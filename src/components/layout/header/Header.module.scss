@@ -1,0 +1,23 @@
+@import "../../../scss/vars.scss";
+.header {
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  &__Container {
+    padding: 26px 0 0 0;
+  }
+}
+
+.active {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  padding-bottom: 30px;
+
+  .header__Container {
+    padding: 10px 0 0 0;
+  }
+}

@@ -1,0 +1,28 @@
+import { FC } from "react";
+
+import { socialMediaIconProps } from "../socialMediaIconProps.interface";
+
+const FacebookIcon: FC<socialMediaIconProps> = ({ color, width, height }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      version="1.1"
+      id="Слой_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      viewBox="0 0 20 20"
+    >
+      <style type="text/css"></style>
+      <g>
+        <path
+          d="M20,10c0-5.5-4.5-10-10-10C4.5,0,0,4.5,0,10c0,5.5,4.5,10,10,10c0.1,0,0.1,0,0.2,0v-7.8H8V9.7h2.1V7.9
+		c0-2.1,1.3-3.3,3.2-3.3c0.9,0,1.7,0.1,1.9,0.1v2.2H14c-1,0-1.2,0.5-1.2,1.2v1.6h2.5l-0.3,2.5h-2.2v7.4C16.9,18.4,20,14.6,20,10z"
+          fill={color}
+        />
+      </g>
+    </svg>
+  );
+};
+export default FacebookIcon;

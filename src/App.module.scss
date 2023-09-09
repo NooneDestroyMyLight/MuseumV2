@@ -1,0 +1,66 @@
+//SECTION BLOCK COLOR
+$headerColor: #ffff;
+$footerColor: #101010;
+$serviceRangeSectionColor: #232323;
+$contactSectionColor: #000000;
+//
+
+// FONT COLOR
+$whiteColor: #ffff;
+
+.mainContainer {
+  position: relative;
+}
+
+.summaryBlocksContainer {
+  gap: 60px;
+}
+
+h1 {
+  font-family: Gilroy-Bold;
+  font-size: 2.86rem;
+  line-height: 3.57rem;
+
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+@mixin generaText($textSize, $textColor) {
+  color: $textColor;
+  font-size: $textSize;
+}
+
+@mixin subTitle($textSize, $textColor) {
+  font-family: Gilroy-Bold;
+  color: $textColor;
+  font-size: $textSize;
+  line-height: 29px;
+}
+
+.generalText {
+  @include generaText(1rem, $whiteColor);
+}
+
+.contactText {
+  @include generaText(1.14rem, $whiteColor);
+}
+
+.subTitle {
+  @include subTitle(24px, $whiteColor);
+}
+
+.line {
+  width: 20px;
+}

@@ -1,0 +1,22 @@
+$orederNumberColor: #6a6a6a;
+
+.serviceThesisItemContainer {
+  .orderNumber {
+    width: 50px;
+    font-family: Gilroy-Extrabold;
+    font-size: 70px;
+    line-height: 65px;
+    letter-spacing: 0.05em;
+    color: $orederNumberColor;
+  }
+  .discriptionContainer {
+    gap: 10px;
+
+    .title {
+      font-family: Gilroy-Bold;
+    }
+    .discription {
+      max-width: 310px;
+    }
+  }
+}

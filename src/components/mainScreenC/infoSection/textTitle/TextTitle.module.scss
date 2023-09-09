@@ -1,0 +1,48 @@
+@mixin titleColorMixin($Backcolor, $mainColor) {
+  .title {
+    position: relative;
+
+    color: $mainColor;
+
+    font-family: Gilroy-Bold;
+    z-index: 10;
+
+    &:before {
+      content: attr(data-content);
+
+      color: $Backcolor; //   #1e1e1e   #f8f8f8
+
+      font-family: Gilroy-Extrabold;
+      font-size: 10.71rem;
+      font-weight: 900;
+      line-height: 8.75rem;
+
+      text-transform: uppercase;
+
+      position: absolute;
+
+      bottom: 0;
+      left: -8px;
+      z-index: -1;
+      -webkit-transform: translateZ(-1px);
+      transform: translateZ(-1px);
+    }
+    @media (max-width: 768px) {
+      &:before {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+$darkTitleColor: #1e1e1e;
+$lightTitleColor: #f8f8f8;
+
+.textTitleDarkStyle {
+  @include titleColorMixin($darkTitleColor, white);
+  margin-bottom: 80px;
+}
+.textTitleLightStyle {
+  @include titleColorMixin($lightTitleColor, black);
+  margin-bottom: 80px;
+}

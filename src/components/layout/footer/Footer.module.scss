@@ -1,0 +1,10 @@
+@import "../../../App.module.scss";
+.footer {
+  background-color: $footerColor;
+  &__Container {
+    padding: 90px 0 45px 0;
+  }
+}
+.item {
+  margin-bottom: 20px;
+}

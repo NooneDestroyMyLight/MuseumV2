@@ -1,0 +1,41 @@
+.boxMenuContainer {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+
+  position: relative;
+  .boxMenuTitleContainer {
+    justify-self: center;
+
+    width: 100%;
+
+    position: absolute;
+    .boxMenuTitle {
+      height: 400px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .boxMenuContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.boxMenuItemContainer {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100vw 800px;
+}
+
+.topLeftImg {
+  background-position: top left;
+}
+.topRightImg {
+  background-position: top right;
+}
+.bottomLeftImg {
+  background-position: bottom left;
+}
+.bottomRightImg {
+  background-position: bottom right;
+}

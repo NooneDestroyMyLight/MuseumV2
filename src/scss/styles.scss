@@ -1,0 +1,68 @@
+@import "./vars.scss";
+
+@mixin inputGroup($inputWidth, $fontSize, $borderColor) {
+  .inputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .inputLabel {
+      transition: 0.3s;
+      pointer-events: none;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .input {
+      color: white;
+      width: $inputWidth;
+
+      border-bottom: 1px solid white;
+      background-color: transparent;
+
+      transition: 0.3s;
+      &:focus ~ .inputLabel,
+      &:not(:placeholder-shown) ~ .inputLabel {
+        font-size: $fontSize;
+        color: rgba($borderColor, 0.5);
+
+        top: -1.5em;
+      }
+    }
+  }
+}
+
+@mixin generaText($textSize, $textColor) {
+  color: $textColor;
+  font-size: $textSize;
+}
+
+@mixin subTitle($textSize, $textColor) {
+  font-weight: 600;
+  color: $textColor;
+  font-size: $textSize;
+  line-height: 29px;
+}
+
+//Text
+h1 {
+  font-family: Gilroy-Bold;
+  font-size: 2.86rem;
+  line-height: 3.57rem;
+
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.generalText {
+  @include generaText(1rem, $whiteColor);
+}
+
+.contactText {
+  @include generaText(1.14rem, $whiteColor);
+}
+
+.subTitle {
+  @include subTitle(24px, $whiteColor);
+}

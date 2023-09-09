@@ -1,0 +1,32 @@
+.runingLineContainer {
+  padding: 100px 0 100px 0;
+  width: 100%;
+  overflow: hidden;
+  .runingLineContent {
+    display: flex;
+    overflow: hidden;
+
+    .h1 {
+      white-space: nowrap;
+      font-family: Gilroy-Extrabold;
+      //   font-weight: 900;
+      font-size: 150px;
+      line-height: 130px;
+      letter-spacing: 0.1em;
+      color: black;
+
+      flex-shrink: 0;
+      padding: 0 25px;
+      animation: marquee 30s linear infinite;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

@@ -1,0 +1,35 @@
+.buttonArrow {
+  font-family: Gilroy-Bold;
+  cursor: pointer;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  position: relative;
+
+  margin-right: 42px;
+  padding-right: 0;
+
+  &:hover {
+    + .arrowContainer {
+      -webkit-transform: translate(7px, 0);
+      -moz-transform: translate(7px, 0);
+      -o-transform: translate(7px, 0);
+      transform: translate(7px, 0);
+    }
+  }
+}
+
+.arrowContainer {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -mox-transition: all 0.5s ease-in-out;
+  transition: transform all 0.5s ease-in-out;
+  &:hover {
+    -webkit-transform: translate(7px, 0);
+    -moz-transform: translate(7px, 0);
+    -o-transform: translate(7px, 0);
+    transform: translate(7px, 0);
+  }
+}

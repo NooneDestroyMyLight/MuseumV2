@@ -1,0 +1,15 @@
+.textBlockContainer {
+  max-width: 600px;
+  text-align: left;
+  margin-right: 130px;
+  gap: 28px;
+  .paragraph {
+    // margin-bottom: 28px;
+    overflow-wrap: break-word;
+  }
+}
+@media (max-width: 768px) {
+  .textBlockContainer {
+    margin-right: 0;
+  }
+}

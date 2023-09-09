@@ -1,0 +1,5 @@
+@import "../../../../../scss/styles.scss";
+.inputContainer {
+  width: 100%;
+  @include inputGroup(100%, 14px, white);
+}

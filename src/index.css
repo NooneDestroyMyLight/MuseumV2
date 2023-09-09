@@ -1,0 +1,73 @@
+:root {
+  --bs-body-font-family: "Gilroy-Regular";
+  font-size: 14px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url("../Gilroy-Bold.ttf");
+}
+
+@font-face {
+  font-family: Gilroy-Extrabold;
+  src: url("../Gilroy-Extrabold.ttf");
+}
+
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url("../Gilroy-Regular.ttf");
+}
+
+body {
+  font-family: "Gilroy-Regular";
+  font-style: normal;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  font-size: 1.14rem;
+  line-height: 2rem;
+
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  /* Сброс стилей */
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  overflow: visible;
+  text-align: inherit;
+  cursor: pointer;
+  outline: none;
+}

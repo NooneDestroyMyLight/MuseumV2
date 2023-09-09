@@ -1,0 +1,24 @@
+@import "../../../../../scss/styles.scss";
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  &__Block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.line {
+  display: flex;
+  gap: 20px;
+  &:before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: white;
+
+    align-self: center;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../App.module.scss";
+
+.ServiceRangeSectionContainer {
+  padding: 130px 0;
+  background-color: $serviceRangeSectionColor;
+  color: white;
+  .ServiceThesisItemsContainer {
+    row-gap: 35px;
+  }
+}
