@@ -8,7 +8,7 @@ export interface TextBlockProps {
 
 const TextBlock: FC<TextBlockProps> = ({ text }) => {
   return (
-    <article className={` col d-flex flex-column  ${style.textBlockContainer}`}>
+    <article className={`  d-flex flex-column  ${style.textBlockContainer}`}>
       {text && text.map(item => <p className={style.paragraph}>{item}</p>)}
     </article>
   );

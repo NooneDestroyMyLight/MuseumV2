@@ -11,7 +11,7 @@ interface ButtonArrowProps {
 
 const ButtonArrow: FC<ButtonArrowProps> = ({ text, color }) => {
   return (
-    <div className={"row align-items-center "}>
+    <div className={"row align-items-center d-flex flex-nowrap "}>
       <button
         style={{ color: color }}
         className={`col-auto text-nowrap  ${style.buttonArrow}`} //p-0

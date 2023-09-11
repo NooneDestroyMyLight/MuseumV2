@@ -12,7 +12,7 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({ children }) => {
   return (
     <section className={style.consultationSection}>
       <div
-        className={`container d-flex flex-column ${style.consultationSection__Container}`}
+        className={`container-fluid d-flex flex-column ${style.consultationSection__Container}`}
       >
         <div className={`row `}>
           <TextTitle

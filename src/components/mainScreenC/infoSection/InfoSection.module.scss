@@ -1,7 +1,23 @@
+$paddingBottom: 130px;
 .infoSection {
-  margin-bottom: 130px;
+  position: relative;
+  padding-bottom: $paddingBottom;
 
   &__Children {
-    gap: 35px;
+    // gap: 35px;
+  }
+}
+
+@media (max-width: 850px) {
+  .infoSection {
+    &__Children {
+      flex-direction: column;
+      gap: 35px;
+    }
+    &__Button {
+      position: absolute;
+      bottom: calc($paddingBottom / 2 - 1rem);
+      left: 0;
+    }
   }
 }

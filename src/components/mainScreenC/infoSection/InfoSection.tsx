@@ -19,19 +19,19 @@ const InfoSection: FC<InfoSectionProps> = ({
   children,
 }) => {
   return (
-    <section className={`container d-flex flex-column   ${style.infoSection}`}>
+    <section
+      className={`container-fluid  d-flex flex-column   ${style.infoSection}`}
+    >
       <TextTitle
         title={title}
         backText={backText}
         colorStyle="textTitleLightStyle"
       >
-        <div className="align-self-end">
+        <div className={`align-self-end ${style.infoSection__Button}`}>
           <ButtonArrow text={buttonText} color="black" />
         </div>
       </TextTitle>
-      <div
-        className={`col d-flex flex-column flex-md-row ${style.infoSection__Children}`}
-      >
+      <div className={`col-auto d-flex  ${style.infoSection__Children}`}>
         {children && children}
       </div>
     </section>

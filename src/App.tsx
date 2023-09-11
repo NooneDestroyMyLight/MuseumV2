@@ -37,7 +37,7 @@ function App() {
         >
           <TextBlock text={textBlockData} />
           <div
-            className={`col-auto d-flex flex-column ${style.summaryBlocksContainer}`}
+            className={` d-flex flex-column ${style.summaryBlocksContainer}`}
           >
             <SummeryBlock
               title="Residential property"

@@ -1,32 +1,39 @@
 .boxMenuContainer {
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); // 2 - its count in ONE ROW, 1fr - place that unit can take
 
   position: relative;
   .boxMenuTitleContainer {
     justify-self: center;
-
-    width: 100%;
 
     position: absolute;
     .boxMenuTitle {
       height: 400px;
     }
   }
-}
-@media (max-width: 768px) {
-  .boxMenuContainer {
-    grid-template-columns: repeat(1, 1fr);
+  .boxMenuItemContainer {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100vw 800px;
   }
 }
 
-.boxMenuItemContainer {
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: 100vw 800px;
+@media (max-width: 850px) {
+  .boxMenuContainer {
+    grid-template-columns: repeat(1, 1fr);
+
+    .boxMenuItemContainer {
+      background-size: cover;
+      background-position: center;
+    }
+  }
 }
 
+//BoxMenu img position
 .topLeftImg {
   background-position: top left;
 }

@@ -10,9 +10,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Footer: FC = () => {
   return (
     <footer className={style.footer}>
-      <div className={`container ${style.footer__Container}`}>
-        <div className="row ">
-          <div className={`col-md-3  ${style.generalText}`}>
+      <div className={`container-fluid ${style.footer__Container}`}>
+        <div className={`row ${style.footerInfoList}`}>
+          <div className={`col-md-3  ${style.generalText} ${style.item}`}>
             <MainLogo color="white" />
           </div>
           {footerDatas.map(item => (

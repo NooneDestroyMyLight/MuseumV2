@@ -1,4 +1,17 @@
-.boxMenuTitle {
-  height: 400px;
-  padding-left: 100px;
+.boxMenu {
+  .boxMenuTitle {
+    height: 400px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  //Need refactor
+  .boxMenu {
+    display: flex;
+    flex-direction: column;
+    .boxMenuTitle {
+      padding-left: 0;
+    }
+  }
 }

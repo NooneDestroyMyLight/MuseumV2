@@ -9,11 +9,10 @@ interface MainLogoProps {
 const MainLogo: FC<MainLogoProps> = ({ color }) => {
   return (
     <svg
-      width="109"
-      height="48"
       viewBox="0 0 109 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={style.mainLogo}
     >
       <g clip-path="url(#clip0)">
         <path

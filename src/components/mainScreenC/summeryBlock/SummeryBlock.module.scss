@@ -1,6 +1,8 @@
 .summaryBlockContainer {
   position: relative;
   padding-left: 75px;
+  overflow-wrap: break-word;
+  max-width: 350px;
 
   .icon {
     width: 46px;
@@ -12,22 +14,10 @@
     top: -24px;
   }
 
-  .number {
-    font-family: Gilroy-Extrabold;
-    font-weight: 900;
-    font-size: 70px;
-    line-height: 65px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .title {
     font-family: Gilroy-Bold;
   }
 
   .discription {
-    max-width: 350px;
   }
 }

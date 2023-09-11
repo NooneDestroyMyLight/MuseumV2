@@ -15,10 +15,10 @@ const BoxMenuLayout: FC<BoxMenuLayoutProps> = ({
   currentBackground,
 }) => {
   return (
-    <div className="row">
+    <div className={`row ${style.boxMenu}`}>
       {titleBoxMenuDatas.map(item => (
         <div
-          className={`col-md-6 d-flex align-items-center   ${style.boxMenuTitle}`}
+          className={`col-6 d-flex align-items-center ${style.boxMenuTitle}`}
           onMouseEnter={() => setCurrentBackground(item.backgroundImg)}
           onMouseLeave={() => {
             setCurrentBackground(null);

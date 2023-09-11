@@ -60,8 +60,9 @@ $gap: 25px;
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .SendQuestionsContainer {
+    width: 100%;
     .inputs {
       flex-direction: column;
     }

@@ -10,7 +10,7 @@ const WatherMark: FC<WatherMarkProps> = ({}) => {
   return (
     <div className={`row d-flex flex-column  ${style.waterMark}`}>
       <div>
-        <h1 className="col">
+        <h1 className={`col ${style.h1title}`}>
           Interior design <br /> Construction and renovation <br />
           Architectural design
         </h1>

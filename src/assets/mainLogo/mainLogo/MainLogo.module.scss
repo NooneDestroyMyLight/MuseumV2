@@ -1,0 +1,10 @@
+.mainLogo {
+  width: 110px;
+  height: 50px;
+}
+@media (max-width: 768px) {
+  .mainLogo {
+    width: 141px;
+    height: 62px;
+  }
+}

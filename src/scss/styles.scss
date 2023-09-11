@@ -45,7 +45,7 @@
   line-height: 29px;
 }
 
-//Text
+// <== TEXT START ==>
 h1 {
   font-family: Gilroy-Bold;
   font-size: 2.86rem;
@@ -66,3 +66,4 @@ h1 {
 .subTitle {
   @include subTitle(24px, $whiteColor);
 }
+// <== TEXT END ==>

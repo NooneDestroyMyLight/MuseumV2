@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useState } from "react";
 import style from "./Header.module.scss";
 
 import MainLogo from "../../../assets/mainLogo/mainLogo/MainLogo";
@@ -14,13 +14,22 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ isSticky, mainColor, isStickyColor }) => {
+  const [navToggle, setNavToggle] = useState<boolean>(false);
+
   return (
     <header className={`${style.header} ${isSticky && style.active}`}>
       <section
-        className={`container d-flex justify-content-between  ${style.header__Container}`}
+        className={`container-fluid d-flex justify-content-between  ${style.header__Container}`}
       >
-        <MainLogo color={isSticky ? isStickyColor : mainColor} />
-        <HeaderNav textColor={isSticky ? isStickyColor : mainColor} />
+        <MainLogo
+          color={isSticky ? isStickyColor : mainColor}
+          // width={isSticky ? "141" : "109"}
+          // height={isSticky ? "62" : "48"}
+        />
+        <HeaderNav
+          textColor={isSticky ? isStickyColor : mainColor}
+          isSticky={isSticky}
+        />
       </section>
     </header>
   );

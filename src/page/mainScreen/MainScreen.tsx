@@ -28,7 +28,7 @@ const MainScreen: FC<MainScreenProps> = () => {
           }
         });
       },
-      { threshold: 0.95 } // Измените порог по вашему усмотрению
+      { threshold: 0.95 }
     );
 
     observer.observe(headerElement);
@@ -46,7 +46,7 @@ const MainScreen: FC<MainScreenProps> = () => {
         videoType="video/mp4"
       />
       <div
-        className={`container d-flex flex-column justify-content-between p-0 ${style.mainPageContent}`}
+        className={`container-fluid d-flex flex-column justify-content-between  ${style.mainPageContent}`}
       >
         <WatherMark />
         <div></div>

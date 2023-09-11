@@ -8,7 +8,7 @@ interface SocialMediaListProps {}
 
 const SocialMediaList: FC<SocialMediaListProps> = ({}) => {
   return (
-    <div className={`row d-flex  ${style.socialMediaListContainer}`}>
+    <div className={`row d-flex  ${style.socialMediaList}`}>
       {socialMediaList.map((item, index) => (
         <div className={`col-auto p-0 `}>
           <item.iconComponent
