@@ -50,7 +50,7 @@
   font-weight: bold;
   font-size: $textSize;
   line-height: 29px;
-  margin-bottom: 22px;
+  // margin-bottom: 22px;
 }
 
 // <== TEXT START ==>
@@ -64,15 +64,15 @@ h1 {
 }
 
 .generalText {
-  @include generaText(1rem, $whiteColor);
+  @include generaText(1rem, $lightColor);
 }
 
 .contactText {
-  @include generaText(1.14rem, $whiteColor);
+  @include generaText(1.14rem, $lightColor);
 }
 
 .subTitle {
-  @include subTitle(24px, $whiteColor);
+  @include subTitle(24px, $lightColor);
 }
 
 // <== TEXT END ==>

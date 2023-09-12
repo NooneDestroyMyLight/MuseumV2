@@ -1,4 +1,4 @@
-interface IHeaderNav {
+export interface IHeaderNav {
   name: string;
   subMenu?: {
     name: string;

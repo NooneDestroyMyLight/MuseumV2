@@ -38,7 +38,12 @@ const HeaderNav: FC<HeaderNavProps> = ({
     <>
       <div className={`${style.linkGroup} ${navToggle && style.showLinkGroup}`}>
         {headerNavData.map(item => (
-          <HeaderNavItem name={item.name} textColor={textColor} />
+          <HeaderNavItem
+            navItem={item}
+            textColor={textColor}
+            isSticky={isSticky}
+            navToggle={navToggle}
+          />
         ))}
       </div>
       <button

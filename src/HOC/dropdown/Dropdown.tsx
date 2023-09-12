@@ -1,13 +1,15 @@
-import { FC } from "react";
+import { FC, ReactNode, memo } from "react";
 import style from "./Dropdown.module.scss";
 
 interface DropdownProps {
-  color: string;
+  styleClass: string;
+  children: ReactNode;
 }
 
-const Dropdown: FC<DropdownProps> = ({ color }) => {
+const Dropdown: FC<DropdownProps> = memo(({ children, styleClass }) => {
+  console.log("Dropdown Open");
   return (
-    <div style={{ backgroundColor: color }} className={style.dropdown}></div>
+    <div className={`${style[styleClass]} ${style.dropdown}`}>{children}</div>
   );
-};
+});
 export default Dropdown;
