@@ -17,8 +17,6 @@ import Footer from "./components/layout/footer/Footer";
 import ConsultationSection from "./components/mainScreenC/consultationSection/ConsultationSection";
 import SendQuestions from "./components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
 import ContactInfo from "./components/mainScreenC/consultationSection/sendQuestions/contactInfo/ContactInfo";
-import Header from "./components/layout/header/Header";
-import { useEffect, useRef, useState } from "react";
 
 // import Button from "react-bootstrap/Button";
 // import "bootstrap/dist/css/bootstra  p.min.css";

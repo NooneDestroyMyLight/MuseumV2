@@ -45,6 +45,14 @@
   line-height: 29px;
 }
 
+@mixin mobileNav($textSize, $textColor) {
+  color: $textColor;
+  font-weight: bold;
+  font-size: $textSize;
+  line-height: 29px;
+  margin-bottom: 22px;
+}
+
 // <== TEXT START ==>
 h1 {
   font-family: Gilroy-Bold;
@@ -66,4 +74,5 @@ h1 {
 .subTitle {
   @include subTitle(24px, $whiteColor);
 }
+
 // <== TEXT END ==>

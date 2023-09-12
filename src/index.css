@@ -2,15 +2,29 @@
   --bs-body-font-family: "Gilroy-Regular";
   font-size: 14px;
 }
-
-html {
-  overflow-x: hidden;
-  box-sizing: border-box;
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url("../Gilroy-Bold.ttf");
 }
 
-body {
+@font-face {
+  font-family: Gilroy-Extrabold;
+  src: url("../Gilroy-Extrabold.ttf");
+}
+
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url("../Gilroy-Regular.ttf");
+}
+/* html {
   overflow-x: hidden;
-  min-width: 320px;
+} */
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  min-width: 328px;
   margin: 0;
   padding: 0;
 
@@ -20,6 +34,10 @@ body {
   font-weight: 300;
   font-size: 1.14rem;
   line-height: 2rem;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 button {
@@ -36,7 +54,6 @@ button {
   cursor: pointer;
   outline: none;
 }
-
 h1,
 h2,
 h3,
@@ -51,11 +68,9 @@ p {
 *::before {
   box-sizing: inherit;
 }
-
 li {
   list-style-type: none;
 }
-
 input,
 textarea {
   box-sizing: border-box;
@@ -63,31 +78,10 @@ textarea {
   outline: none;
 }
 
-@font-face {
-  font-family: Gilroy-Bold;
-  src: url("../Gilroy-Bold.ttf");
-}
-
-@font-face {
-  font-family: Gilroy-Extrabold;
-  src: url("../Gilroy-Extrabold.ttf");
-}
-
-@font-face {
-  font-family: Gilroy-Regular;
-  src: url("../Gilroy-Regular.ttf");
-}
-
 /*  MEDIA */
 .container-fluid {
-  width: 1250px;
+  width: 1225px;
 }
-
-/* @media (max-width: 768px) {
-  .container-fluid {
-    margin-bottom: 130px;
-  }
-} */
 
 @media (max-width: 1250px) {
   .container-fluid {

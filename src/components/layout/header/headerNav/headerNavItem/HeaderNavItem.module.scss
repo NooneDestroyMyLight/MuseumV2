@@ -1,9 +1,14 @@
+@import "../../../../../scss/styles.scss";
+
 .headerNavItamContainer {
   font-family: Gilroy-Bold;
   font-size: 1.2rem;
+
+  position: relative;
 }
+
 @media (max-width: 850px) {
   .headerNavItamContainer {
-    display: none;
+    @include mobileNav(24px, black);
   }
 }

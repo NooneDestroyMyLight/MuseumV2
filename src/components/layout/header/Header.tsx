@@ -15,21 +15,34 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ isSticky, mainColor, isStickyColor }) => {
   const [navToggle, setNavToggle] = useState<boolean>(false);
-
   return (
-    <header className={`${style.header} ${isSticky && style.active}`}>
-      <section
-        className={`container-fluid d-flex justify-content-between  ${style.header__Container}`}
-      >
-        <MainLogo
-          color={isSticky ? isStickyColor : mainColor}
-          // width={isSticky ? "141" : "109"}
-          // height={isSticky ? "62" : "48"}
-        />
-        <HeaderNav
-          textColor={isSticky ? isStickyColor : mainColor}
-          isSticky={isSticky}
-        />
+    <header
+      className={`
+      ${style.header} 
+      ${isSticky && style.sticked} 
+      ${navToggle && style.burgerMenuActive}
+      ${navToggle && !isSticky && style.notSticked}
+      `}
+    >
+      <section className={`container-fluid ${style.header__Container}`}>
+        <div className={`row `}>
+          <div
+            className={`col p-0 d-flex justify-content-between   ${style.header__Container__Links}`}
+          >
+            <MainLogo
+              color={isSticky ? isStickyColor : mainColor}
+              // width={isSticky ? "141" : "109"}
+              // height={isSticky ? "62" : "48"}
+            />
+            <HeaderNav
+              setNavToggle={setNavToggle}
+              navToggle={navToggle}
+              //
+              textColor={isSticky ? isStickyColor : mainColor}
+              isSticky={isSticky}
+            />
+          </div>
+        </div>
       </section>
     </header>
   );

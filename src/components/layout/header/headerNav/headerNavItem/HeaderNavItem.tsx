@@ -12,7 +12,7 @@ const HeaderNavItem: FC<IHeaderNavItemProps> = ({ name, textColor }) => {
   return (
     <label
       style={{ color: textColor }}
-      className={`col-auto text-nowrap ${style.headerNavItamContainer}`}
+      className={`text-nowrap ${style.headerNavItamContainer}`}
     >
       {name}
     </label>

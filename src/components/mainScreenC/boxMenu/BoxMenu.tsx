@@ -20,7 +20,6 @@ const BoxMenu: FC<InfoSectionProps> = ({}) => {
           currentBackground={currentBackground}
         />
       </div>
-
       {boxMenuBackgroundDatas.map(item => (
         <div
           className={`${style.boxMenuItemContainer} ${style[item.position]}`}

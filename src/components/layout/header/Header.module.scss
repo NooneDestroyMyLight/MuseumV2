@@ -1,20 +1,61 @@
 @import "../../../scss/vars.scss";
+@import "../../../scss/styles.scss";
+
 .header {
   width: 100%;
-  z-index: 2;
+
   position: fixed;
+  z-index: 20;
   &__Container {
     padding-top: 26px;
+    &__Links {
+      position: relative;
+    }
   }
 }
 
-.active {
+.sticked {
   background-color: white;
   transition: background-color 0.3s ease-in-out;
 
-  position: fixed;
   z-index: 100;
   top: 0;
+  .header__Container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 
-  padding-bottom: 30px;
+// @media (max-width: 850px) {
+//   .sticked {
+//     z-index: 100;
+//     top: 0;
+//     .header__Container {
+//       padding-top: 10px;
+//       padding-bottom: 10px;
+//     }
+//   }
+// }
+
+@media (max-width: 850px) {
+  .header {
+    &__Container {
+      &__Links {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .burgerMenuActive {
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+
+    inset: 0;
+  }
+
+  .notSticked {
+    background-color: black;
+  }
 }
