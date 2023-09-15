@@ -5,11 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 interface InputProps {
   label: string;
+  StylesClass: string;
 }
 
-const Input: FC<InputProps> = ({ label }) => {
+const Input: FC<InputProps> = ({ label, StylesClass }) => {
   return (
-    <div className={style.inputContainer}>
+    <div className={style[StylesClass]}>
       <fieldset className={style.inputGroup}>
         <input className={style.input} placeholder=" " type="text" />
         <label className={style.inputLabel}>{label}</label>

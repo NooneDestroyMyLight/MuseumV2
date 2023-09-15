@@ -1,5 +1,12 @@
 @import "../../../../../scss/styles.scss";
-.inputContainer {
+
+// DarkStyleInput
+.DarkStyleInput {
   width: 100%;
   @include inputGroup(100%, 14px, white);
+}
+// LightStyleInput
+.LightStyleInput {
+  width: 100%;
+  @include inputGroup(100%, 14px, black);
 }

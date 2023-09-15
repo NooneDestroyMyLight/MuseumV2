@@ -16,7 +16,7 @@ const ServiceThesisItem: FC<ServiceThesisItemProps> = ({
 }) => {
   return (
     <div
-      className={`col-12 col-md-4 d-flex ${style.serviceThesisItemContainer}`}
+      className={`col-12  col-md-3 d-flex ${style.serviceThesisItemContainer}`}
     >
       <div className={`justify-content-center ${style.orderNumber}`}>
         {order}

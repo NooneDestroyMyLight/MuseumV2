@@ -1,4 +1,5 @@
 $orederNumberColor: #6a6a6a;
+@import "../../../../App.module.scss";
 
 .serviceThesisItemContainer {
   .orderNumber {
@@ -8,6 +9,8 @@ $orederNumberColor: #6a6a6a;
     line-height: 65px;
     letter-spacing: 0.05em;
     color: $orederNumberColor;
+
+    padding-right: 18px;
   }
   .discriptionContainer {
     gap: 10px;
@@ -17,6 +20,7 @@ $orederNumberColor: #6a6a6a;
     }
     .discription {
       max-width: 310px;
+      word-wrap: break-word;
     }
   }
 }

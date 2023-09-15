@@ -4,36 +4,35 @@ import style from "./serviceRangeSection.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import TextTitle from "../infoSection/textTitle/TextTitle";
-import SummeryBlock from "../summeryBlock/SummeryBlock";
+
 import ServiceThesisItem from "./serviceThesisItem/ServiceThesisItem";
 
-export interface SummeryBlockProps {}
+import { IserviceThesisItemData } from "./serviceRange.data";
 
-const ServiceRangeSection: FC<SummeryBlockProps> = ({}) => {
+export interface SummeryBlockProps {
+  data: IserviceThesisItemData[];
+}
+
+const ServiceRangeSection: FC<SummeryBlockProps> = ({ data }) => {
   return (
     <section className={style.ServiceRangeSectionContainer}>
-      <div className={`container-fluid `}>
+      <div className={` p-0 container-fluid `}>
         <TextTitle
           title={["We build", `“turn-key” projects`]}
           backText={"service"}
           colorStyle="textTitleDarkStyle"
         />
-        <div className={`row  ${style.ServiceThesisItemsContainer}`}>
-          <ServiceThesisItem
-            order={1}
-            title="Concept and idea"
-            discription="We develop the concept of the project and prepare planning solutions"
-          />
-          <ServiceThesisItem
-            order={2}
-            title="Design and project"
-            discription="3D visualization of design, development of project documentation for renovation"
-          />
-          <ServiceThesisItem
-            order={3}
-            title="Renovation and equipment"
-            discription="Performing all types of renovation work, furniture and decor instalation"
-          />
+        <div
+          className={`row d-flex justify-content-between ${style.ServiceThesisItemsContainer}`}
+        >
+          {data.map((item, index) => (
+            <ServiceThesisItem
+              // key={item.discription}
+              order={index + 1}
+              title={item.title}
+              discription={item.discription}
+            />
+          ))}
         </div>
       </div>
     </section>

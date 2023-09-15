@@ -20,15 +20,19 @@ const TextTitle: FC<TextTitleProps> = ({
   colorStyle,
 }) => {
   return (
-    <div className={`col d-flex justify-content-between  ${style[colorStyle]}`}>
-      <h2 className={style.title} data-content={backText}>
-        {title.map(item => (
-          <p>{item}</p>
-        ))}
-      </h2>
-      <div className="d-flex align-items-start">
-        {children && children}
-        {/* <ButtonArrow text={buttonText} color="black" /> */}
+    <div className={`row d-flex justify-content-between `}>
+      <div className="col ">
+        <div className={style[colorStyle]}>
+          <h2 className={style.title} data-content={backText}>
+            {title.map(item => (
+              <p>{item}</p>
+            ))}
+          </h2>
+          <div className="d-flex align-items-start">
+            {children && children}
+            {/* <ButtonArrow text={buttonText} color="black" /> */}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,12 @@
   background-color: $serviceRangeSectionColor;
   color: white;
   .ServiceThesisItemsContainer {
-    row-gap: 35px;
+    // row-gap: 35px;
+  }
+}
+@media (max-width: 850px) {
+  .ServiceThesisItemsContainer {
+    align-items: center;
+    row-gap: 60px;
   }
 }

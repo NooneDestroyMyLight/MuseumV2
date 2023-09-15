@@ -1,0 +1,14 @@
+@import "../../../../scss/styles.scss";
+.slider {
+  display: flex;
+  align-self: center;
+
+  width: 650px;
+  height: 430px;
+
+  overflow: hidden;
+
+  &__Item {
+    object-fit: cover;
+  }
+}

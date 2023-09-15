@@ -12,20 +12,16 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({ children }) => {
   return (
     <section className={style.consultationSection}>
       <div
-        className={`container-fluid d-flex flex-column ${style.consultationSection__Container}`}
+        className={`container-fluid  d-flex flex-column ${style.consultationSection__Container}`}
       >
-        <div className={`row `}>
-          <TextTitle
-            title={[
-              "Need a consultation?",
-              "We will answer all your questions",
-            ]}
-            backText={"contact"}
-            colorStyle="textTitleDarkStyle"
-          ></TextTitle>
-        </div>
+        <TextTitle
+          title={["Need a consultation?", "We will answer all your questions"]}
+          backText={"contact"}
+          colorStyle="textTitleDarkStyle"
+        ></TextTitle>
+
         <div
-          className={`row d-flex justify-content-between ${style.consultationSection__Children}`}
+          className={`row justify-content-between ${style.consultationSection__Children}`}
         >
           {children && children}
         </div>

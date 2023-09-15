@@ -1,0 +1,10 @@
+@import "../../../scss/styles.scss";
+@import "../../../scss/vars.scss";
+
+.priceListSection {
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 130px 0;
+  &__Container {
+    width: 100%;
+  }
+}

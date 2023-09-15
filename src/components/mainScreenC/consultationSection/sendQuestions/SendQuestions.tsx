@@ -12,17 +12,22 @@ interface SendQuestionsProps {
 
 const SendQuestions: FC<SendQuestionsProps> = ({ title, subTitle }) => {
   return (
-    <div className={`col-auto  ${style.SendQuestionsContainer}`}>
-      <div className={style.title}>
-        <span className={style.subTitle}>{title}</span>
-        <span>{subTitle}</span>
+    <div className={`col-auto`}>
+      <div className={style.SendQuestionsContainer}>
+        <div className={style.title}>
+          <span className={style.subTitle}>{title}</span>
+          <span>{subTitle}</span>
+        </div>
+        <div className={`${style.inputs}`}>
+          <Input label="Your name *" StylesClass={"DarkStyleInput"} />
+          <Input
+            label="Phone number / email *"
+            StylesClass={"DarkStyleInput"}
+          />
+        </div>
+        <Textarea label="Your massage" />
+        <button className={style.button}>Send massage</button>
       </div>
-      <div className={`${style.inputs}`}>
-        <Input label="Your name *" />
-        <Input label="Phone number / email *" />
-      </div>
-      <Textarea label="Your massage" />
-      <button className={style.button}>Send your massage</button>
     </div>
   );
 };

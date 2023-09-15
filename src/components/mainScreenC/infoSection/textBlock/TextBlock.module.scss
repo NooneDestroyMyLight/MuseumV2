@@ -1,11 +1,11 @@
 .textBlockContainer {
   text-align: left;
   gap: 28px;
-
+  margin-right: 130px;
+  width: 100%;
   .paragraph {
-    margin-right: 130px;
-    // margin-bottom: 28px;
     overflow-wrap: break-word;
+    // margin-bottom: 28px;
     max-width: 600px;
   }
 }

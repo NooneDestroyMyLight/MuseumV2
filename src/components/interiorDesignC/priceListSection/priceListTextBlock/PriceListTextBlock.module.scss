@@ -1,0 +1,40 @@
+@import "../../../../scss/styles.scss";
+
+$gap: 28px;
+$bgColor: white;
+
+.priceListSection {
+  width: calc(33% - 120px);
+  height: -moz-min-content;
+  height: min-content;
+
+  padding: 38px 78px 38px 38px;
+  box-sizing: content-box;
+
+  gap: $gap;
+
+  background-color: $bgColor;
+  .title {
+  }
+
+  .discription {
+    display: flex;
+    flex-direction: column;
+    &__Item {
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 19px 50px;
+
+  background-color: black;
+  color: white;
+}

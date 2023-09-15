@@ -25,7 +25,7 @@ const Header: FC<HeaderProps> = ({ isSticky, mainColor, isStickyColor }) => {
       `}
     >
       <section className={`container-fluid ${style.header__Container}`}>
-        <div className={`row `}>
+        <div className={`row p-0`}>
           <div
             className={`col p-0 d-flex justify-content-between   ${style.header__Container__Links}`}
           >

@@ -2,11 +2,11 @@ import { FC, useEffect, useRef, useState } from "react";
 import style from "./MainScreen.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import IntroVideo from "../../components/mainScreenC/introVideo/IntroVideo";
+import IntroVideo from "../introVideo/IntroVideo";
 
-import Header from "../../components/layout/header/Header";
-import WatherMark from "../../components/mainScreenC/watherMark/WatherMark";
-import SocialMediaList from "../../components/mainScreenC/socialMediaList/SocialMediaList";
+import Header from "../../layout/header/Header";
+import WatherMark from "../watherMark/WatherMark";
+import SocialMediaList from "../socialMediaList/SocialMediaList";
 
 interface MainScreenProps {}
 
