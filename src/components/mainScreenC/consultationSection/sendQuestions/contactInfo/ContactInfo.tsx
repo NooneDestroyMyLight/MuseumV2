@@ -12,7 +12,7 @@ interface ContactInfoProps {
 
 const ContactInfo: FC<ContactInfoProps> = ({ info }) => {
   return (
-    <div className={`col-auto`}>
+    <div className={`p-0 col-auto`}>
       <ul className={style.contactInfo}>
         <SubTitle
           label="Our contacts"

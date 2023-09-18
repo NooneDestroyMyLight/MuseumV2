@@ -1,0 +1,26 @@
+@import "../../../../../scss/styles.scss";
+
+.processSectionItem {
+  width: 100%;
+  gap: 30px;
+
+  //Icon start
+  .icon {
+    width: 60px;
+    height: 60px;
+
+    -o-object-position: center;
+    object-position: center;
+
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+  .isWide {
+    width: 100px;
+  }
+  //Icon end
+
+  .label {
+    color: $lightColor;
+  }
+}

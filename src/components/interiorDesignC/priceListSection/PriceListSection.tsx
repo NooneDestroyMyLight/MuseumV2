@@ -10,7 +10,7 @@ export interface PriceListSectionProps {}
 const PriceListSection: FC<PriceListSectionProps> = ({}) => {
   return (
     <section className={style.priceListSection}>
-      <div className={`container-fluid p-0`}>
+      <div className={`container-fluid `}>
         <TextTitle
           title={["Cost of services", `interior design`]}
           backText={"price"}
@@ -18,7 +18,7 @@ const PriceListSection: FC<PriceListSectionProps> = ({}) => {
         />
         <div className="row">
           <div
-            className={`col d-flex justify-content-between ${style.priceListSection__Container}`}
+            className={`col p-0 d-flex justify-content-between ${style.priceListSection__Container}`}
           >
             {priceListSectionData.map(item => (
               <PriceListTextBlock

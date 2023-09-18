@@ -1,5 +1,9 @@
 @import "./vars.scss";
 
+.section {
+  padding: 130px 0;
+}
+
 @mixin inputGroup($inputWidth, $fontSize, $borderColor) {
   .inputGroup {
     position: relative;
@@ -111,7 +115,8 @@ h2 {
 }
 
 h4 {
-  font-weight: bold;
+  font-family: Gilroy-Bold;
+
   font-size: 1.13rem;
   line-height: 22px;
 }

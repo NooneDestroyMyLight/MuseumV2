@@ -46,7 +46,7 @@ const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
 
   return (
     <>
-      <Header isSticky={isSticky} mainColor={"white"} isStickyColor={"black"} />
+      <Header isSticky={isSticky} mainColor={"black"} isStickyColor={"black"} />
       <div ref={divRef} className={`container-fluid  ${style.formBlock}`}>
         <div
           className={`row p-0 d-flex justify-content-between ${style.formBlock__Container}`}

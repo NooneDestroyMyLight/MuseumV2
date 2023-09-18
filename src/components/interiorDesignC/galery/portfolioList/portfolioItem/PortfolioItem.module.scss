@@ -1,0 +1,12 @@
+// @import "../../../../../scss/styles.scss";
+
+.portfolioItem {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

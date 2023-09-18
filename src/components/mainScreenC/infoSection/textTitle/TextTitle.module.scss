@@ -43,6 +43,11 @@ $lightTitleColor: #f8f8f8;
   margin-bottom: 80px;
 }
 .textTitleLightStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+
   @include titleColorMixin($lightTitleColor, black);
   margin-bottom: 80px;
 }

@@ -16,7 +16,7 @@ export interface SummeryBlockProps {
 const ServiceRangeSection: FC<SummeryBlockProps> = ({ data }) => {
   return (
     <section className={style.ServiceRangeSectionContainer}>
-      <div className={` p-0 container-fluid `}>
+      <div className={` container-fluid `}>
         <TextTitle
           title={["We build", `“turn-key” projects`]}
           backText={"service"}

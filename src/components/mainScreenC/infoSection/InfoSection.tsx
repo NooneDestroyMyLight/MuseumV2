@@ -20,7 +20,7 @@ const InfoSection: FC<InfoSectionProps> = ({
 }) => {
   return (
     <section
-      className={`container-fluid  d-flex flex-column   ${style.infoSection}`}
+      className={`container-fluid p-0   d-flex flex-column   ${style.infoSection}`}
     >
       <TextTitle
         title={title}

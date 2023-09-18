@@ -16,12 +16,16 @@ import Footer from "../../../components/layout/footer/Footer";
 import { serviceThesisItemInteriorDesignPageData } from "../../../components/mainScreenC/serviceRangeSection/serviceRange.data";
 import PriceListSection from "../../../components/interiorDesignC/priceListSection/PriceListSection";
 
+import Gallery from "../../../components/interiorDesignC/galery/Gallery";
+import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
+
 const InteriorDesign: FC = () => {
   return (
     <div>
       <FormBlock title={"Interior Design"} buttonText="To get a consultation" />
       <RuningBanner />
       <ServiceRangeSection data={serviceThesisItemInteriorDesignPageData} />
+      <Gallery />
       <PriceListSection />
       <ConsultationSection>
         <ContactInfo info="" />
@@ -30,6 +34,7 @@ const InteriorDesign: FC = () => {
           subTitle="Just write to us"
         />
       </ConsultationSection>
+      <ProcessSection />
       <Footer />
     </div>
   );
