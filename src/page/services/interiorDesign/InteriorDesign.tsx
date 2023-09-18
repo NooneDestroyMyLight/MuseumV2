@@ -12,6 +12,7 @@ import ConsultationSection from "../../../components/mainScreenC/consultationSec
 import ContactInfo from "../../../components/mainScreenC/consultationSection/sendQuestions/contactInfo/ContactInfo";
 import SendQuestions from "../../../components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
 
+import FAQSection from "../../../components/interiorDesignC/fAQSection/FAQSection";
 import Footer from "../../../components/layout/footer/Footer";
 import { serviceThesisItemInteriorDesignPageData } from "../../../components/mainScreenC/serviceRangeSection/serviceRange.data";
 import PriceListSection from "../../../components/interiorDesignC/priceListSection/PriceListSection";
@@ -27,6 +28,8 @@ const InteriorDesign: FC = () => {
       <ServiceRangeSection data={serviceThesisItemInteriorDesignPageData} />
       <Gallery />
       <PriceListSection />
+      <ProcessSection />
+      <FAQSection />
       <ConsultationSection>
         <ContactInfo info="" />
         <SendQuestions
@@ -34,7 +37,6 @@ const InteriorDesign: FC = () => {
           subTitle="Just write to us"
         />
       </ConsultationSection>
-      <ProcessSection />
       <Footer />
     </div>
   );

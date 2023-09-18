@@ -1,0 +1,14 @@
+@import "../../../../scss/styles.scss";
+
+$gap: 30px;
+
+.fAQSectionList {
+  justify-content: space-between;
+  row-gap: $gap;
+  .column {
+    display: flex;
+    flex-direction: column;
+    // gap: $gap;
+    width: 600px;
+  }
+}

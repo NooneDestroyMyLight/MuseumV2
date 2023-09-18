@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import style from "./Gallery.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 

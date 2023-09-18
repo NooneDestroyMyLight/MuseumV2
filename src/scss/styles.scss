@@ -4,6 +4,7 @@
   padding: 130px 0;
 }
 
+// <== Mixin START ==>
 @mixin inputGroup($inputWidth, $fontSize, $borderColor) {
   .inputGroup {
     position: relative;
@@ -50,12 +51,16 @@
   line-height: 29px;
 }
 
+@mixin subText($textSize, $line-height) {
+  font-size: $textSize;
+  line-height: $line-height;
+}
+
 @mixin mobileNav($textSize, $textColor) {
   color: $textColor;
   font-weight: bold;
   font-size: $textSize;
   line-height: 29px;
-  // margin-bottom: 22px;
 }
 
 @mixin button($size) {
@@ -97,6 +102,7 @@
     transform: scaleX(1);
   }
 }
+// <== Mixin END ==>
 
 // <== TEXT START ==>
 h1 {
@@ -110,8 +116,12 @@ h1 {
 
 h2 {
   font-family: Gilroy-Bold;
-  font-size: 1.72rem;
-  line-height: 2.07rem;
+
+  font-size: 2.43rem;
+  line-height: 3rem;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 h4 {
@@ -131,6 +141,10 @@ h4 {
 
 .subTitle {
   @include subTitle(24px, $lightColor);
+}
+
+.subText {
+  @include subText(14px, 180%);
 }
 
 // <== TEXT END ==>
