@@ -1,0 +1,14 @@
+@import "../../../scss/styles.scss";
+
+.resultSection {
+  &__Container {
+    .row {
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+  }
+}

@@ -124,6 +124,13 @@ h2 {
   transform-style: preserve-3d;
 }
 
+h3 {
+  font-family: Gilroy-Bold;
+
+  font-size: 1.72rem;
+  line-height: 2.07rem;
+}
+
 h4 {
   font-family: Gilroy-Bold;
 
@@ -145,6 +152,14 @@ h4 {
 
 .subText {
   @include subText(14px, 180%);
+}
+.bold {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+}
+
+.boldItem {
+  font-family: Gilroy-Bold;
 }
 
 // <== TEXT END ==>

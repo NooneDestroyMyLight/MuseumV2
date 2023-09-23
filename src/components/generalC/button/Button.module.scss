@@ -1,0 +1,25 @@
+@import "../../../scss/styles.scss";
+$LightHoverColor: black;
+$LightColor: #efefef;
+
+@mixin sectionButton($mainColor, $textColor, $hoverColor, $textHoverColor) {
+  color: $textColor;
+
+  background-color: $mainColor;
+  transition: 0.2s ease-out;
+  padding: 19px 50px;
+
+  &:hover {
+    background-color: $hoverColor;
+    color: $textHoverColor;
+  }
+}
+
+.resultSectionButton {
+  @include sectionButton($LightColor, black, $LightHoverColor, $lightColor);
+}
+
+.estimateCostSectionButton {
+  width: fit-content;
+  @include sectionButton(white, black, #e5e5e5, black);
+}

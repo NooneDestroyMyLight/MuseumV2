@@ -19,6 +19,18 @@ import PriceListSection from "../../../components/interiorDesignC/priceListSecti
 
 import Gallery from "../../../components/interiorDesignC/galery/Gallery";
 import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
+import ResultSection from "../../../components/interiorDesignC/resultSection/ResultSection";
+
+//
+import EstimateCost from "../../../components/interiorDesignC/estimateCostSection/EstimateCost";
+import { estimateCostSectionData } from "./interiorDesign.data";
+//
+
+import TextBlock from "../../../components/mainScreenC/infoSection/textBlock/TextBlock";
+import { textBlockResultSectionData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
+
+import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
+import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 
 const InteriorDesign: FC = () => {
   return (
@@ -28,6 +40,26 @@ const InteriorDesign: FC = () => {
       <ServiceRangeSection data={serviceThesisItemInteriorDesignPageData} />
       <Gallery />
       <PriceListSection />
+      <ResultSection buttonText="More about construction">
+        <div className={`col-6 p-0 ${style.column}`}>
+          <TextBlock text={textBlockResultSectionData} />
+        </div>
+        <ResultSectionImage
+          firstImageSrc={
+            "../../../../public/InteriorDesignPage/resultSection/realiz-1.jpg"
+          }
+          firstImageLabel={"Visualización"}
+          firstImageAlt="ResultSectionImage"
+          //
+          secondImageSrc={
+            "../../../../public/InteriorDesignPage/resultSection/viz.jpg"
+          }
+          secondImageAlt={"ResultSectionImage"}
+          secondImageLabel={"Implementación"}
+        />
+      </ResultSection>
+      <EstimateCost estimateCostSectionData={estimateCostSectionData} />
+      <DirectorSection paddingTop="20px" />
       <ProcessSection />
       <FAQSection />
       <ConsultationSection>

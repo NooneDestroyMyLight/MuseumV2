@@ -28,7 +28,7 @@ const PriceListTextBlock: FC<PriceListTextBlockProps> = ({
         ))}
       </li>
       <li>
-        <span>{priceCost}/sq.m</span>
+        <h3>{priceCost}$ /sq.m</h3>
       </li>
       <button className={style.button}>order</button>
     </ul>

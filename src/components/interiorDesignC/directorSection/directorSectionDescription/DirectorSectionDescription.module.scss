@@ -1,0 +1,21 @@
+@import "../../../../scss/styles.scss";
+$gap: 30px;
+.directorSectionDescription {
+  height: fit-content;
+
+  align-self: center;
+  background-color: #fff;
+
+  transform: translateX(-80px);
+  padding: 46px 0 46px 43px;
+
+  &__Container {
+    width: calc(100% + 80px);
+    gap: $gap;
+    margin-bottom: 40px;
+
+    .title {
+      @include subTitle(24px, black);
+    }
+  }
+}

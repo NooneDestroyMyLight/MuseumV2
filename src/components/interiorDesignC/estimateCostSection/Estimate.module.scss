@@ -1,0 +1,22 @@
+@import "../../../scss/styles.scss";
+$gap: 30px;
+.estimateCost {
+  background-color: $serviceRangeSectionColor;
+  padding: 75px 0;
+
+  position: relative;
+  &__Container {
+    gap: $gap;
+    color: $lightColor;
+    .discription {
+      width: 420px;
+    }
+  }
+  .img {
+    position: absolute;
+    align-self: center;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+}

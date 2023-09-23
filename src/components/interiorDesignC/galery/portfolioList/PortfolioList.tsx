@@ -8,11 +8,13 @@ export interface PortfolioListProps {}
 
 const PortfolioList: FC<PortfolioListProps> = ({}) => {
   return (
-    <div className={`row  d-flex  ${style.portfolioList}`}>
+    <div className={`${style.portfolioList}`}>
       {portfolioListData.map(item => (
-        <div className={`p-0 col-4 ${style.item}`}>
+        // <div className={"col-4 p-0"}>
+        <div className={`${style.item}`}>
           <PortfolioItem imgSrc={item.imgSrc} />
         </div>
+        // </div>
       ))}
     </div>
   );

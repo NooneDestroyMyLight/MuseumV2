@@ -1,0 +1,13 @@
+@import "../../../scss/styles.scss";
+$gap: 30px;
+.directorSection {
+  padding: 130px 0;
+
+  .directorSection__Container {
+    position: relative;
+
+    .DirectorSectionDescriptionCol {
+      flex: 1;
+    }
+  }
+}

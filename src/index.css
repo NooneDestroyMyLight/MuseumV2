@@ -51,6 +51,7 @@ button {
   line-height: normal;
   overflow: visible;
   text-align: inherit;
+  letter-spacing: inherit;
   cursor: pointer;
   outline: none;
 }
