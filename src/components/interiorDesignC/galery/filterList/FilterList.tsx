@@ -3,20 +3,39 @@ import style from "./FilterList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import FilterItem from "./filterItem/FilterItem";
-import { filterListData } from "./filterList.data";
+//
+import { IPortfolioListData } from "../portfolioList/portfolioList.data";
 
-export interface FilterListProps {}
+export interface FilterListProps {
+  category: string[];
+  //
+  portfilioList: IPortfolioListData[];
+  setPortfilioList: React.Dispatch<React.SetStateAction<IPortfolioListData[]>>;
+}
 
-const FilterList: FC<FilterListProps> = ({}) => {
-  const [currentFilter, setCurrentFilter] = useState<string>("");
+export const allProject: string = "All projects";
+
+const FilterList: FC<FilterListProps> = ({
+  category,
+  portfilioList,
+  setPortfilioList,
+}) => {
+  const [currentFilter, setCurrentFilter] = useState(allProject);
+
   return (
-    <div className={`d-flex ${style.filterList}`}>
-      {filterListData.map(item => (
-        <FilterItem
-          name={item.text}
-          setCurrentFilter={setCurrentFilter}
-          currentFilter={currentFilter}
-        />
+    <div className={`row  d-flex ${style.filterList}`}>
+      {category.map(item => (
+        <div className={`col-2 p-0 ${style.col}`}>
+          <FilterItem
+            name={item}
+            //
+            portfilioList={portfilioList}
+            setPortfilioList={setPortfilioList}
+            //
+            currentFilter={currentFilter}
+            setCurrentFilter={setCurrentFilter}
+          />
+        </div>
       ))}
     </div>
   );

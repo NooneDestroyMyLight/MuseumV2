@@ -1,10 +1,15 @@
 @import "../../../scss/styles.scss";
 
-$gap: 37px;
+$gap: 30px;
 .gallery {
   padding: 130px 0;
 
-  // &__Container {
-  //   // gap: $gap;
-  // }
+  &__Container {
+    // gap: $gap;
+    .portfolioGroup {
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+    }
+  }
 }

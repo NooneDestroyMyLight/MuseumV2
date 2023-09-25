@@ -1,218 +1,241 @@
-interface IPortfolioListData {
+export interface IPortfolioListData {
   imgSrc: string;
   category: string;
   name: string;
 }
 
-export const portfolioListData: IPortfolioListData[] = [
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (1).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (2).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (3).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (4).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (5).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (6).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (7).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (8).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (9).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (10).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (11).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (12).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (13).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (14).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (15).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (16).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (17).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (18).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (19).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (20).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (21).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (22).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (23).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (24).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (25).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (26).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (27).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (28).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (29).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (30).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (31).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (32).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (33).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (34).jpg",
-    category: "",
-    name: "",
-  },
-  {
-    imgSrc:
-      "../../../../../public/InteriorDesignPage/gallery/AllProject/portfolioItem (35).jpg",
-    category: "",
-    name: "",
-  },
+// export const allProjects: string = "All projects";
+
+export const portfolioCategory = [
+  "All projects",
+  "Commercial real estate",
+  "Residential Properties",
+  "Architectural Engineering",
 ];
+
+function shuffleArray(array: IPortfolioListData[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+export const portfolioListData: IPortfolioListData[] = shuffleArray([
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/boutiqueLucir.jpg",
+    category: portfolioCategory[1],
+    name: "'Lucir' boutique",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/boutiqueClothes.jpg",
+    category: portfolioCategory[1],
+    name: "Сlothing boutique",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/restaurant.jpg",
+    category: portfolioCategory[1],
+    name: "Restaurant",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/boutiqueCafe.jpg",
+    category: portfolioCategory[1],
+    name: "Coffe boutique",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/restaurant (2).jpg",
+    category: portfolioCategory[1],
+    name: "Restaurant",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/polDanceStudio.jpg",
+    category: portfolioCategory[1],
+    name: "'Pol Dance' dance studio",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/boutiqueCharizma.jpg",
+    category: portfolioCategory[1],
+    name: "'Charizma' boutique",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/barbershop.jpg",
+    category: portfolioCategory[1],
+    name: "Barbershop",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/fitnessCentre.jpg",
+    category: portfolioCategory[1],
+    name: "Fitness centre",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/t.e.c.jpg",
+    category: portfolioCategory[1],
+    name: "Trading entertainment center",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/restaurant (3).jpg",
+    category: portfolioCategory[1],
+    name: "Restaurant",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/office.jpg",
+    category: portfolioCategory[1],
+    name: "Office",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/tselinogradskayaOffice.jpg",
+    category: portfolioCategory[1],
+    name: "Tselinogradskaya office",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/office (2).jpg",
+    category: portfolioCategory[1],
+    name: "Office",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Commercial real estate/restaurant (4).jpg",
+    category: portfolioCategory[1],
+    name: "Restaurant",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Architectural Engineering/royalClub.jpg",
+    category: portfolioCategory[3],
+    name: "Private house, cottage community “Royal Club”",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Architectural Engineering/royalClub (2).jpg",
+    category: portfolioCategory[3],
+    name: "Private house, cottage community “Royal Club”",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Architectural Engineering/royalClub (3).jpg",
+    category: portfolioCategory[3],
+    name: "Private house, cottage community “Royal Club”",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Architectural Engineering/t.e.c.jpg",
+    category: portfolioCategory[3],
+    name: "Trading entertainment center",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouseValencia.jpg",
+    category: portfolioCategory[2],
+    name: "Private house, Valencia Spain",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouseValencia (2).jpg",
+    category: portfolioCategory[2],
+    name: "Private house, Valencia Spain",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/loftApartment.jpg",
+    category: portfolioCategory[2],
+    name: "Loft Apartments",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/loftApartment (2).jpg",
+    category: portfolioCategory[2],
+    name: "Loft Apartments",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/houseOn Sumskaya.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment in the residential complex 'House on Sumskaya'",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/houseOn Sumskaya (2).jpg",
+    category: portfolioCategory[2],
+    name: "Apartment in the residential complex 'House on Sumskaya'",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/whiteElephant.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment residential complex 'White Elephant'",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/pavlovoPole.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment residential complex 'Pavlovo Pole'",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouseKharkiv.jpg",
+    category: portfolioCategory[2],
+    name: "Private house Kharkov",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouseKharkiv (2).jpg",
+    category: portfolioCategory[2],
+    name: "Private house Kharkov",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouseKharkiv (3).jpg",
+    category: portfolioCategory[2],
+    name: "Private house Kharkov",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/privateHouse.jpg",
+    category: portfolioCategory[2],
+    name: "Private house ",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/residential ComplexFavorit.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment residential сomplex Favorit",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/apartmentResidentialComplex PremierPalace.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment Residential Complex Premier Palace",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/residential ComplexParkovy.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment Residential Complex Parkovy",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/residentialcomplexEuropeCity.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment Residential Complex 'Europe City'",
+  },
+  {
+    imgSrc:
+      "../../../../../public/InteriorDesignPage/gallery/Residential Properties/residentialcomplexVorobyovHouse.jpg",
+    category: portfolioCategory[2],
+    name: "Apartment Residential Complex 'Vorobyov House'",
+  },
+]);

@@ -4,4 +4,8 @@ $gap: 50px;
 
 .filterList {
   gap: $gap;
+
+  .col {
+    width: fit-content;
+  }
 }

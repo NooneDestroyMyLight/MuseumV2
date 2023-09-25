@@ -1,11 +1,20 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import style from "./Gallery.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
 import ButtonArrow from "../../mainScreenC/buttonArrow/ButtonArrow";
 import FilterList from "./filterList/FilterList";
+
 import PortfolioList from "./portfolioList/PortfolioList";
+
+import { motion, AnimatePresence } from "framer-motion";
+
+import {
+  IPortfolioListData,
+  portfolioListData,
+  portfolioCategory,
+} from "./portfolioList/portfolioList.data";
 
 export interface GalleryProps {
   // children?: ReactNode;
@@ -15,6 +24,9 @@ export interface GalleryProps {
 }
 
 const Gallery: FC<GalleryProps> = ({}) => {
+  const [portfilioList, setPortfilioList] =
+    useState<IPortfolioListData[]>(portfolioListData);
+
   return (
     <section className={style.gallery}>
       <div
@@ -29,8 +41,15 @@ const Gallery: FC<GalleryProps> = ({}) => {
             <ButtonArrow text={"Our service"} color="black" />
           </div>
         </TextTitle>
-        <FilterList />
-        <PortfolioList />
+        <div className={style.portfolioGroup}>
+          <FilterList
+            category={portfolioCategory}
+            //
+            setPortfilioList={setPortfilioList}
+            portfilioList={portfolioListData}
+          />
+          <PortfolioList portfilioList={portfilioList} />
+        </div>
       </div>
     </section>
   );

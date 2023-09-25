@@ -3,7 +3,7 @@ interface IfilterListData {
 }
 
 export const filterListData: IfilterListData[] = [
-  { text: " All projects" },
+  { text: "All projects" },
   { text: "Commercial real estate" },
   { text: "Residential Properties" },
   { text: "Architectural Engineering" },

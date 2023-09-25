@@ -1,21 +1,34 @@
 import { FC, useState } from "react";
 import style from "./PortfolioList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { portfolioListData } from "./portfolioList.data";
+
 import PortfolioItem from "./portfolioItem/PortfolioItem";
+import { IPortfolioListData } from "./portfolioList.data";
 
-export interface PortfolioListProps {}
+import { AnimatePresence, motion } from "framer-motion";
 
-const PortfolioList: FC<PortfolioListProps> = ({}) => {
+export interface PortfolioListProps {
+  portfilioList: IPortfolioListData[];
+}
+
+const PortfolioList: FC<PortfolioListProps> = ({ portfilioList }) => {
   return (
-    <div className={`${style.portfolioList}`}>
-      {portfolioListData.map(item => (
-        // <div className={"col-4 p-0"}>
-        <div className={`${style.item}`}>
-          <PortfolioItem imgSrc={item.imgSrc} />
+    <div className="row">
+      <div className="col-auto p-0">
+        <div className={`${style.portfolioList}`}>
+          <AnimatePresence>
+            {portfilioList.map(item => (
+              <PortfolioItem
+                key={item.imgSrc}
+                //
+                imgSrc={item.imgSrc}
+                category={item.category}
+                name={item.name}
+              />
+            ))}
+          </AnimatePresence>
         </div>
-        // </div>
-      ))}
+      </div>
     </div>
   );
 };

@@ -1,12 +1,14 @@
 // @import "../../../../../scss/styles.scss";
-$gap: 1px;
+$gap: 2px;
 .portfolioList {
-  display: grid;
+  overflow: hidden;
+  position: relative;
 
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   align-self: center;
 
-  .item {
-    height: 300px;
-  }
+  row-gap: $gap;
+  column-gap: $gap;
 }
