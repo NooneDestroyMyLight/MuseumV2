@@ -23,7 +23,7 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
   secondImageLabel,
   secondImageAlt,
 }) => {
-  const [currentWidth, setCurrentWidth] = useState();
+  const [currentWidth, setCurrentWidth] = useState<string>("");
   return (
     <div className={`col-6 d-flex flex-column p-0 ${style.resultSectionImage}`}>
       <div className={style.resultSectionImage__Container}>
@@ -50,7 +50,9 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
           value="400"
           aria-label="Percentage of before image show"
           className={style.resizeBar}
-          onInput={(e: any) => setCurrentWidth(e.target.value)}
+          onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setCurrentWidth(e.target.value)
+          }
         />
         <div
           className={style.resizeTumbler}

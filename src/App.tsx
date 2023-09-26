@@ -1,8 +1,8 @@
-import style from "./App.module.scss";
+// import style from "./App.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //PAGE
-import GeneralPage from "./page/generalPage/GeneralPage";
+// import GeneralPage from "./page/generalPage/GeneralPage";
 import InteriorDesign from "./page/services/interiorDesign/InteriorDesign";
 
 // import Button from "react-bootstrap/Button";
