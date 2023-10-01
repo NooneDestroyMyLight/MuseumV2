@@ -23,11 +23,11 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
   secondImageLabel,
   secondImageAlt,
 }) => {
-  const [currentWidth, setCurrentWidth] = useState<string>("");
+  const [currentWidth, setCurrentWidth] = useState<string>("50"); //default value
   return (
     <div className={`col-6 d-flex flex-column p-0 ${style.resultSectionImage}`}>
-      <div className={style.resultSectionImage__Container}>
-        <div className={style.resultSectionImage__Container__Inner}>
+      <div className={style.resultSectionImage__container}>
+        <div className={style.resultSectionImage__container__inner}>
           <img
             src={firstImageSrc}
             alt={firstImageAlt}
@@ -37,7 +37,7 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
           <img
             src={secondImageSrc}
             style={{
-              width: `${currentWidth}px`,
+              width: `${currentWidth}%`,
             }}
             className={`${style.secondImage} ${style.image}`}
           />
@@ -45,9 +45,8 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
         <input
           type="range"
           min="0"
-          max="800"
+          max="100"
           step="0.01"
-          value="400"
           aria-label="Percentage of before image show"
           className={style.resizeBar}
           onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -57,12 +56,12 @@ const ResultSectionImage: FC<ResultSectionImageProps> = ({
         <div
           className={style.resizeTumbler}
           aria-hidden="true"
-          style={{ left: `${currentWidth}px` }}
+          style={{ left: `${currentWidth}%` }}
         ></div>
         <ul
           className={style.resizeTumblerButt}
           aria-hidden="true"
-          style={{ left: `${currentWidth}px` }}
+          style={{ left: `${currentWidth}%` }}
         >
           <li className={style.leftIcon}></li>
           <li className={style.rightIcon}></li>

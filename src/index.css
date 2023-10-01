@@ -136,3 +136,16 @@ textarea {
     width: 328px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  width: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

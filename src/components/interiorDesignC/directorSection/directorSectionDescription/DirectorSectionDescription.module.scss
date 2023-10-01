@@ -9,13 +9,23 @@ $gap: 30px;
   transform: translateX(-80px);
   padding: 46px 0 46px 43px;
 
-  &__Container {
+  &__container {
     width: calc(100% + 80px);
     gap: $gap;
     margin-bottom: 40px;
 
     .title {
       @include subTitle(24px, black);
+    }
+  }
+}
+@media (max-width: 920px) {
+  .directorSectionDescription {
+    transform: translateX(0);
+    padding: 0;
+
+    &__container {
+      width: 100%;
     }
   }
 }

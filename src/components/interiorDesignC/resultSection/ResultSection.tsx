@@ -29,15 +29,8 @@ const ResultSection: FC<ResultSectionProps> = ({
           backText={"result"}
           colorStyle="textTitleLightStyle"
         />
-        <div className={`row ${style.row}`}>{children && children}</div>
-        <div className="row">
-          <div className={`col-auto p-0 ${style.button}`}>
-            <Button
-              buttonText={"More about construction"}
-              styles={"resultSectionButton"}
-            />
-          </div>
-        </div>
+        <div>{children && children}</div>
+        <div className="row"></div>
       </div>
     </section>
   );

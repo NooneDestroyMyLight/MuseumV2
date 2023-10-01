@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface ArrowButtonIconProps {
+export interface ArrowButtonIconProps {
   color: string;
   width: string;
   height: string;

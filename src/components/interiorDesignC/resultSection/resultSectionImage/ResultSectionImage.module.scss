@@ -3,15 +3,16 @@
 $position: 50%;
 .resultSectionImage {
   width: 800px;
+
   height: 100%;
 
-  &__Container {
+  &__container {
     width: 100%;
     height: 575px;
     position: relative;
 
     overflow: hidden;
-    &__Inner {
+    &__inner {
       width: 100%;
       height: 100%;
 
@@ -57,6 +58,10 @@ $position: 50%;
       z-index: 2;
     }
     .resizeTumblerButt {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       width: 38px;
       height: 38px;
 
@@ -73,10 +78,6 @@ $position: 50%;
 
       top: 50%;
       position: absolute;
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
 
       .leftIcon {
         width: 8px;
@@ -99,4 +100,32 @@ $position: 50%;
       }
     }
   }
+}
+
+@mixin resultSecitonImageSize($width, $height) {
+  .resultSectionImage {
+    width: $width;
+    &__container {
+      height: $height;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  @include resultSecitonImageSize(500px, 360px);
+}
+@media (max-width: 920px) {
+  @include resultSecitonImageSize(100%, 600px);
+  //100%,600px
+}
+@media (max-width: 850px) {
+  //720px
+  @include resultSecitonImageSize(100%, 520px);
+}
+@media (max-width: 740px) {
+  //720px
+  @include resultSecitonImageSize(100%, 460px);
+}
+@media (max-width: 660px) {
+  @include resultSecitonImageSize(100%, 240px);
 }

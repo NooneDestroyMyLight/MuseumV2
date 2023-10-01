@@ -31,6 +31,7 @@ import { textBlockResultSectionData } from "../../../components/interiorDesignC/
 
 import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
+import Button from "../../../components/generalC/button/Button";
 
 const InteriorDesign: FC = () => {
   return (
@@ -38,28 +39,34 @@ const InteriorDesign: FC = () => {
       <FormBlock title={"Interior Design"} buttonText="To get a consultation" />
       <RuningBanner />
       <ServiceRangeSection data={serviceThesisItemInteriorDesignPageData} />
-      <Gallery />
-      <PriceListSection />
+      <Gallery showButtonText="Show more" />
+      {/* <PriceListSection /> */}
       <ResultSection buttonText="More about construction">
-        <div className={`col-6 p-0 ${style.column}`}>
-          <TextBlock text={textBlockResultSectionData} />
-        </div>
-        <ResultSectionImage
-          firstImageSrc={
-            "../../../../public/InteriorDesignPage/resultSection/realiz-1.jpg"
-          }
-          firstImageLabel={"Visualización"}
-          firstImageAlt="ResultSectionImage"
-          //
-          secondImageSrc={
-            "../../../../public/InteriorDesignPage/resultSection/viz.jpg"
-          }
-          secondImageAlt={"ResultSectionImage"}
-          secondImageLabel={"Implementación"}
-        />
+        <ul className={`row ${style.resultSection__hoc__container}`}>
+          <li className={`col-6 p-0 ${style.column}`}>
+            <TextBlock text={textBlockResultSectionData} />
+            <Button
+              buttonText={"More about construction"}
+              styles={"resultSectionButton"}
+            />
+          </li>
+          <ResultSectionImage
+            firstImageSrc={
+              "../../../../public/InteriorDesignPage/resultSection/realiz-1.jpg"
+            }
+            firstImageLabel={"Visualización"}
+            firstImageAlt="ResultSectionImage"
+            //
+            secondImageSrc={
+              "../../../../public/InteriorDesignPage/resultSection/viz.jpg"
+            }
+            secondImageAlt={"ResultSectionImage"}
+            secondImageLabel={"Implementación"}
+          />
+        </ul>
       </ResultSection>
-      <EstimateCost estimateCostSectionData={estimateCostSectionData} />
-      <DirectorSection paddingTop="20px" />
+      {/* <EstimateCost estimateCostSectionData={estimateCostSectionData} /> */}
+      {/* <DirectorSection styles={{ paddingTop: "20px" }} /> */}
       <ProcessSection />
       <FAQSection />
       <ConsultationSection>

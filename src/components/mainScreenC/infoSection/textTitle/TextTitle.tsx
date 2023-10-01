@@ -28,7 +28,7 @@ const TextTitle: FC<TextTitleProps> = ({
               <p>{item}</p>
             ))}
           </h2>
-          <div className="">
+          <div>
             {children && children}
             {/* <ButtonArrow text={buttonText} color="black" /> */}
           </div>

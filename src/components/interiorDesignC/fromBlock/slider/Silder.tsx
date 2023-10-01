@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { sliderData } from "./slider.data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SliderCounterAndButton from "./SliderCounterAndButton/SliderCounterAndButton";
+
+import SliderCounterAndButton from "./sliderCounterAndButton/SliderCounterAndButton";
 
 export interface SilderProps {}
 
@@ -14,10 +15,13 @@ const Silder: FC<SilderProps> = ({}) => {
   return (
     <Swiper
       slidesPerView={1}
+      loop={true}
       //class
       className={`col-auto p-0 ${style.slider}`}
       wrapperClass={style.slider__Wrapper}
-      onSlideChange={swiper => setCurrentSlide(swiper.activeIndex + 1)}
+      onSlideChange={swiper => {
+        setCurrentSlide(swiper.realIndex + 1);
+      }}
     >
       {sliderData.map(item => (
         <SwiperSlide key={item} className={style.slider__Wrapper__Slide}>

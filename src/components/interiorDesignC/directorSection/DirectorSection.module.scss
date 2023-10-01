@@ -3,11 +3,22 @@ $gap: 30px;
 .directorSection {
   padding: 130px 0;
 
-  .directorSection__Container {
+  &__container {
     position: relative;
 
     .DirectorSectionDescriptionCol {
       flex: 1;
+    }
+  }
+}
+@media (max-width: 920px) {
+  .directorSection {
+    &__container {
+      flex-direction: column;
+
+      .DirectorSectionDescriptionCol {
+        width: 100%;
+      }
     }
   }
 }

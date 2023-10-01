@@ -9,17 +9,24 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export interface PortfolioListProps {
   portfilioList: IPortfolioListData[];
+  showMore: boolean;
 }
 
-const PortfolioList: FC<PortfolioListProps> = ({ portfilioList }) => {
+const PortfolioList: FC<PortfolioListProps> = ({ portfilioList, showMore }) => {
   return (
-    <div className="row">
-      <div className="col-auto p-0">
-        <div className={`${style.portfolioList}`}>
+    <div className={`row ${style.portfolioList}`}>
+      <div className="col p-0 ">
+        <div
+          className={`${style.portfolioList__container} ${
+            showMore && style.showMore
+          }`}
+        >
           <AnimatePresence>
-            {portfilioList.map(item => (
+            {portfilioList.map((item, index) => (
               <PortfolioItem
+                showMore={showMore}
                 key={item.imgSrc}
+                index={index}
                 //
                 imgSrc={item.imgSrc}
                 category={item.category}

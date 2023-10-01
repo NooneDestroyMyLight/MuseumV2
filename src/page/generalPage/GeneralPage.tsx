@@ -32,7 +32,10 @@ const GeneralPage: FC = () => {
         buttonText={"More about us"}
         backText={"about"}
       >
-        <TextBlock text={textBlockGeneralPageData} />
+        <TextBlock
+          text={textBlockGeneralPageData}
+          styles={"textBlock__InfoSectionBlock"}
+        />
         <div className={` d-flex flex-column ${style.summaryBlocksContainer}`}>
           <SummeryBlock
             title="Residential property"

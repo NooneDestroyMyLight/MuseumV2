@@ -45,9 +45,9 @@ const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
   }, []);
 
   return (
-    <>
+    <div className={style.formBlockWithHeader}>
       <Header isSticky={isSticky} mainColor={"black"} isStickyColor={"black"} />
-      <div ref={divRef} className={`container-fluid  ${style.formBlock}`}>
+      <div ref={divRef} className={`container-fluid ${style.formBlock}`}>
         <div
           className={`row p-0 d-flex justify-content-between ${style.formBlock__Container}`}
         >
@@ -66,7 +66,7 @@ const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
           <Silder />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -15,7 +15,7 @@ const DirectorSectionDescription: FC<DirectorSectionDiscriptionProps> = ({
   return (
     <div className={style.directorSectionDescription}>
       <div
-        className={`d-flex flex-column ${style.directorSectionDescription__Container}`}
+        className={`d-flex flex-column ${style.directorSectionDescription__container}`}
       >
         <h4 className={style.title}>
           {title.map(item => (

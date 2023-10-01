@@ -8,19 +8,16 @@ import { directorSectionDesription } from "./directorSectionDesription.data";
 import Video from "./video/Video";
 
 interface DirectorSectionProps {
-  paddingTop: string;
+  styles: React.CSSProperties;
 }
 
-const DirectorSection: FC<DirectorSectionProps> = ({ paddingTop }) => {
+const DirectorSection: FC<DirectorSectionProps> = ({ styles }) => {
   return (
-    <section
-      style={{ paddingTop: paddingTop }}
-      className={`${style.directorSection}`}
-    >
+    <section style={styles} className={`${style.directorSection}`}>
       <div className={`container-fluid `}>
-        <ul className={`row d-flex ${style.directorSection__Container}`}>
-          <li className={`col-auto p-0 `}>
-            <Video width={"564px"} height={"571px"} />
+        <ul className={`row d-flex ${style.directorSection__container}`}>
+          <li className={`col-6 p-0 `}>
+            <Video />
           </li>
           <li
             className={`col-6 p-0 align-self-center ${style.DirectorSectionDescriptionCol}`}

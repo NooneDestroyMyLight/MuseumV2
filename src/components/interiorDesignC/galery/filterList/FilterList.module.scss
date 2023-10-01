@@ -1,9 +1,10 @@
 @import "../../../../scss/styles.scss";
 
-$gap: 50px;
+// $gap: 50px;
 
 .filterList {
-  gap: $gap;
+  gap: 30px;
+  display: flex;
 
   .col {
     width: fit-content;

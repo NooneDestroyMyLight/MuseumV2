@@ -1,12 +1,17 @@
 @import "../../../scss/styles.scss";
-.formBlock {
-  padding-top: 100px;
-  &__Container {
-    &__Discription {
-      width: 390px;
-      gap: 28px;
-      .button {
-        @include button(100%);
+.formBlockWithHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .formBlock {
+    padding-top: 100px;
+    &__Container {
+      &__Discription {
+        width: 390px;
+        gap: 28px;
+        .button {
+          @include button(100%);
+        }
       }
     }
   }
@@ -16,4 +21,17 @@ h1 {
   font-weight: bold;
   font-size: 40px;
   line-height: 48px;
+}
+
+@media (max-width: 920px) {
+  .formBlockWithHeader {
+    .formBlock {
+      padding-top: 100px;
+      &__Container {
+        &__Discription {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

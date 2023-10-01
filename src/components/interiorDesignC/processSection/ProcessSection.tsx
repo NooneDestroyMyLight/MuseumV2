@@ -9,7 +9,9 @@ export interface ProcessSectionProps {}
 const ProcessSection: FC<ProcessSectionProps> = ({}) => {
   return (
     <div className={`${style.processSection} ${style.section}`}>
-      <section className={`d-flex flex-column container-fluid`}>
+      <section
+        className={`d-flex flex-column container-fluid ${style.processSection__container}`}
+      >
         <TextTitle
           title={["How we", "are working"]}
           backText={"process"}
