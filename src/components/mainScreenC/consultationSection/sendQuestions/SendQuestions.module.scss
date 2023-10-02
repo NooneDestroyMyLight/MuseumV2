@@ -2,43 +2,54 @@
 
 $gap: 25px;
 
-.SendQuestionsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-
-  color: white;
-  width: 600px;
-
-  .title {
+.sendQuestions {
+  .SendQuestionsContainer {
     display: flex;
     flex-direction: column;
-  }
+    gap: 35px;
 
-  .inputs {
-    display: flex;
-    gap: $gap;
-    width: 100%;
-  }
+    color: white;
+    width: 600px;
 
-  //calc(50% - $gap / 2)
-  .button {
-    @include button(calc(50% - $gap / 2));
+    .title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inputs {
+      display: flex;
+      gap: $gap;
+      width: 100%;
+    }
+
+    .button {
+      @include button(calc(50% - $gap / 2));
+    }
   }
 }
 @media (max-width: 1050px) {
-  .SendQuestionsContainer {
-    width: 500px;
+  .sendQuestions {
+    .SendQuestionsContainer {
+      width: 500px;
+    }
   }
 }
 @media (max-width: 850px) {
-  .SendQuestionsContainer {
-    width: 100%;
-    .inputs {
-      flex-direction: column;
-    }
-    .button {
+  .sendQuestions {
+    .SendQuestionsContainer {
       width: 100%;
+      .inputs {
+        flex-direction: column;
+      }
+      .button {
+        width: 100%;
+      }
     }
+  }
+}
+
+@media (max-width: 660px) {
+  .sendQuestions {
+    width: 100%;
   }
 }

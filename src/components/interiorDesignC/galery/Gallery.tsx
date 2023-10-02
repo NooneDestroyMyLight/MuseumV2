@@ -18,6 +18,7 @@ import {
 import ShowMoreButton from "./showMoreButton/ShowMoreButton";
 import Button from "../../generalC/button/Button";
 import ArrowButtonIcon from "../../../assets/arrowButtonIcon/ArrowButtonIcon";
+import TextTitleWithArrowButton from "../../../HOC/textTitleWithArrowButton/TextTitleWithArrowButton";
 
 export interface GalleryProps {
   // children?: ReactNode;
@@ -51,6 +52,15 @@ const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
             <ButtonArrow text={"Our service"} color="black" />
           </div>
         </TextTitle>
+        {/* <TextTitleWithArrowButton
+          textTitleStyle="textTitleLightStyle"
+          //
+          title={["Our", "project"]}
+          backText={"Cases"}
+          //
+          buttonText="Our service"
+          buttonColor="black"
+        /> */}
         <div className={style.portfolioGroup}>
           <FilterList
             //
@@ -73,7 +83,6 @@ const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
             />
           </li>
         </ul>
-        {/* <ShowMoreButton setShowMore={setShowMore} showMore={} showButtonText={showButtonText}/> */}
       </div>
     </section>
   );

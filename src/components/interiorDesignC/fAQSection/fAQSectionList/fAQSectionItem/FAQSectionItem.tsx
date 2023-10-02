@@ -21,13 +21,14 @@ const FAQSectionItem: FC<FAQSectionItemProps> = ({
   };
 
   return (
-    <ul onClick={onItemClick} className={`${style.fAQSectionItem}`}>
+    <ul className={`${style.fAQSectionItem}`}>
       <li
         className={`
-        ${style.fAQSectionItem__Container} 
+        ${style.fAQSectionItem__container} 
         ${isDiscOpen === title && style.fAQSectionItem__Active}
         `}
         data-content={isDiscOpen === title ? "+" : "-"}
+        onClick={onItemClick}
       >
         <label className={style.title}>{title}</label>
       </li>

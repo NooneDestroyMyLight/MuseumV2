@@ -46,13 +46,24 @@ const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
 
   return (
     <div className={style.formBlockWithHeader}>
-      <Header isSticky={isSticky} mainColor={"black"} isStickyColor={"black"} />
-      <div ref={divRef} className={`container-fluid ${style.formBlock}`}>
+      <Header
+        HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
+        HeaderNavDropdownNotStickyStyle={"stickydHeaderNavItem"}
+        //
+        notStickedMobileBackground={"white"}
+        isStickyMobileBackground={"white"}
+        //
+        isSticky={isSticky}
+        //
+        textColor={"black"}
+        isStickyTextColor={"black"}
+      />
+      <div ref={divRef} className={`container-fluid  ${style.formBlock}`}>
         <div
-          className={`row p-0 d-flex justify-content-between ${style.formBlock__Container}`}
+          className={`row p-0 d-flex justify-content-between ${style.formBlock__container}`}
         >
           <div
-            className={`col-auto p-0 d-flex flex-column ${style.formBlock__Container__Discription}`}
+            className={`col-auto p-0 d-flex flex-column ${style.formBlock__container__discription}`}
           >
             <h1>{title}</h1>
             <TextBlock text={textBlockInteriorDesignData} />

@@ -7,11 +7,11 @@ $gap: 30px;
   padding: 75px 0;
 
   position: relative;
-  &__Container {
+  &__container {
     gap: $gap;
     color: $lightColor;
-    .discription {
-      width: 420px;
+    &__discription {
+      max-width: 420px;
     }
   }
   .img {
@@ -45,6 +45,11 @@ $gap: 30px;
 
 @media (max-width: 850px) {
   .estimateCost {
+    &__container {
+      &__button {
+        width: 100%;
+      }
+    }
     .img {
       display: none;
     }

@@ -32,6 +32,8 @@ import { textBlockResultSectionData } from "../../../components/interiorDesignC/
 import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 import Button from "../../../components/generalC/button/Button";
+import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
+import Video from "../../../components/generalC/video/Video";
 
 const InteriorDesign: FC = () => {
   return (
@@ -65,8 +67,8 @@ const InteriorDesign: FC = () => {
           />
         </ul>
       </ResultSection>
-      {/* <EstimateCost estimateCostSectionData={estimateCostSectionData} /> */}
-      {/* <DirectorSection styles={{ paddingTop: "20px" }} /> */}
+      <EstimateCost estimateCostSectionData={estimateCostSectionData} />
+      <DirectorSection styles={{ paddingTop: "30px" }} />
       <ProcessSection />
       <FAQSection />
       <ConsultationSection>
@@ -77,6 +79,7 @@ const InteriorDesign: FC = () => {
         />
       </ConsultationSection>
       <Footer />
+      <ModelWindow><Video/></ModelWindow>
     </div>
   );
 };

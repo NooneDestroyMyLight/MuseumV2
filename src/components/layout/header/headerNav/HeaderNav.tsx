@@ -10,6 +10,12 @@ import CloseIcon from "../../../../assets/closeIcon/CloseIcon";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface HeaderNavProps {
+  HeaderNavDropdownIsStickyStyle: string;
+  HeaderNavDropdownNotStickyStyle: string;
+  //
+  isStickyColor: string;
+  notStickyColor: string;
+  //
   textColor: string;
   isSticky: boolean;
   //
@@ -18,6 +24,12 @@ interface HeaderNavProps {
 }
 
 const HeaderNav: FC<HeaderNavProps> = ({
+  HeaderNavDropdownIsStickyStyle,
+  HeaderNavDropdownNotStickyStyle,
+  //
+  isStickyColor,
+  notStickyColor,
+  //
   textColor,
   isSticky,
   //
@@ -39,6 +51,9 @@ const HeaderNav: FC<HeaderNavProps> = ({
       <div className={`${style.linkGroup} ${navToggle && style.showLinkGroup}`}>
         {headerNavData.map(item => (
           <HeaderNavItem
+            isStickyStyle={HeaderNavDropdownIsStickyStyle}
+            notStickyStyle={HeaderNavDropdownNotStickyStyle}
+            //
             navItem={item}
             textColor={textColor}
             isSticky={isSticky}
@@ -54,10 +69,10 @@ const HeaderNav: FC<HeaderNavProps> = ({
           <CloseIcon
             width={"30"}
             height={"30"}
-            color={isSticky ? "black" : "white"}
+            color={isSticky ? isStickyColor : notStickyColor}
           />
         ) : (
-          <BurgerMenuIcon color={isSticky ? "black" : "white"} />
+          <BurgerMenuIcon color={isSticky ? isStickyColor : notStickyColor} />
         )}
       </button>
     </>

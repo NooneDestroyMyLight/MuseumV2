@@ -13,17 +13,24 @@ const EstimateCost: FC<EstimateCostProps> = ({ estimateCostSectionData }) => {
 
   return (
     <section className={`${style.estimateCost} `}>
-      <div
-        className={`d-flex flex-column container-fluid p-0 ${style.estimateCost__Container}`}
+      <ul
+        className={`d-flex flex-column container-fluid p-0 ${style.estimateCost__container}`}
       >
         <h2>
           {title.map(item => (
             <p>{item}</p>
           ))}
         </h2>
-        <p className={style.discription}>{discription}</p>
-        <Button buttonText={buttonText} styles={"estimateCostSectionButton"} />
-      </div>
+        <p className={style.estimateCost__container__discription}>
+          {discription}
+        </p>
+        <li className={style.eestimateCost__container__button}>
+          <Button
+            buttonText={buttonText}
+            styles={"estimateCostSectionButton"}
+          />
+        </li>
+      </ul>
       <img
         src="../../../../public/InteriorDesignPage/estimateCostSection/10en.png"
         alt="estimateCostImg"

@@ -32,10 +32,19 @@ $LightColor: #efefef;
 }
 //resultSectionButton END
 
+//estimateCostSectionButton START
 .estimateCostSectionButton {
+  display: flex;
   width: fit-content;
   @include sectionButton(white, black, #e5e5e5, black);
 }
+@media (max-width: 850px) {
+  .estimateCostSectionButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+//estimateCostSectionButton END
 
 .cursor {
   cursor: pointer;
