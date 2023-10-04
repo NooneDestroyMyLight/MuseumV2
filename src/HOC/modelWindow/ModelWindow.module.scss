@@ -11,8 +11,18 @@
   background-color: rgb(0, 0, 0, 0.5);
 
   position: fixed;
-  top: 0;
+  inset: 0;
   z-index: 100;
+
+  visibility: hidden;
+
+  &__content {
+    display: flex;
+  }
+}
+
+.modelWindow__open {
+  visibility: visible;
 }
 
 // <HeaderNavItem> end

@@ -79,7 +79,6 @@ const InteriorDesign: FC = () => {
         />
       </ConsultationSection>
       <Footer />
-      <ModelWindow><Video/></ModelWindow>
     </div>
   );
 };

@@ -4,7 +4,9 @@
 .priceListSection {
   background-color: $priceListSection;
   padding: 130px 0;
-  &__Container {
+  &__container {
     width: 100%;
+    gap: 30px;
+    overflow-x: scroll;
   }
 }

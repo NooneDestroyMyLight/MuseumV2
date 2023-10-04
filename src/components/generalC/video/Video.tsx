@@ -1,20 +1,28 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import style from "./Video.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+//
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
 
 interface VideoProps {
-  isOpen: boolean;
+  videoSrc?: string;
 }
 
-const Video: FC<VideoProps> = ({ isOpen }) => {
+const Video: FC<VideoProps> = ({}) => {
   return (
-    <div className={`${style.video}`}>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/AD2aftdD_fA?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Fservices%2Finterior-design%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=4"
-        className={style.video__item}
-      ></iframe>
+    <div className={style.video}>
+      <Plyr
+        source={{
+          type: "video",
+          sources: [
+            {
+              src: "https://www.youtube.com/watch?v=AD2aftdD_fA&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fes%2Finterior-design%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark",
+              provider: "youtube",
+            },
+          ],
+        }}
+      />
     </div>
   );
 };

@@ -8,7 +8,7 @@ import FAQSectionItem from "./fAQSectionItem/FAQSectionItem";
 export interface FAQSectionListProps {}
 
 const FAQSectionList: FC<FAQSectionListProps> = ({}) => {
-  const [isDiscOpen, setDiscOpen] = useState<string>("");
+  const [isDiscOpen, setDiscOpen] = useState<string>(fAQSectionData[0].title);
   return (
     <div className={`row ${style.fAQSectionList}`}>
       <div className={`col-6 p-0 ${style.column}`}>

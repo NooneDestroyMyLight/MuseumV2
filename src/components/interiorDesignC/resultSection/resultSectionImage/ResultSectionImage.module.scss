@@ -5,100 +5,61 @@ $position: 50%;
   width: 800px;
 
   height: 100%;
+}
 
-  &__container {
-    width: 100%;
-    height: 575px;
-    position: relative;
+.resizeTumbler {
+  width: 2px;
+  height: 100%;
 
-    overflow: hidden;
-    &__inner {
-      width: 100%;
-      height: 100%;
+  background-color: white;
+  pointer-events: none;
 
-      position: relative;
+  transform: translateX(-50%);
 
-      .image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.resizeTumblerButt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      .secondImage {
-        object-position: left;
+  width: 38px;
+  height: 38px;
 
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-      }
-    }
+  cursor: pointer;
+  pointer-events: none;
 
-    .resizeBar {
-      opacity: 0;
-      inset: 0;
-      z-index: 100;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 
-      width: 100%;
-      height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-sizing: content-box;
 
-      position: absolute;
-      cursor: pointer;
-    }
-    .resizeTumbler {
-      width: 2px;
-      height: 100%;
+  top: 50%;
+  position: absolute;
 
-      background-color: white;
-      pointer-events: none;
+  .leftIcon {
+    width: 8px;
+    height: 8px;
 
-      transform: translateX(-50%);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
 
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-    }
-    .resizeTumblerButt {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    transform: rotate(45deg);
+    margin-left: 3px;
+  }
+  .rightIcon {
+    width: 8px;
+    height: 8px;
 
-      width: 38px;
-      height: 38px;
-
-      cursor: pointer;
-      pointer-events: none;
-
-      transform: translate(-50%, -50%);
-      z-index: 2;
-
-      background-color: white;
-      border-radius: 50%;
-      border: 3px solid white;
-      box-sizing: content-box;
-
-      top: 50%;
-      position: absolute;
-
-      .leftIcon {
-        width: 8px;
-        height: 8px;
-
-        border-left: 2px solid black;
-        border-bottom: 2px solid black;
-
-        transform: rotate(45deg);
-        margin-left: 3px;
-      }
-      .rightIcon {
-        width: 8px;
-        height: 8px;
-
-        border-right: 2px solid black;
-        border-top: 2px solid black;
-        transform: rotate(45deg);
-        margin-right: 3px;
-      }
-    }
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    transform: rotate(45deg);
+    margin-right: 3px;
   }
 }
 
