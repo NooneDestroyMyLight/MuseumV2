@@ -10,3 +10,9 @@ export const textBlockInteriorDesignData: string[] = [
 
   "All the little things are important to us - from a small screw on the electrical panel to a comfortable sofa in your living room! Details play a major role in the quality of the work performed.",
 ];
+
+/////////// ConstructionAndRenovationPage
+
+export const textBlockConstructionAndRenovationPageData: string[] = [
+  "We take on all the pain of repairs and the difficulties of communicating with contractors. We know how to implement any design project without missing deadlines and without additional estimates.",
+];

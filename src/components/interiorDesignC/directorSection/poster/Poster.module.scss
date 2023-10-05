@@ -1,17 +1,12 @@
-.poster {
-  position: relative;
-  width: 564px;
-  height: 571px;
-
-  display: grid;
-  &__item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  &__playButton {
-    width: 121px;
-    height: 121px;
+@mixin playButton(
+  $playbuttonSize,
+  $secondCircleSize,
+  $hoveredCircle,
+  $iconSize
+) {
+  .poster__playButton {
+    width: $playbuttonSize; //121px
+    height: $playbuttonSize;
 
     justify-self: center;
     align-self: center;
@@ -27,16 +22,16 @@
 
     &:hover {
       &::before {
-        width: 108px;
-        height: 108px;
+        width: ($hoveredCircle); //108px
+        height: ($hoveredCircle);
         transition: all ease-in-out 0.2s;
       }
     }
 
     &:before {
       content: "";
-      width: 98px;
-      height: 98px;
+      width: $secondCircleSize; //98px
+      height: $secondCircleSize;
 
       justify-self: center;
       align-self: center;
@@ -48,8 +43,8 @@
     }
     &:after {
       content: "";
-      width: 47px;
-      height: 47px;
+      width: $iconSize; //47px
+      height: $iconSize;
 
       position: absolute;
 
@@ -67,10 +62,49 @@
   }
 }
 
+.poster {
+  position: relative;
+  width: 564px;
+  height: 571px;
+
+  display: grid;
+  &__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //
+    position: relative;
+  }
+}
+
 @media (max-width: 920px) {
   .poster {
+    justify-self: center;
+
+    width: 100%;
+    height: auto;
+  }
+}
+//DirectorSection
+.directorSectionSize {
+  width: 564px;
+  height: 571px;
+
+  @include playButton(121px, 98px, 108px, 47px);
+}
+@media (max-width: 920px) {
+  .directorSectionSize {
     justify-self: center;
     width: 100%;
     height: auto;
   }
+}
+
+//FormBlockSize
+.formBlockSize {
+  width: 730px;
+  height: 100%;
+  align-self: center;
+
+  @include playButton(276px, 210px, 240px, 75px);
 }

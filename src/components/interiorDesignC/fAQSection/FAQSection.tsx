@@ -5,9 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
 import FAQSectionList from "./fAQSectionList/FAQSectionList";
 
-export interface FAQSectionProps {}
+import { IFAQSectionData } from "./fAQSection.data";
+export interface FAQSectionProps {
+  FAQSectionListData: IFAQSectionData[];
+}
 
-const FAQSection: FC<FAQSectionProps> = ({}) => {
+const FAQSection: FC<FAQSectionProps> = ({ FAQSectionListData }) => {
   return (
     <section className={`${style.fAQSection} ${style.section}`}>
       <div className={`container-fluid `}>
@@ -16,7 +19,7 @@ const FAQSection: FC<FAQSectionProps> = ({}) => {
           backText={"FAQ"}
           colorStyle="textTitleLightStyle"
         />
-        <FAQSectionList />
+        <FAQSectionList FAQSectionListData={FAQSectionListData} />
       </div>
     </section>
   );

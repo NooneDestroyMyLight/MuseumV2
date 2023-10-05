@@ -1,12 +1,11 @@
 import { FC } from "react";
 
-import style from "./InteriorDesign.module.scss";
+import style from "./ConstructionAndRenovation.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import FormBlock from "../../../components/interiorDesignC/fromBlock/FormBlock";
-import InteriorDesignFromBlockChild from "../../../components/interiorDesignC/fromBlock/children/interiorDesignFromBlockChild/InteriorDesignFromBlockChild";
-import { textBlockInteriorDesignData } from "../../../components/mainScreenC/infoSection/textBlock/textBlock.data";
-//
+import { textBlockConstructionAndRenovationPageData } from "../../../components/mainScreenC/infoSection/textBlock/textBlock.data";
+
 import RuningBanner from "../../../components/mainScreenC/runingBanner/RuningBanner";
 import ServiceRangeSection from "../../../components/mainScreenC/serviceRangeSection/ServiceRangeSection";
 
@@ -15,52 +14,56 @@ import ContactInfo from "../../../components/mainScreenC/consultationSection/sen
 import SendQuestions from "../../../components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
 
 import FAQSection from "../../../components/interiorDesignC/fAQSection/FAQSection";
-import Footer from "../../../components/layout/footer/Footer";
-import { serviceThesisItemInteriorDesignPageData } from "../../../components/mainScreenC/serviceRangeSection/serviceRange.data";
-import PriceListSection from "../../../components/interiorDesignC/priceListSection/PriceListSection";
+import { serviceThesisItemConstructionAndRenovationPageData } from "../../../components/mainScreenC/serviceRangeSection/serviceRange.data";
+import { fAQSectionConstructionAndRenovationData } from "../../../components/interiorDesignC/fAQSection/fAQSection.data";
 
+//
 import Gallery from "../../../components/interiorDesignC/galery/Gallery";
 import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
 import ResultSection from "../../../components/interiorDesignC/resultSection/ResultSection";
-
+import { estimateCostSectionData } from "../interiorDesign/interiorDesign.data";
 //
 import EstimateCost from "../../../components/interiorDesignC/estimateCostSection/EstimateCost";
-import { estimateCostSectionData } from "./interiorDesign.data";
+import ConstructionAndRenovationFormBlockChild from "../../../components/interiorDesignC/fromBlock/children/constructionAndRenovationFormBlockChild/ConstructionAndRenovationFormBlockChild";
 //
-
 import TextBlock from "../../../components/mainScreenC/infoSection/textBlock/TextBlock";
-import { textBlockResultSectionData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
+import { textBlockResultSectionConstructionAndRenovationData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
 
 import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 import Button from "../../../components/generalC/button/Button";
-import { fAQSectionInteriorDesignData } from "../../../components/interiorDesignC/fAQSection/fAQSection.data";
 
-const InteriorDesign: FC = () => {
+import Footer from "../../../components/layout/footer/Footer";
+const ConstructionAndRenovation: FC = () => {
   return (
     <div>
       <FormBlock>
-        <InteriorDesignFromBlockChild
-          title={"Interior Design"}
-          buttonText="To get a consultation"
-          textBlockData={textBlockInteriorDesignData}
+        <ConstructionAndRenovationFormBlockChild
+          title="Construction
+          and repairs"
+          //
+          textBlockData={textBlockConstructionAndRenovationPageData}
+          buttonArrowText="Price for construction work"
+          //
+          buttonText="Get consultation"
         />
       </FormBlock>
       <RuningBanner />
       <ServiceRangeSection
-        data={serviceThesisItemInteriorDesignPageData}
-        className="interiorDesign"
+        data={serviceThesisItemConstructionAndRenovationPageData}
+        className="constructionAndRenovation"
         //
-        discriptionClassName="discription__interiorDesign"
+        discriptionClassName="discription__constructionAndRenovation"
       />
       <Gallery showButtonText="Show more" />
-      <PriceListSection />
       <ResultSection>
         <ul className={`row ${style.resultSection__hoc__container}`}>
           <li className={`col-6 p-0 ${style.column}`}>
-            <TextBlock text={textBlockResultSectionData} />
+            <TextBlock
+              text={textBlockResultSectionConstructionAndRenovationData}
+            />
             <Button
-              buttonText={"More about construction"}
+              buttonText={"More about design"}
               styles={"resultSectionButton"}
             />
           </li>
@@ -82,7 +85,9 @@ const InteriorDesign: FC = () => {
       <EstimateCost estimateCostSectionData={estimateCostSectionData} />
       <DirectorSection styles={{ paddingTop: "30px" }} />
       <ProcessSection />
-      <FAQSection FAQSectionListData={fAQSectionInteriorDesignData} />
+      <FAQSection
+        FAQSectionListData={fAQSectionConstructionAndRenovationData}
+      />
       <ConsultationSection>
         <ContactInfo info="" />
         <SendQuestions
@@ -94,4 +99,4 @@ const InteriorDesign: FC = () => {
     </div>
   );
 };
-export default InteriorDesign;
+export default ConstructionAndRenovation;

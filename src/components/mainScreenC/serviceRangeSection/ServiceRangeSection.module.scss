@@ -1,11 +1,28 @@
 @import "../../../scss/vars.scss";
 
-.ServiceRangeSectionContainer {
+$gap: 30px;
+.ServiceRangeSection {
   padding: 130px 0;
   background-color: $serviceRangeSectionColor;
   color: white;
+
   .ServiceThesisItemsContainer {
-    // row-gap: 35px;
+    display: grid;
+  }
+  //ConstructionAndRenovation Style START
+  .constructionAndRenovation {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $gap;
+  }
+
+  @media (max-width: 850px) {
+    .constructionAndRenovation {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  //ConstructionAndRenovation Style END
+  .interiorDesign {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 850px) {

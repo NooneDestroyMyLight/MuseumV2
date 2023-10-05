@@ -8,7 +8,6 @@ import Button from "../../generalC/button/Button";
 
 export interface ResultSectionProps {
   children?: ReactNode;
-  buttonText: string;
   // title: string[];
   // backText: string;
 }
@@ -17,7 +16,6 @@ const ResultSection: FC<ResultSectionProps> = ({
   // title,
   // backText,
   children,
-  buttonText,
 }) => {
   return (
     <section className={`${style.resultSection} ${style.section}`}>

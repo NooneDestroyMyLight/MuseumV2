@@ -1,0 +1,15 @@
+@import "../../../../../scss/styles.scss";
+
+.formBlock__container__discription {
+  width: 390px;
+  gap: 28px;
+  .button {
+    @include button(100%);
+  }
+}
+
+@media (max-width: 920px) {
+  .formBlock__container__discription {
+    width: 100%;
+  }
+}

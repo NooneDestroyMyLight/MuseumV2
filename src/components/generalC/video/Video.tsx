@@ -6,10 +6,10 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 
 interface VideoProps {
-  videoSrc?: string;
+  videoSrc: string;
 }
 
-const Video: FC<VideoProps> = ({}) => {
+const Video: FC<VideoProps> = ({ videoSrc }) => {
   return (
     <div className={style.video}>
       <Plyr
@@ -17,7 +17,7 @@ const Video: FC<VideoProps> = ({}) => {
           type: "video",
           sources: [
             {
-              src: "https://www.youtube.com/watch?v=AD2aftdD_fA&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fes%2Finterior-design%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark",
+              src: videoSrc,
               provider: "youtube",
             },
           ],
@@ -26,5 +26,6 @@ const Video: FC<VideoProps> = ({}) => {
     </div>
   );
 };
+//"https://www.youtube.com/watch?v=AD2aftdD_fA&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fes%2Finterior-design%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark"
 
 export default Video;

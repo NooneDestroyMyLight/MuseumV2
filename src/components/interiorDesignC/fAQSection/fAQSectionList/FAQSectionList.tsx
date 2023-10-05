@@ -2,17 +2,21 @@ import { FC, useState } from "react";
 import style from "./FAQSectionList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { fAQSectionData } from "../fAQSection.data";
+import { IFAQSectionData } from "../fAQSection.data";
 import FAQSectionItem from "./fAQSectionItem/FAQSectionItem";
 
-export interface FAQSectionListProps {}
+export interface FAQSectionListProps {
+  FAQSectionListData: IFAQSectionData[];
+}
 
-const FAQSectionList: FC<FAQSectionListProps> = ({}) => {
-  const [isDiscOpen, setDiscOpen] = useState<string>(fAQSectionData[0].title);
+const FAQSectionList: FC<FAQSectionListProps> = ({ FAQSectionListData }) => {
+  const [isDiscOpen, setDiscOpen] = useState<string>(
+    FAQSectionListData[0].title
+  );
   return (
     <div className={`row ${style.fAQSectionList}`}>
       <div className={`col-6 p-0 ${style.column}`}>
-        {fAQSectionData.map(
+        {FAQSectionListData.map(
           (item, index) =>
             index % 2 === 0 && (
               <FAQSectionItem
@@ -27,7 +31,7 @@ const FAQSectionList: FC<FAQSectionListProps> = ({}) => {
         )}
       </div>
       <div className={`col-6 p-0 ${style.column}`}>
-        {fAQSectionData.map(
+        {FAQSectionListData.map(
           (item, index) =>
             index % 2 !== 0 && (
               <FAQSectionItem
