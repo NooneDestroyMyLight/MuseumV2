@@ -8,10 +8,12 @@ interface PosterProps {
   className: string;
   imageSrc: string;
   //
+  title?: string;
+  //
   videoSrc: string;
 }
 
-const Poster: FC<PosterProps> = ({ className, imageSrc, videoSrc }) => {
+const Poster: FC<PosterProps> = ({ className, imageSrc, title, videoSrc }) => {
   const [isMWOpen, setMWOpen] = useState<boolean>(false);
 
   const onPlayButtonClick = (): void => {
@@ -20,11 +22,14 @@ const Poster: FC<PosterProps> = ({ className, imageSrc, videoSrc }) => {
 
   return (
     <div className={`col-auto p-0  ${style.poster}  ${style[className]}`}>
-      <video poster={imageSrc} className={style.poster__item}></video>
+      <video poster={imageSrc} className={style.poster__item} />
       <button
         onClick={onPlayButtonClick}
         className={style.poster__playButton}
       />
+      {(title as string) && (
+        <span className={style.poster__title}>{title}</span>
+      )}
       <ModelWindow isOpen={isMWOpen} setMWOpen={setMWOpen}>
         <Video videoSrc={videoSrc} />
       </ModelWindow>

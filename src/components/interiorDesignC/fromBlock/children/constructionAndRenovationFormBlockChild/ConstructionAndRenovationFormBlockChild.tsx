@@ -1,11 +1,11 @@
 import { FC } from "react";
+//
 import style from "./ConstructionAndRenovationFormBlockChild.module.scss";
-
+//
 import TextBlock from "../../../../mainScreenC/infoSection/textBlock/TextBlock";
+import ButtonArrow from "../../../../mainScreenC/buttonArrow/ButtonArrow";
 import Input from "../../../../mainScreenC/consultationSection/sendQuestions/input/Input";
 //
-import Silder from "../../slider/Silder";
-import ButtonArrow from "../../../../mainScreenC/buttonArrow/ButtonArrow";
 import Poster from "../../../directorSection/poster/Poster";
 
 interface InteriorDesignFromBlockChildProps {
@@ -43,6 +43,8 @@ const ConstructionAndRenovationFormBlockChild: FC<
       <Poster
         className="formBlockSize"
         imageSrc="https://museum-interior.com/wp-content/uploads/2020/11/img.jpg"
+        //
+        title="Renovation apartment in 1 minute"
         //
         videoSrc={"https://www.youtube.com/watch?v=5zCul8AtKhw"}
       />

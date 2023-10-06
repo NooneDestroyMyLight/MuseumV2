@@ -17,7 +17,7 @@ export interface FormBlockProps {
 }
 
 const FormBlock: FC<FormBlockProps> = ({ children }) => {
-  const divRef = useRef<HTMLDivElement | null>(null);
+  const divRef = useRef<HTMLLIElement | null>(null);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const FormBlock: FC<FormBlockProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className={style.formBlockWithHeader}>
+    <ul className={style.formBlockWithHeader}>
       <Header
         HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
         HeaderNavDropdownNotStickyStyle={"stickydHeaderNavItem"}
@@ -58,14 +58,12 @@ const FormBlock: FC<FormBlockProps> = ({ children }) => {
         textColor={"black"}
         isStickyTextColor={"black"}
       />
-      <div ref={divRef} className={`container-fluid  ${style.formBlock}`}>
-        <div
-          className={`row p-0 d-flex justify-content-between ${style.formBlock__container}`}
-        >
+      <li ref={divRef} className={`container-fluid  ${style.formBlock}`}>
+        <div className={`row p-0  ${style.formBlock__container}`}>
           {children}
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

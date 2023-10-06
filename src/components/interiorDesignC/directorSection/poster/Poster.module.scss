@@ -1,3 +1,6 @@
+@import "../../../../scss/styles.scss";
+
+//Mixin START
 @mixin playButton(
   $playbuttonSize,
   $secondCircleSize,
@@ -61,6 +64,7 @@
     }
   }
 }
+//Mixin END
 
 .poster {
   position: relative;
@@ -75,6 +79,16 @@
     //
     position: relative;
   }
+  &__title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+
+    justify-self: center;
+
+    position: absolute;
+    bottom: 15%;
+  }
 }
 
 @media (max-width: 920px) {
@@ -85,7 +99,8 @@
     height: auto;
   }
 }
-//DirectorSection
+
+//DirectorSection START
 .directorSectionSize {
   width: 564px;
   height: 571px;
@@ -99,8 +114,9 @@
     height: auto;
   }
 }
+//DirectorSection END
 
-//FormBlockSize
+//FormBlockSize START
 .formBlockSize {
   width: 730px;
   height: 100%;
@@ -108,3 +124,9 @@
 
   @include playButton(276px, 210px, 240px, 75px);
 }
+@media (max-width: 1250px) {
+  .formBlockSize {
+    width: 100%;
+  }
+}
+//FormBlockSize END

@@ -15,8 +15,8 @@ function App() {
   return (
     <main>
       {/* <GeneralPage /> */}
-      {/* <InteriorDesign /> */}
-      <ConstructionAndRenovation />
+      <InteriorDesign />
+      {/* <ConstructionAndRenovation /> */}
     </main>
   );
 }

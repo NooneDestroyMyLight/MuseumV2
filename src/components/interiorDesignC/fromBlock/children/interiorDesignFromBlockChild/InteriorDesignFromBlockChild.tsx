@@ -28,7 +28,9 @@ const InteriorDesignFromBlockChild: FC<InteriorDesignFromBlockChildProps> = ({
         <Input label="Phone number / email *" StylesClass="LightStyleInput" />
         <button className={style.button}>{buttonText}</button>
       </div>
+      {/* <div className={`col-auto p-0 ${style.formBlock__sidebar}`}> */}
       <Silder />
+      {/* </div> */}
     </>
   );
 };

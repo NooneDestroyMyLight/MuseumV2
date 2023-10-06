@@ -23,7 +23,6 @@ $LightColor: #efefef;
   margin-top: 30px;
   @include sectionButton($LightColor, black, $LightHoverColor, $lightColor);
 }
-
 @media (max-width: 920px) {
   .resultSectionButton {
     width: 100%;

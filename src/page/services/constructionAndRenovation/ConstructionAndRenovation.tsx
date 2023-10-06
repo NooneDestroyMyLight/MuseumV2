@@ -2,21 +2,20 @@ import { FC } from "react";
 
 import style from "./ConstructionAndRenovation.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+//
 import FormBlock from "../../../components/interiorDesignC/fromBlock/FormBlock";
 import { textBlockConstructionAndRenovationPageData } from "../../../components/mainScreenC/infoSection/textBlock/textBlock.data";
-
+//
 import RuningBanner from "../../../components/mainScreenC/runingBanner/RuningBanner";
 import ServiceRangeSection from "../../../components/mainScreenC/serviceRangeSection/ServiceRangeSection";
-
+//
 import ConsultationSection from "../../../components/mainScreenC/consultationSection/ConsultationSection";
 import ContactInfo from "../../../components/mainScreenC/consultationSection/sendQuestions/contactInfo/ContactInfo";
 import SendQuestions from "../../../components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
-
+//
 import FAQSection from "../../../components/interiorDesignC/fAQSection/FAQSection";
 import { serviceThesisItemConstructionAndRenovationPageData } from "../../../components/mainScreenC/serviceRangeSection/serviceRange.data";
 import { fAQSectionConstructionAndRenovationData } from "../../../components/interiorDesignC/fAQSection/fAQSection.data";
-
 //
 import Gallery from "../../../components/interiorDesignC/galery/Gallery";
 import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
@@ -28,12 +27,13 @@ import ConstructionAndRenovationFormBlockChild from "../../../components/interio
 //
 import TextBlock from "../../../components/mainScreenC/infoSection/textBlock/TextBlock";
 import { textBlockResultSectionConstructionAndRenovationData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
-
+//
 import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 import Button from "../../../components/generalC/button/Button";
-
+//
 import Footer from "../../../components/layout/footer/Footer";
+
 const ConstructionAndRenovation: FC = () => {
   return (
     <div>

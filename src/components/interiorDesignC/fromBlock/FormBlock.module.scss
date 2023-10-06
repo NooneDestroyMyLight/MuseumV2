@@ -7,6 +7,9 @@
   .formBlock {
     padding-top: 100px;
     &__container {
+      display: flex;
+      justify-content: space-between;
+
       &__discription {
         width: 390px;
         gap: 28px;
@@ -29,6 +32,8 @@ h1 {
     .formBlock {
       padding-top: 100px;
       &__container {
+        flex-direction: column;
+        gap: 30px;
         &__discription {
           width: 100%;
         }

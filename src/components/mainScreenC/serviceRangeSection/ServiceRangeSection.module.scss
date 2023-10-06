@@ -21,9 +21,17 @@ $gap: 30px;
     }
   }
   //ConstructionAndRenovation Style END
+
+  //interiorDesign  START
   .interiorDesign {
     grid-template-columns: repeat(4, 1fr);
   }
+  @media (max-width: 850px) {
+    .interiorDesign {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  //interiorDesign  END
 }
 @media (max-width: 850px) {
   .ServiceThesisItemsContainer {

@@ -3,13 +3,27 @@
 .formBlock__container__discription {
   width: 390px;
   gap: 28px;
+  margin-right: 100px;
   .button {
     @include button(100%);
   }
 }
-
 @media (max-width: 920px) {
   .formBlock__container__discription {
     width: 100%;
+    margin-right: 0;
+  }
+}
+
+.formBlock__sidebar {
+  width: 650px;
+  height: 430px;
+}
+
+@media (max-width: 1250px) {
+  .formBlock__sidebar {
+    width: 100%;
+    height: fit-content;
+    flex: 1;
   }
 }
