@@ -1,13 +1,17 @@
 import { FC } from "react";
 import style from "./ProcessSectionList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { processSectionData } from "../processSection.data";
+import { IProcessSectionData } from "../processSection.data";
 
 import ProcessSectionItem from "./processSectionItems/ProcessSectionItem";
 
-export interface ProcessSectionListProps {}
+export interface ProcessSectionListProps {
+  processSectionData: IProcessSectionData[];
+}
 
-const ProcessSectionList: FC<ProcessSectionListProps> = () => {
+const ProcessSectionList: FC<ProcessSectionListProps> = ({
+  processSectionData,
+}) => {
   return (
     <ul className={`row  ${style.processSectionList}`}>
       {processSectionData.map(item => (

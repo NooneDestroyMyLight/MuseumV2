@@ -51,3 +51,18 @@ $lightTitleColor: #f8f8f8;
   @include titleColorMixin($lightTitleColor, black);
   margin-bottom: 80px;
 }
+
+//CompoundProjectSection START
+$compoundProjectSectionColor: #ededed;
+
+.textTitleCompoundProjectSection {
+  //rework it into MIXIN
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+
+  @include titleColorMixin($compoundProjectSectionColor, black);
+  margin-bottom: 20px;
+}
+//CompoundProjectSection END

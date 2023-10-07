@@ -50,7 +50,11 @@ const GeneralPage: FC = () => {
         </div>
       </InfoSection>
       <BoxMenu />
-      <ServiceRangeSection data={serviceThesisItemGeneralPageData} />
+      <ServiceRangeSection
+        data={serviceThesisItemGeneralPageData}
+        className="generalPage"
+        discriptionClassName="discription__interiorDesign"
+      />
       <ConsultationSection>
         <ContactInfo info="" />
         <SendQuestions

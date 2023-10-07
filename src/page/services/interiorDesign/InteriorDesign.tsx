@@ -22,12 +22,11 @@ import PriceListSection from "../../../components/interiorDesignC/priceListSecti
 import Gallery from "../../../components/interiorDesignC/galery/Gallery";
 import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
 import ResultSection from "../../../components/interiorDesignC/resultSection/ResultSection";
-
+import { sliderInteriorDesignPageData } from "../../../components/interiorDesignC/fromBlock/slider/slider.data";
 //
 import EstimateCost from "../../../components/interiorDesignC/estimateCostSection/EstimateCost";
 import { estimateCostSectionData } from "./interiorDesign.data";
 //
-
 import TextBlock from "../../../components/mainScreenC/infoSection/textBlock/TextBlock";
 import { textBlockResultSectionData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
 
@@ -35,6 +34,7 @@ import ResultSectionImage from "../../../components/interiorDesignC/resultSectio
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 import Button from "../../../components/generalC/button/Button";
 import { fAQSectionInteriorDesignData } from "../../../components/interiorDesignC/fAQSection/fAQSection.data";
+import { processSectionInteriorDesignPageData } from "../../../components/interiorDesignC/processSection/processSection.data";
 
 const InteriorDesign: FC = () => {
   return (
@@ -44,6 +44,8 @@ const InteriorDesign: FC = () => {
           title={"Interior Design"}
           buttonText="To get a consultation"
           textBlockData={textBlockInteriorDesignData}
+          //
+          sliderData={sliderInteriorDesignPageData}
         />
       </FormBlock>
       <RuningBanner />
@@ -81,7 +83,9 @@ const InteriorDesign: FC = () => {
       </ResultSection>
       <EstimateCost estimateCostSectionData={estimateCostSectionData} />
       <DirectorSection styles={{ paddingTop: "30px" }} />
-      <ProcessSection />
+      <ProcessSection
+        processSectionData={processSectionInteriorDesignPageData}
+      />
       <FAQSection FAQSectionListData={fAQSectionInteriorDesignData} />
       <ConsultationSection>
         <ContactInfo info="" />

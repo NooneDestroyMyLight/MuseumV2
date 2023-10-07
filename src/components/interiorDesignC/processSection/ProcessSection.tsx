@@ -1,12 +1,16 @@
 import { FC } from "react";
 import style from "./ProcessSection.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
 import ProcessSectionList from "./processSectionList/ProcessSectionList";
+import { IProcessSectionData } from "./processSection.data";
 
-export interface ProcessSectionProps {}
+export interface ProcessSectionProps {
+  processSectionData: IProcessSectionData[];
+}
 
-const ProcessSection: FC<ProcessSectionProps> = ({}) => {
+const ProcessSection: FC<ProcessSectionProps> = ({ processSectionData }) => {
   return (
     <div className={`${style.processSection} ${style.section}`}>
       <section
@@ -17,7 +21,7 @@ const ProcessSection: FC<ProcessSectionProps> = ({}) => {
           backText={"process"}
           colorStyle="textTitleDarkStyle"
         />
-        <ProcessSectionList />
+        <ProcessSectionList processSectionData={processSectionData} />
       </section>
     </div>
   );

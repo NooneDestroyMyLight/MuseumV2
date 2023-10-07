@@ -59,7 +59,7 @@ const FormBlock: FC<FormBlockProps> = ({ children }) => {
         isStickyTextColor={"black"}
       />
       <li ref={divRef} className={`container-fluid  ${style.formBlock}`}>
-        <div className={`row p-0  ${style.formBlock__container}`}>
+        <div className={`row p-0 ${style.formBlock__container}`}>
           {children}
         </div>
       </li>

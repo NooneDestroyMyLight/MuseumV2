@@ -9,7 +9,7 @@
     &__container {
       display: flex;
       justify-content: space-between;
-
+      flex-wrap: nowrap;
       &__discription {
         width: 390px;
         gap: 28px;

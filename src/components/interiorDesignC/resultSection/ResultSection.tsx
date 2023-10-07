@@ -1,9 +1,10 @@
 import { FC, ReactNode } from "react";
 
 import style from "./ResultSection.module.scss";
+
 import "bootstrap/dist/css/bootstrap.min.css";
-//
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
+import Button from "../../generalC/button/Button";
 
 export interface ResultSectionProps {
   children?: ReactNode;
@@ -27,6 +28,7 @@ const ResultSection: FC<ResultSectionProps> = ({
           colorStyle="textTitleLightStyle"
         />
         <div>{children && children}</div>
+        {/* <div className="row"></div> */}
       </div>
     </section>
   );

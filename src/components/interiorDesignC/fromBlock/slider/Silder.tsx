@@ -2,14 +2,16 @@ import { FC, useState } from "react";
 import style from "./Silder.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { sliderData } from "./slider.data";
+// import { sliderData } from "./slider.data";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SliderCounterAndButton from "./sliderCounterAndButton/SliderCounterAndButton";
 
-export interface SilderProps {}
+export interface SilderProps {
+  sliderData: string[];
+}
 
-const Silder: FC<SilderProps> = ({}) => {
+const Silder: FC<SilderProps> = ({ sliderData }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(1);
 
   return (
@@ -19,6 +21,7 @@ const Silder: FC<SilderProps> = ({}) => {
       //class
       className={`col-auto p-0 ${style.slider}`}
       wrapperClass={style.slider__Wrapper}
+      //
       onSlideChange={swiper => {
         setCurrentSlide(swiper.realIndex + 1);
       }}
