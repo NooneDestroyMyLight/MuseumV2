@@ -26,6 +26,7 @@ const DirectorSection: FC<DirectorSectionProps> = ({ styles }) => {
               videoSrc={
                 "https://www.youtube.com/watch?v=AD2aftdD_fA&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fes%2Finterior-design%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark"
               }
+              buttonClassName="button__play__directorSection"
             />
           </li>
           <li

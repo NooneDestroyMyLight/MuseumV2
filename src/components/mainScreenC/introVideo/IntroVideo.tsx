@@ -1,7 +1,7 @@
 import { FC } from "react";
 import style from "./IntroVideo.module.scss";
 
-interface IntroVideoProps {
+export interface IntroVideoProps {
   videoSrc: string;
   videoType: string;
 }

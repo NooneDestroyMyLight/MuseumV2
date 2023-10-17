@@ -1,0 +1,19 @@
+@import "../../../scss/styles.scss";
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+  margin-right: 62px;
+}
+
+.imgWithDescr {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+  .img {
+    width: 100%;
+  }
+}

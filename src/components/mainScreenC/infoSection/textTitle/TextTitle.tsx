@@ -2,15 +2,12 @@ import { FC, ReactNode } from "react";
 import style from "./TextTitle.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ButtonArrow from "../../buttonArrow/ButtonArrow";
-
-import { InfoSectionProps } from "../InfoSection";
-
-interface TextTitleProps {
+export interface TextTitleProps {
   children?: ReactNode;
   title: string[];
   backText: string;
   colorStyle: string;
+  //
 }
 
 const TextTitle: FC<TextTitleProps> = ({
@@ -18,6 +15,7 @@ const TextTitle: FC<TextTitleProps> = ({
   backText,
   children,
   colorStyle,
+  //
 }) => {
   return (
     <div className={`row d-flex justify-content-between `}>

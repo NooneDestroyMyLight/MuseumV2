@@ -22,3 +22,21 @@ export const textBlockConstructionAndRenovationPageData: string[] = [
 export const textBlockArchitecturalDesignPageData: string[] = [
   "We will design and build your dream home from scratch! From geodesy, site plan, drawings and room markings to the final finishing of the walls outside and the last bedside table inside the house.",
 ];
+
+export const textBlockAboutUsPageData: string[][] = [
+  [
+    "The Museum interior company appeared in 2008. All this time we prove that renovation without problems and headaches are possible! And we are your reliable assistants and guides.",
+  ],
+  [
+    "In our work we are guided by the following principles:",
+    "- housing should be not only beautiful, but also functional;",
+    "- keep within the specified deadlines;",
+    "- Don’t go beyond the agreed budget.",
+  ],
+  [
+    "For 14 years of existence of Museum Interior we have:",
+    "- more than a thousand satisfied customers;",
+    "- hundreds of apartments with designer renovation;",
+    "- dozens of restaurants, hotels and shopping malls with our design.",
+  ],
+];

@@ -1,45 +1,23 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import style from "./MainScreen.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import IntroVideo from "../introVideo/IntroVideo";
+import IntroVideo, { IntroVideoProps } from "../introVideo/IntroVideo";
 
 import Header from "../../layout/header/Header";
 import WatherMark from "../watherMark/WatherMark";
 import SocialMediaList from "../socialMediaList/SocialMediaList";
+import { useSticky } from "../../../hooks/useSticky";
 
-interface MainScreenProps {}
+interface MainScreenProps extends IntroVideoProps {
+  children?: ReactNode;
+}
 
-const MainScreen: FC<MainScreenProps> = () => {
-  const divRef = useRef<HTMLDivElement | null>(null);
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const headerElement = divRef.current;
-    if (!headerElement) return;
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsSticky(false);
-          } else {
-            setIsSticky(true);
-          }
-        });
-      },
-      { threshold: 0.95 }
-    );
-
-    observer.observe(headerElement);
-
-    return () => {
-      observer.unobserve(headerElement);
-    };
-  }, []);
+const MainScreen: FC<MainScreenProps> = ({ children }) => {
+  const [isSticky, elRef] = useSticky(false);
 
   return (
-    <section ref={divRef} className={`${style.mainPageContainer}`}>
+    <section ref={elRef} className={`${style.mainPageContainer}`}>
       <Header
         HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
         HeaderNavDropdownNotStickyStyle={"headerNavItem"}

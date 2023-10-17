@@ -7,6 +7,8 @@ import InteriorDesign from "./page/services/interiorDesign/InteriorDesign";
 import GeneralPage from "./page/generalPage/GeneralPage";
 import ConstructionAndRenovation from "./page/services/constructionAndRenovation/ConstructionAndRenovation";
 import ArchitecturalDesign from "./page/services/architecturalDesign/ArchitecturalDesign";
+import Review from "./page/review/Review";
+import AboutUs from "./page/aboutUs/AboutUs";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       {/* <GeneralPage /> */}
       {/* <InteriorDesign /> */}
       {/* <ConstructionAndRenovation /> */}
-      <ArchitecturalDesign />
+      {/* <ArchitecturalDesign /> */}
+      {/* <Review /> */}
+      <AboutUs />
     </main>
   );
 }

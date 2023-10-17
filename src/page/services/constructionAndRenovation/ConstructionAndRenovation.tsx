@@ -33,6 +33,7 @@ import DirectorSection from "../../../components/interiorDesignC/directorSection
 import Button from "../../../components/generalC/button/Button";
 //
 import Footer from "../../../components/layout/footer/Footer";
+import { processSectionInteriorDesignPageData } from "../../../components/interiorDesignC/processSection/processSection.data";
 
 const ConstructionAndRenovation: FC = () => {
   return (
@@ -84,7 +85,9 @@ const ConstructionAndRenovation: FC = () => {
       </ResultSection>
       <EstimateCost estimateCostSectionData={estimateCostSectionData} />
       <DirectorSection styles={{ paddingTop: "30px" }} />
-      <ProcessSection />
+      <ProcessSection
+        processSectionData={processSectionInteriorDesignPageData}
+      />
       <FAQSection
         FAQSectionListData={fAQSectionConstructionAndRenovationData}
       />

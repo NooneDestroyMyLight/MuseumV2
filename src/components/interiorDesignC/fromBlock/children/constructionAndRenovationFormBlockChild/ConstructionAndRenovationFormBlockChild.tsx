@@ -47,6 +47,7 @@ const ConstructionAndRenovationFormBlockChild: FC<
         title="Renovation apartment in 1 minute"
         //
         videoSrc={"https://www.youtube.com/watch?v=5zCul8AtKhw"}
+        buttonClassName="button__play__formBlock"
       />
       {/* </div> */}
     </>

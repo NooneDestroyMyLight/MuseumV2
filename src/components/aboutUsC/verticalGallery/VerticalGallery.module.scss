@@ -1,0 +1,30 @@
+@import "../../../scss/styles.scss";
+
+.verticalGallery {
+  // display: flex;
+  // position: relative;
+  display: grid;
+  .description {
+    &__title {
+      font-size: 1.72rem;
+      line-height: 2.07rem;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    width: 35%;
+  }
+
+  .portfolioList {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-self: center;
+
+    width: 57%;
+
+    overflow: scroll;
+  }
+}

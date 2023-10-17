@@ -7,7 +7,7 @@ import Textarea from "./textAriea/Textarea";
 
 interface SendQuestionsProps {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }
 
 const SendQuestions: FC<SendQuestionsProps> = ({ title, subTitle }) => {

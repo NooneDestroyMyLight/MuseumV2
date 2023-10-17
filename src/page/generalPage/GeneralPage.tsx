@@ -25,7 +25,10 @@ import { serviceThesisItemGeneralPageData } from "../../components/mainScreenC/s
 const GeneralPage: FC = () => {
   return (
     <div className={`${style.mainContainer}`}>
-      <MainScreen />
+      <MainScreen
+        videoSrc="../../../public/introVideo/main-bg-video.mp4"
+        videoType="video/mp4"
+      />
       <RuningBanner />
       <InfoSection
         title={["Who we are", "and what are we able to do?"]}

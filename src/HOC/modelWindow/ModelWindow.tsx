@@ -1,13 +1,14 @@
 import { FC, MouseEventHandler, ReactNode, useEffect, useRef } from "react";
 import style from "./ModelWindow.module.scss";
+import { motion } from "framer-motion";
 
 interface ModelWindowProps {
   children: ReactNode;
   isOpen?: boolean;
-  setMWOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMW: () => void;
 }
 
-const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, setMWOpen }) => {
+const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, toggleMW }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -18,8 +19,8 @@ const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, setMWOpen }) => {
   }, [isOpen]);
 
   return (
-    <ul
-      onClick={() => setMWOpen(false)}
+    <motion.ul
+      onClick={() => toggleMW()}
       className={`${style.modelWindow} ${isOpen && style.modelWindow__open}`}
     >
       <li
@@ -30,7 +31,7 @@ const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, setMWOpen }) => {
       >
         {children}
       </li>
-    </ul>
+    </motion.ul>
   );
 };
 export default ModelWindow;

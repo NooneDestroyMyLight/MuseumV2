@@ -1,0 +1,27 @@
+@import "../../../scss/styles.scss";
+
+.aboutUsInfoSection {
+  background-color: #f8f8f8;
+  &__container {
+    .itemsList {
+      display: flex;
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        margin-right: 46px;
+        .icon {
+          align-self: flex-start;
+          height: 60px;
+
+          -o-object-fit: contain;
+          object-fit: contain;
+
+          -o-object-position: center;
+          object-position: center;
+        }
+      }
+    }
+  }
+}

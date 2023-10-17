@@ -1,0 +1,31 @@
+// @import "../../../App.module.scss";
+@import "../../../scss/styles.scss";
+
+$gap: 80px;
+.sendReviewSection {
+  background-color: $reviewListSectionColor;
+  padding: 125px 0 110px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // background-color: $contactSectionColor;
+    gap: $gap;
+    &__title {
+      color: #fff;
+    }
+  }
+  &__children {
+    // gap: 35px;
+  }
+}
+@media (max-width: 920px) {
+  .sendReviewSection {
+    &__container {
+      &__title {
+      }
+    }
+    &__children {
+      gap: 35px;
+    }
+  }
+}

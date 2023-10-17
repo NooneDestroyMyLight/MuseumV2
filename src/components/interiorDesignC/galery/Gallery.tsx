@@ -16,9 +16,7 @@ import {
   portfolioCategory,
 } from "./portfolioList/portfolioList.data";
 import ShowMoreButton from "./showMoreButton/ShowMoreButton";
-import Button from "../../generalC/button/Button";
-import ArrowButtonIcon from "../../../assets/arrowButtonIcon/ArrowButtonIcon";
-import TextTitleWithArrowButton from "../../../HOC/textTitleWithArrowButton/TextTitleWithArrowButton";
+import PortfolioItem from "./portfolioList/portfolioItem/PortfolioItem";
 
 export interface GalleryProps {
   // children?: ReactNode;
@@ -52,15 +50,6 @@ const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
             <ButtonArrow text={"Our service"} color="black" />
           </div>
         </TextTitle>
-        {/* <TextTitleWithArrowButton
-          textTitleStyle="textTitleLightStyle"
-          //
-          title={["Our", "project"]}
-          backText={"Cases"}
-          //
-          buttonText="Our service"
-          buttonColor="black"
-        /> */}
         <div className={style.portfolioGroup}>
           <FilterList
             //
@@ -68,7 +57,20 @@ const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
             setPortfilioList={setPortfilioList}
             portfilioList={portfolioListData}
           />
-          <PortfolioList portfilioList={portfilioList} showMore={showMore} />
+          <PortfolioList showMore={showMore}>
+            <AnimatePresence>
+              {portfilioList.map(item => (
+                <PortfolioItem
+                  key={item.imgSrc}
+                  //
+                  imgSrc={item.imgSrc}
+                  description={item.category}
+                  name={item.name}
+                  className={"portfolioItem"}
+                />
+              ))}
+            </AnimatePresence>
+          </PortfolioList>
         </div>
         <ul
           className={`row d-flex justify-content-center ${style.showMoreButton} `}

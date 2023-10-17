@@ -8,7 +8,7 @@ import ButtonArrow from "../buttonArrow/ButtonArrow";
 export interface InfoSectionProps {
   children?: ReactNode;
   title: string[];
-  buttonText: string;
+  buttonText?: string;
   backText: string;
 }
 
@@ -28,7 +28,7 @@ const InfoSection: FC<InfoSectionProps> = ({
         colorStyle="textTitleLightStyle"
       >
         <div className={`align-self-end ${style.infoSection__Button}`}>
-          <ButtonArrow text={buttonText} color="black" />
+          {buttonText && <ButtonArrow text={buttonText} color="black" />}
         </div>
       </TextTitle>
       <ul className="row">

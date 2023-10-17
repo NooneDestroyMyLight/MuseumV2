@@ -5,6 +5,7 @@ import MainLogo from "../../../assets/mainLogo/mainLogo/MainLogo";
 import HeaderNav from "./headerNav/HeaderNav";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useSticky } from "../../../hooks/useSticky";
 
 interface HeaderProps {
   HeaderNavDropdownIsStickyStyle: string;

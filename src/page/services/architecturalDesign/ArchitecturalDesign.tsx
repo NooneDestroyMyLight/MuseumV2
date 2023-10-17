@@ -10,23 +10,20 @@ import { sliderArchitecturalDesignPageData } from "../../../components/interiorD
 //
 import RuningBanner from "../../../components/mainScreenC/runingBanner/RuningBanner";
 //
-
 import ProcessSection from "../../../components/interiorDesignC/processSection/ProcessSection";
 import { processSectionArchitecturalDesignPageData } from "../../../components/interiorDesignC/processSection/processSection.data";
-import Gallery from "../../../components/interiorDesignC/galery/Gallery";
 //
-import CompoundProject from "../../../components/constructionAndRenovationC/compoundProject/CompoundProjectSection";
 import ConsultationSection from "../../../components/mainScreenC/consultationSection/ConsultationSection";
 import SendQuestions from "../../../components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
 import ContactInfo from "../../../components/mainScreenC/consultationSection/sendQuestions/contactInfo/ContactInfo";
 import Footer from "../../../components/layout/footer/Footer";
 import PortfolioList from "../../../components/interiorDesignC/galery/portfolioList/PortfolioList";
 //
-
 import { portfolioListData } from "../../../components/interiorDesignC/galery/portfolioList/portfolioList.data";
 import TextTitle from "../../../components/mainScreenC/infoSection/textTitle/TextTitle";
 import ButtonArrow from "../../../components/mainScreenC/buttonArrow/ButtonArrow";
 import CompoundProjectSection from "../../../components/constructionAndRenovationC/compoundProject/CompoundProjectSection";
+import PortfolioItem from "../../../components/interiorDesignC/galery/portfolioList/portfolioItem/PortfolioItem";
 
 export interface ArchitecturalDesignProps {}
 
@@ -43,7 +40,6 @@ const ArchitecturalDesign: FC<ArchitecturalDesignProps> = ({}) => {
         />
       </FormBlock>
       <RuningBanner />
-      {/* <Gallery showButtonText="Show more" /> */}
       <div className={`container-fluid ${style.section}`}>
         <TextTitle
           title={["Our", "project"]}
@@ -54,12 +50,18 @@ const ArchitecturalDesign: FC<ArchitecturalDesignProps> = ({}) => {
             <ButtonArrow text={"Our service"} color="black" />
           </div>
         </TextTitle>
-        <PortfolioList
-          portfilioList={portfolioListData.filter(
-            item => item.category === "Architectural Engineering"
-          )}
-          showMore={false}
-        />
+        <PortfolioList showMore={false}>
+          {portfolioListData.map(item => (
+            <PortfolioItem
+              key={item.imgSrc}
+              //
+              className="portfolioItem"
+              imgSrc={item.imgSrc}
+              description={item.category}
+              name={item.name}
+            />
+          ))}
+        </PortfolioList>
       </div>
       <ProcessSection
         processSectionData={processSectionArchitecturalDesignPageData}

@@ -15,6 +15,68 @@ $LightColor: #efefef;
     color: $textHoverColor;
   }
 }
+
+@mixin playButton(
+  $playbuttonSize,
+  $secondCircleSize,
+  $hoveredCircle,
+  $iconSize
+) {
+  width: $playbuttonSize; //121px
+  height: $playbuttonSize;
+
+  justify-self: center;
+  align-self: center;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: all ease-in-out 0.3s;
+
+  display: grid;
+
+  &:hover {
+    &::before {
+      width: ($hoveredCircle); //108px
+      height: ($hoveredCircle);
+      transition: all ease-in-out 0.2s;
+    }
+  }
+
+  &:before {
+    content: "";
+    width: $secondCircleSize; //98px
+    height: $secondCircleSize;
+
+    justify-self: center;
+    align-self: center;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all ease-in-out 0.2s;
+
+    border-radius: 50%;
+  }
+  &:after {
+    content: "";
+    width: $iconSize; //47px
+    height: $iconSize;
+
+    position: absolute;
+
+    justify-self: center;
+    align-self: center;
+
+    transform: translateX(10%);
+
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+
+    background: url("https://museum-interior.com/wp-content/themes/inten/assets/icons/PLAY.svg")
+      no-repeat center/contain;
+  }
+}
+
 //Mixin END
 
 //resultSectionButton START
@@ -44,6 +106,22 @@ $LightColor: #efefef;
   }
 }
 //estimateCostSectionButton END
+
+//buttonPlay START
+.button__play__directorSection {
+  position: absolute;
+  @include playButton(121px, 98px, 108px, 47px);
+}
+
+.button__play__formBlock {
+  position: absolute;
+  @include playButton(276px, 210px, 240px, 75px);
+}
+
+.button__play__aboutUsMainScreenSection {
+  @include playButton(276px, 210px, 240px, 75px);
+}
+//buttonPlay END
 
 .cursor {
   cursor: pointer;

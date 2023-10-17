@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import ArrowButtonIcon from "../../../assets/arrowButtonIcon/ArrowButtonIcon";
 
-interface ButtonArrowProps {
+export interface ButtonArrowProps {
   text: string;
   color: string;
 }

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import style from "./PortfolioList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -8,11 +8,18 @@ import { IPortfolioListData } from "./portfolioList.data";
 import { AnimatePresence, motion } from "framer-motion";
 
 export interface PortfolioListProps {
-  portfilioList: IPortfolioListData[];
+  // portfilioList: IPortfolioListData[];
   showMore: boolean;
+  //
+  children?: ReactNode;
 }
 
-const PortfolioList: FC<PortfolioListProps> = ({ portfilioList, showMore }) => {
+const PortfolioList: FC<PortfolioListProps> = ({
+  // portfilioList,
+  showMore,
+  children,
+  //
+}) => {
   return (
     <div className={`row ${style.portfolioList}`}>
       <div className="col p-0 ">
@@ -21,19 +28,18 @@ const PortfolioList: FC<PortfolioListProps> = ({ portfilioList, showMore }) => {
             showMore && style.showMore
           }`}
         >
-          <AnimatePresence>
-            {portfilioList.map((item, index) => (
+          {children}
+          {/* <AnimatePresence>
+            {portfilioList.map(item => (
               <PortfolioItem
-                showMore={showMore}
                 key={item.imgSrc}
-                index={index}
                 //
                 imgSrc={item.imgSrc}
-                category={item.category}
+                description={item.category}
                 name={item.name}
               />
             ))}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </div>
       </div>
     </div>

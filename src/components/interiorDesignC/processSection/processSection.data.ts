@@ -105,3 +105,7 @@ export const processSectionArchitecturalDesignPageData: IProcessSectionData[] =
       isWide: true,
     },
   ];
+
+// const processSectionAboutUsPageData: IProcessSectionData[] = [
+
+// ];

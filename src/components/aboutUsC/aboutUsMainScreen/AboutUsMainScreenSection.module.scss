@@ -1,0 +1,32 @@
+@import "../../../scss/styles.scss";
+$gap: 30px;
+.aboutUsMainScreenSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  &__textBlock {
+    padding-top: 230px;
+    color: $lightColor;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+
+      .textAndDescription {
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        &__text {
+          width: 470px;
+        }
+      }
+      .aboutUsMainScreenSection__button {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

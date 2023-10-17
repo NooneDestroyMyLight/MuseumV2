@@ -13,7 +13,7 @@ export const portfolioCategory = [
   "Architectural Engineering",
 ];
 
-function shuffleArray(array: IPortfolioListData[]) {
+function shuffleArray(array: any) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -239,3 +239,181 @@ export const portfolioListData: IPortfolioListData[] = shuffleArray([
     name: "Apartment Residential Complex 'Vorobyov House'",
   },
 ]);
+
+interface IReviewListData extends IPortfolioListData {
+  videoSrc: string;
+}
+
+export const reviewListData: IReviewListData[] = [
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x1-1-.png.pagespeed.ic.n2mZD4bsx-.png",
+    category: "Частный клиент",
+    name: "Мария Лазарева",
+    videoSrc:
+      "https://www.youtube.com/watch?v=7JLaLHVaLsc&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x2.png.pagespeed.ic.EIaag1Pawh.png",
+    category: "Владелец ТРЦ БОШЕ",
+    name: "Игорь Барщук",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/2zsK068ITso?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=5",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x3-2.png.pagespeed.ic.IcNJvpuAoN.png",
+    category: 'Ресторатор(рестораны "Веретено", "Сосновка")',
+    name: "Александр Бондарь",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/Ekj8kAHsuGc?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=6",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x4-2.png.pagespeed.ic.jjxK3Nlqku.png",
+    category: "Арт-директор ресторана-курорта Дубровкий",
+    name: "Оксана Яценко",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/ZB-ehsNiS-Y?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=7",
+  },
+
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x5.png.pagespeed.ic.IpU4LzjzbI.png",
+    category: "Руководитель компании «ОВИС»",
+    name: "Сергей Иванович",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/MwhGntOumzs?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=8",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x6.png.pagespeed.ic.mIbkfIk4WF (1).png",
+    category: 'Генеральный директор хлебозавода "Ново Баварский"',
+    name: "Валерий Фандер",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/EdJbpj_JOBk?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=9",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x6.png.pagespeed.ic.mIbkfIk4WF.png",
+    category: "Генеральный директор сети кофеен и турагенств",
+    name: "Ирина Мишина",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/y031hUXS2GU?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=10",
+  },
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x8.png.pagespeed.ic.xNJ953pbMV.png",
+    category: "Директор салона красоты",
+    name: "Эльмира Гончарова",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/ngGY7aFXPTI?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=11",
+  },
+
+  {
+    imgSrc:
+      "../../../../../public/review/previewList/x9.png.pagespeed.ic.xKTyZPH9FB.png",
+    category: 'Мер города "Мерефа"',
+    name: "Вениамин Ситов",
+    videoSrc:
+      "https://www.youtube-nocookie.com/embed/HHZGKLQeaoM?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=13",
+  },
+];
+
+export const teamListData: IPortfolioListData[] = [
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  //
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  //
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  //
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  //
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+  {
+    imgSrc:
+      "https://museum-interior.com/wp-content/uploads/2021/06/%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A8%D1%83%D1%82%D1%8C%D0%BA%D0%BE3.jpg",
+    category: "CEO",
+    name: "Artur Shutko",
+  },
+];

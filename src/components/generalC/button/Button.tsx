@@ -4,7 +4,7 @@ import style from "./Button.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface ButtonProps {
-  buttonText: string;
+  buttonText?: string;
   //
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   styles: string;
@@ -15,6 +15,7 @@ const Button: FC<ButtonProps> = ({
   buttonText,
   styles,
   onClick,
+  //
   inLineStyle,
 }) => {
   return (
