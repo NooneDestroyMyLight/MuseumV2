@@ -35,6 +35,7 @@ import DirectorSection from "../../../components/interiorDesignC/directorSection
 import Button from "../../../components/generalC/button/Button";
 import { fAQSectionInteriorDesignData } from "../../../components/interiorDesignC/fAQSection/fAQSection.data";
 import { processSectionInteriorDesignPageData } from "../../../components/interiorDesignC/processSection/processSection.data";
+import { portfolioListData } from "../../../components/interiorDesignC/galery/portfolioList/portfolioList.data";
 
 const InteriorDesign: FC = () => {
   return (
@@ -55,7 +56,11 @@ const InteriorDesign: FC = () => {
         //
         discriptionClassName="discription__interiorDesign"
       />
-      <Gallery showButtonText="Show more" />
+      <Gallery
+        showButtonText="Show more"
+        showAll={false}
+        dataList={portfolioListData}
+      />
       <PriceListSection />
       <ResultSection>
         <ul className={`row ${style.resultSection__hoc__container}`}>

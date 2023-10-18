@@ -11,17 +11,22 @@ export interface FilterListProps {
   //
   portfilioList: IPortfolioListData[];
   setPortfilioList: React.Dispatch<React.SetStateAction<IPortfolioListData[]>>;
+  //
+  currentFilter: string;
+  setCurrentFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const allProject: string = "All projects";
 
 const FilterList: FC<FilterListProps> = ({
   category,
+  //
   portfilioList,
   setPortfilioList,
+  //
+  currentFilter,
+  setCurrentFilter,
 }) => {
-  const [currentFilter, setCurrentFilter] = useState(allProject);
-
   return (
     <div className={`row d-flex ${style.filterList}`}>
       {category.map(item => (

@@ -9,6 +9,7 @@ import ConstructionAndRenovation from "./page/services/constructionAndRenovation
 import ArchitecturalDesign from "./page/services/architecturalDesign/ArchitecturalDesign";
 import Review from "./page/review/Review";
 import AboutUs from "./page/aboutUs/AboutUs";
+import Project from "./page/project/Project";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <ConstructionAndRenovation /> */}
       {/* <ArchitecturalDesign /> */}
       {/* <Review /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
+      <Project />
     </main>
   );
 }

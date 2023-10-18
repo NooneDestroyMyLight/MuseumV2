@@ -17,20 +17,25 @@ import {
 } from "./portfolioList/portfolioList.data";
 import ShowMoreButton from "./showMoreButton/ShowMoreButton";
 import PortfolioItem from "./portfolioList/portfolioItem/PortfolioItem";
+import EstimateCost from "../estimateCostSection/EstimateCost";
+import { estimateCostSectionData } from "../../../page/services/interiorDesign/interiorDesign.data";
 
 export interface GalleryProps {
   // children?: ReactNode;
   // title: string;
   // arrowButtonText: string;
   //   backText: string;
-  showButtonText: string;
+  showButtonText?: string;
+  showAll: boolean;
+
+  dataList: IPortfolioListData[];
 }
 
-const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
+const Gallery: FC<GalleryProps> = ({ showButtonText, showAll, dataList }) => {
   const [portfilioList, setPortfilioList] =
-    useState<IPortfolioListData[]>(portfolioListData);
+    useState<IPortfolioListData[]>(dataList);
 
-  const [showMore, setShowMore] = useState<boolean>(false);
+  const [showMore, setShowMore] = useState<boolean>(showAll);
 
   const onButtonClick = () => {
     setShowMore(true);
@@ -79,10 +84,12 @@ const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
             className={`col-auto p-0 ${style.showMoreButton__Container}`}
             style={{ display: showMore ? "none" : "" }}
           >
-            <ShowMoreButton
-              showButtonText={showButtonText}
-              onButtonClick={onButtonClick}
-            />
+            {showButtonText && (
+              <ShowMoreButton
+                showButtonText={showButtonText}
+                onButtonClick={onButtonClick}
+              />
+            )}
           </li>
         </ul>
       </div>

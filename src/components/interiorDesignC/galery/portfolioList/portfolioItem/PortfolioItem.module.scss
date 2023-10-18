@@ -31,6 +31,19 @@
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
+
+  @media (max-width: 920px) {
+    .portfolioItem {
+      &__infoGroup {
+        display: flex;
+        position: static;
+        align-items: center;
+        color: $darkColor;
+
+        opacity: 1;
+      }
+    }
+  }
 }
 //Mixin END
 
@@ -119,17 +132,6 @@
 
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
-    }
-  }
-}
-
-@media (max-width: 920px) {
-  .portfolioItem {
-    &__infoGroup {
-      display: flex;
-      position: static;
-      align-items: center;
-      color: $darkColor;
     }
   }
 }

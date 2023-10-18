@@ -1,3 +1,4 @@
+//Mixin START
 @mixin titleColorMixin($Backcolor, $mainColor) {
   .title {
     position: relative;
@@ -34,6 +35,15 @@
     }
   }
 }
+@mixin textTitleLightStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+
+  @include titleColorMixin($lightTitleColor, black);
+}
+//Mixin END
 
 $darkTitleColor: #1e1e1e;
 $lightTitleColor: #f8f8f8;
@@ -42,19 +52,19 @@ $lightTitleColor: #f8f8f8;
   @include titleColorMixin($darkTitleColor, white);
   margin-bottom: 80px;
 }
-.textTitleLightStyle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
 
-  @include titleColorMixin($lightTitleColor, black);
+//textTitleLightStyle START
+.textTitleLightStyle {
+  @include textTitleLightStyle;
   margin-bottom: 80px;
 }
+.textTitleLightStyleNoneMargin {
+  @include textTitleLightStyle;
+}
+//textTitleLightStyle END
 
 //CompoundProjectSection START
 $compoundProjectSectionColor: #ededed;
-
 .textTitleCompoundProjectSection {
   //rework it into MIXIN
   display: flex;

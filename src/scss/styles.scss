@@ -6,6 +6,14 @@
   padding-bottom: 130px;
 }
 
+.stickyScreen {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
 // <== Mixin START ==>
 @mixin inputGroup($inputWidth, $fontSize, $borderColor) {
   .inputGroup {

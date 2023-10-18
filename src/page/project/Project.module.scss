@@ -1,0 +1,19 @@
+@import "../../scss/styles.scss";
+
+.project {
+  .filteredList {
+    // padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    // gap: $gap;
+    .listWithFilter {
+      display: flex;
+      flex-direction: column;
+      gap: $gap;
+    }
+    .estimateCostWrapper {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}

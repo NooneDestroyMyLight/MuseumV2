@@ -20,7 +20,7 @@ const TextTitle: FC<TextTitleProps> = ({
   return (
     <div className={`row d-flex justify-content-between `}>
       <div className="col p-0">
-        <div className={style[colorStyle]}>
+        <div className={`${style[colorStyle]}`}>
           <h2 className={style.title} data-content={backText}>
             {title.map(item => (
               <p>{item}</p>
