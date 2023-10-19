@@ -14,6 +14,7 @@ import { useToggle } from "../../../hooks/useToggle";
 import { useSticky } from "../../../hooks/useSticky";
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
 import Header from "../../layout/header/Header";
+import { useCurrentVideo } from "../../../hooks/useCurrentVideo";
 
 interface SendReviewSectionProps {
   children?: ReactNode;
@@ -21,15 +22,10 @@ interface SendReviewSectionProps {
 }
 
 const ReviewListSection: FC<SendReviewSectionProps> = ({}) => {
-  const [isMWOpen, toggleMW] = useToggle(false);
-  const [currentVideo, setCurrentVideo] = useState("");
   const [isSticky, elRef] = useSticky(false);
 
-  const onVideoItemClick = (videoSrc: string): void => {
-    setCurrentVideo(videoSrc);
-    toggleMW();
-  };
-
+  const [currentVideo, isMWOpen, onVideoItemClick, toggleMW] =
+    useCurrentVideo();
   return (
     <div className={style.reviewListSection}>
       <li ref={elRef} className={style.stickyScreen} />
@@ -54,7 +50,6 @@ const ReviewListSection: FC<SendReviewSectionProps> = ({}) => {
           colorStyle="textTitleLightStyle"
           //
         />
-
         <PortfolioList showMore={true}>
           <AnimatePresence>
             {reviewListData.map(item => (
@@ -73,11 +68,11 @@ const ReviewListSection: FC<SendReviewSectionProps> = ({}) => {
                 />
               </PortfolioItem>
             ))}
-            <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
-              <Video videoSrc={currentVideo} />
-            </ModelWindow>
           </AnimatePresence>
         </PortfolioList>
+        <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
+          <Video videoSrc={currentVideo} />
+        </ModelWindow>
       </section>
     </div>
   );

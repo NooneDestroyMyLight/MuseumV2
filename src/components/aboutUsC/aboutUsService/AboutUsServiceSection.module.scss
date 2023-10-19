@@ -25,3 +25,13 @@
     }
   }
 }
+@media (max-width: 740px) {
+  .aboutUsInfoSection {
+    &__container {
+      .itemsList {
+        flex-direction: column;
+        gap: $gap;
+      }
+    }
+  }
+}

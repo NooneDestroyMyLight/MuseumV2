@@ -240,7 +240,7 @@ export const portfolioListData: IPortfolioListData[] = shuffleArray([
   },
 ]);
 
-interface IReviewListData extends IPortfolioListData {
+export interface IReviewListData extends IPortfolioListData {
   videoSrc: string;
 }
 

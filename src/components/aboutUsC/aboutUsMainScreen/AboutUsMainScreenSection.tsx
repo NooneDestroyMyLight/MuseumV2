@@ -7,6 +7,11 @@ import Header from "../../layout/header/Header";
 import { useSticky } from "../../../hooks/useSticky";
 
 import { IAboutUsMainScreenSectionData } from "./aboutUsMainScreenSection.data";
+import ButtonArrow from "../../mainScreenC/buttonArrow/ButtonArrow";
+//
+import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
+import Video from "../../generalC/video/Video";
+import { useToggle } from "../../../hooks/useToggle";
 
 export interface AboutUsMainScreenSectionProps
   extends IAboutUsMainScreenSectionData {}
@@ -16,6 +21,7 @@ const AboutUsMainScreenSection: FC<AboutUsMainScreenSectionProps> = ({
   description,
 }) => {
   const [isSticky, elRef] = useSticky(false);
+  const [isMWOpen, toggleMW] = useToggle(false);
   return (
     <section className={style.aboutUsMainScreenSection}>
       <li ref={elRef} className={style.stickyScreen} />
@@ -42,18 +48,24 @@ const AboutUsMainScreenSection: FC<AboutUsMainScreenSectionProps> = ({
       >
         <ul className="row">
           <li
-            className={`col p-0 d-flex  ${style.aboutUsMainScreenSection__textBlock__container}`}
+            className={`col p-0  ${style.aboutUsMainScreenSection__textBlock__container}`}
           >
-            <div className={style.textAndDescription}>
-              <h1>
-                {title.map(item => (
-                  <p>{item}</p>
-                ))}
-              </h1>
-              <p className={style.textAndDescription__text}>{description}</p>
-            </div>
+            <h1 className={style.aboutUsMainScreenSection__title}>
+              {title.map(item => (
+                <p>{item}</p>
+              ))}
+            </h1>
+            <p className={style.aboutUsMainScreenSection__description}>
+              {description}
+            </p>
             <div className={style.aboutUsMainScreenSection__button}>
               <Button styles={"button__play__aboutUsMainScreenSection"} />
+              <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
+                <Video videoSrc="https://www.youtube.com/watch?v=MJzMvBe6N5M" />
+              </ModelWindow>
+            </div>
+            <div className={style.aboutUsMainScreenSection__buttonArrow}>
+              <ButtonArrow text={"Contact us"} color="white" />
             </div>
           </li>
         </ul>

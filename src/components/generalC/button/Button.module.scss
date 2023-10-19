@@ -121,6 +121,12 @@ $LightColor: #efefef;
 .button__play__aboutUsMainScreenSection {
   @include playButton(276px, 210px, 240px, 75px);
 }
+
+@media (max-width: 850px) {
+  .button__play__aboutUsMainScreenSection {
+    @include playButton(94px, 72px, 90px, 24px);
+  }
+}
 //buttonPlay END
 
 .cursor {

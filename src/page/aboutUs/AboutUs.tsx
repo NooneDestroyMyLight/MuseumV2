@@ -13,16 +13,22 @@ import DirectorSection from "../../components/interiorDesignC/directorSection/Di
 //
 import VerticalGallery from "../../components/aboutUsC/verticalGallery/VerticalGallery";
 //
-import InfoSection from "../../components/mainScreenC/infoSection/InfoSection";
-import TextBlock from "../../components/mainScreenC/infoSection/textBlock/TextBlock";
-//
-import { textBlockAboutUsPageData } from "../../components/mainScreenC/infoSection/textBlock/textBlock.data";
-//
-import Footer from "../../components/layout/footer/Footer";
+
 import AboutUsInfoSection from "../../components/aboutUsC/aboutUsInfoSection/AboutUsInfoSection";
 import AboutUsServiceSection from "../../components/aboutUsC/aboutUsService/AboutUsServiceSection";
 import GalleryShortList from "../../components/generalC/galleryShortList/GalleryShortList";
-import { teamListData } from "../../components/interiorDesignC/galery/portfolioList/portfolioList.data";
+import {
+  reviewListData,
+  teamListData,
+} from "../../components/interiorDesignC/galery/portfolioList/portfolioList.data";
+//
+import ConsultationSection from "../../components/mainScreenC/consultationSection/ConsultationSection";
+import ContactInfo from "../../components/mainScreenC/consultationSection/sendQuestions/contactInfo/ContactInfo";
+import SendQuestions from "../../components/mainScreenC/consultationSection/sendQuestions/SendQuestions";
+//
+import Footer from "../../components/layout/footer/Footer";
+import AboutUsGallerySection from "../../components/aboutUsC/aboutUsGallerySection/AboutUsGallerySection";
+
 aboutUsMainScreenSectionData;
 export interface ReviewProps {}
 
@@ -46,12 +52,20 @@ const AboutUs: FC<ReviewProps> = ({}) => {
       <ProcessSection
         processSectionData={processSectionInteriorDesignPageData}
       />
-      <VerticalGallery
+      <AboutUsGallerySection
+        dataList={reviewListData}
         title={"Feedback from our clients"}
         description={
           "Every project is very special for us. So we rooting for him with the whole team. Therefore, we are infinitely grateful for such sincere, truthful reviews of our customers."
         }
       />
+      <ConsultationSection>
+        <ContactInfo info="" />
+        <SendQuestions
+          title="Do you have any questions?"
+          subTitle="Just write to us"
+        />
+      </ConsultationSection>
       <Footer />
     </main>
   );

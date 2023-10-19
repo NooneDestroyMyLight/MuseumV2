@@ -9,23 +9,58 @@ $gap: 30px;
     color: $lightColor;
 
     &__container {
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // flex-direction: column;
+      // gap: $gap;
+      display: grid;
+      grid-template-areas:
+        "t p"
+        "d p"
+        "b p";
 
-      .textAndDescription {
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
+      row-gap: $gap;
+      column-gap: $gap;
+    }
 
-        &__text {
-          width: 470px;
-        }
+    .aboutUsMainScreenSection__title {
+      grid-area: t;
+    }
+
+    @media (max-width: 740px) {
+      .aboutUsMainScreenSection__title {
+        font-size: 24px;
+        line-height: 29px;
       }
-      .aboutUsMainScreenSection__button {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .aboutUsMainScreenSection__description {
+      grid-area: d;
+      max-width: 470px;
+    }
+
+    .aboutUsMainScreenSection__buttonArrow {
+      grid-area: b;
+    }
+
+    .aboutUsMainScreenSection__button {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      grid-area: p;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .aboutUsMainScreenSection {
+    &__textBlock {
+      &__container {
+        grid-template-areas:
+          "p t"
+          "d d"
+          "b b";
       }
     }
   }

@@ -7,11 +7,12 @@
 }
 
 .stickyScreen {
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   position: absolute;
+  overflow: hidden;
+  z-index: -1;
 }
 
 // <== Mixin START ==>
