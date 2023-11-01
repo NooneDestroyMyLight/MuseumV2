@@ -11,6 +11,7 @@ import Review from "./page/review/Review";
 import AboutUs from "./page/aboutUs/AboutUs";
 import Project from "./page/project/Project";
 import Service from "./page/services/Service";
+import Cases from "./page/cases/Cases";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
       {/* <InteriorDesign /> */}
       {/* <ConstructionAndRenovation /> */}
       {/* <ArchitecturalDesign /> */}
-      <AboutUs />
-      {/* <Project /> */}
       {/* <Review /> */}
-      {/* <Service /> */}
+      {/* <Project /> */}
+      {/* <AboutUs /> */}
+      <Service />
+      {/* <Cases /> */}
     </main>
   );
 }

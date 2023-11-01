@@ -10,7 +10,7 @@
   width: 100%;
 
   position: fixed;
-  z-index: 20;
+  z-index: 4;
   &__container {
     padding-top: 26px;
     &__links {
@@ -24,7 +24,7 @@
   background-color: white;
   transition: background-color 0.3s ease-in-out;
 
-  z-index: 100;
+  z-index: 30;
   top: 0;
   .header__container {
     padding-top: 10px;

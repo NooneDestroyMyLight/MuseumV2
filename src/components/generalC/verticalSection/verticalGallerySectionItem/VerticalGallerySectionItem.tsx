@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-import style from "./AboutUsGallerySection.module.scss";
+import style from "./VerticalGallerySectionItem.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface VerticalGallerySectionItemProps {

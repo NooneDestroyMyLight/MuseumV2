@@ -2,13 +2,14 @@
 
 .verticalGallery {
   display: flex;
-  align-self: center;
+  // align-self: center;
   gap: 2px;
   width: 57%;
 
   overflow: scroll;
   position: absolute;
   right: 0;
+  padding-bottom: 44px;
 }
 @media (max-width: 740px) {
   .verticalGallery {

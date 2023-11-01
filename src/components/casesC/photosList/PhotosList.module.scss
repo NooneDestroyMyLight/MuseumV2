@@ -1,0 +1,54 @@
+@import "../../../scss/styles.scss";
+
+.photosList {
+  &__container {
+    padding: 59px 38px 109px 38px;
+    position: relative;
+    display: grid;
+    .photoList {
+      display: grid;
+      row-gap: 2px;
+      padding: 10px;
+    }
+    .buttonGroup {
+      justify-self: center;
+      width: 90%;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .photosList {
+    &__container {
+      padding: 59px 0 109px 0;
+    }
+  }
+}
+
+.mWSlider__wrapper {
+  position: relative;
+  width: 100vw; //1916px
+  height: 100vh;
+  .close {
+    width: 20px;
+    height: 20px;
+
+    background-color: red;
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    // &::before {
+    //   width: 3px;
+    //   height: 100%;
+    //   background-color: red;
+    // }
+  }
+}
+
+.el {
+  max-width: 100%;
+  justify-self: center;
+}

@@ -1,6 +1,7 @@
-import { FC, MouseEventHandler, ReactNode, useEffect, useRef } from "react";
+import { FC, ReactNode, useEffect } from "react";
 import style from "./ModelWindow.module.scss";
 import { motion } from "framer-motion";
+import ReactDOM from "react-dom";
 
 interface ModelWindowProps {
   children: ReactNode;
@@ -18,20 +19,21 @@ const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, toggleMW }) => {
     }
   }, [isOpen]);
 
-  return (
+  if (!isOpen) return;
+
+  return ReactDOM.createPortal(
     <motion.ul
-      onClick={() => toggleMW()}
-      className={`${style.modelWindow} ${isOpen && style.modelWindow__open}`}
+      onClick={toggleMW}
+      className={`${style.modelWindow} ${style.modelWindow__open}`}
     >
       <li
-        onClick={(e): void => {
-          e.stopPropagation();
-        }}
+        onClick={(e): void => e.stopPropagation()}
         className={style.modelWindow__content}
       >
         {children}
       </li>
-    </motion.ul>
+    </motion.ul>,
+    document.getElementById("portal") as HTMLElement
   );
 };
 export default ModelWindow;

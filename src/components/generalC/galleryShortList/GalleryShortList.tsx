@@ -3,9 +3,6 @@ import style from "./GalleryShortList.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 //
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
-import ButtonArrow, {
-  ButtonArrowProps,
-} from "../../mainScreenC/buttonArrow/ButtonArrow";
 //
 import PortfolioList from "../../interiorDesignC/galery/portfolioList/PortfolioList";
 import PortfolioItem from "../../interiorDesignC/galery/portfolioList/portfolioItem/PortfolioItem";
@@ -34,7 +31,9 @@ const GalleryShortList: FC<GalleryShortListProps> = ({
   };
 
   return (
-    <section className={`container-fluid ${style.section}`}>
+    <section
+      className={`container-fluid ${style.galleryShortList} ${style.section}`}
+    >
       <TextTitle
         title={["Our", "project"]} //title
         backText={"team"} //backTitleText
@@ -52,10 +51,13 @@ const GalleryShortList: FC<GalleryShortListProps> = ({
           />
         ))}
       </PortfolioList>
-      <ShowMoreButton
-        showButtonText={"Show more"}
-        onButtonClick={onButtonClick}
-      />
+      <div className={style.galleryShortList__button}>
+        <ShowMoreButton
+          isHide={showMore}
+          showButtonText={"Show more"}
+          onButtonClick={onButtonClick}
+        />
+      </div>
     </section>
   );
 };

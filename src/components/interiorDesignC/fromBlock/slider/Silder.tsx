@@ -19,7 +19,7 @@ const Silder: FC<SilderProps> = ({ sliderData }) => {
       slidesPerView={1}
       loop={true}
       //class
-      className={`col-auto p-0 ${style.slider}`}
+      className={`col-0 p-0 ${style.slider}`}
       wrapperClass={style.slider__Wrapper}
       //
       onSlideChange={swiper => {

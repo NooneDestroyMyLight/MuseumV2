@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import TextTitle from "../../mainScreenC/infoSection/textTitle/TextTitle";
 import ButtonArrow from "../../mainScreenC/buttonArrow/ButtonArrow";
-import FilterList from "./filterList/FilterList";
+import FilterList, { allProject } from "./filterList/FilterList";
 
 import PortfolioList from "./portfolioList/PortfolioList";
 
@@ -34,8 +34,8 @@ export interface GalleryProps {
 const Gallery: FC<GalleryProps> = ({ showButtonText, showAll, dataList }) => {
   const [portfilioList, setPortfilioList] =
     useState<IPortfolioListData[]>(dataList);
-
   const [showMore, setShowMore] = useState<boolean>(showAll);
+  const [currentFilter, setCurrentFilter] = useState<string>(allProject);
 
   const onButtonClick = () => {
     setShowMore(true);
@@ -57,10 +57,13 @@ const Gallery: FC<GalleryProps> = ({ showButtonText, showAll, dataList }) => {
         </TextTitle>
         <div className={style.portfolioGroup}>
           <FilterList
-            //
             category={portfolioCategory}
+            //
             setPortfilioList={setPortfilioList}
             portfilioList={portfolioListData}
+            ///
+            currentFilter={currentFilter}
+            setCurrentFilter={setCurrentFilter}
           />
           <PortfolioList showMore={showMore}>
             <AnimatePresence>

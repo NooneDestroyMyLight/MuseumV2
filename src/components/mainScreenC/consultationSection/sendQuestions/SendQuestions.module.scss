@@ -14,6 +14,9 @@ $gap: 25px;
     .title {
       display: flex;
       flex-direction: column;
+      &__text {
+        @include subTitle(24px, $lightColor);
+      }
     }
 
     .inputs {
@@ -27,6 +30,7 @@ $gap: 25px;
     }
   }
 }
+
 @media (max-width: 1050px) {
   .sendQuestions {
     .SendQuestionsContainer {
@@ -47,9 +51,28 @@ $gap: 25px;
     }
   }
 }
+@media (max-width: 740px) {
+  .sendQuestions {
+    width: 100%;
+  }
+}
 
 @media (max-width: 660px) {
   .sendQuestions {
     width: 100%;
+  }
+}
+
+.mWSendQuestions {
+  .SendQuestionsContainer {
+    background-color: white;
+    color: black;
+    padding: 25px 25px 30px 25px;
+
+    .title {
+      &__text {
+        @include subTitle(24px, $darkColor);
+      }
+    }
   }
 }

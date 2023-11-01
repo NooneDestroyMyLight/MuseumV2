@@ -28,8 +28,8 @@ const InteriorDesignFromBlockChild: FC<InteriorDesignFromBlockChildProps> = ({
       >
         <h1>{title}</h1>
         <TextBlock text={textBlockData} />
-        <Input label="Your name *" StylesClass="LightStyleInput" />
-        <Input label="Phone number / email *" StylesClass="LightStyleInput" />
+        <Input label="Your name *" className="LightStyleInput" />
+        <Input label="Phone number / email *" className="LightStyleInput" />
         <button className={style.button}>{buttonText}</button>
       </div>
       <Silder sliderData={sliderData} />

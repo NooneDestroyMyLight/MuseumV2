@@ -1,22 +1,27 @@
 @import "../../../scss/styles.scss";
 
-.aboutUsGallerySection {
+.verticalGallerySection {
   display: grid;
+  height: 380px;
+
   .description {
-    &__title {
-      font-size: 1.72rem;
-      line-height: 2.07rem;
-    }
     display: flex;
     flex-direction: column;
     gap: $gap;
 
     width: 35%;
+
+    &__title {
+      font-size: 1.72rem;
+      line-height: 2.07rem;
+    }
   }
 }
+
 @media (max-width: 740px) {
-  .aboutUsGallerySection {
+  .verticalGallerySection {
     row-gap: $gap;
+    height: auto;
     .description {
       width: 100%;
     }

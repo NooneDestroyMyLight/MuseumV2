@@ -5,8 +5,10 @@
 .filterList {
   gap: 30px;
   display: flex;
+  overflow: auto;
 
   .col {
     width: fit-content;
+    flex: 0 0 auto;
   }
 }

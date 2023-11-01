@@ -55,9 +55,10 @@ const AboutUs: FC<ReviewProps> = ({}) => {
       <AboutUsGallerySection
         dataList={reviewListData}
         title={"Feedback from our clients"}
-        description={
-          "Every project is very special for us. So we rooting for him with the whole team. Therefore, we are infinitely grateful for such sincere, truthful reviews of our customers."
-        }
+        description={[
+          "Every project is very special for us. So we rooting for him with the whole team. Therefore, we are infinitely grateful for such sincere, truthful reviews of our customers.",
+        ]}
+        arrowButtonText="Leave feedback"
       />
       <ConsultationSection>
         <ContactInfo info="" />

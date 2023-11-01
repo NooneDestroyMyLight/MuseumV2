@@ -12,6 +12,7 @@ import Footer from "../../components/layout/footer/Footer";
 import SendReviewSection from "../../components/reviewC/sendReviewSection/SendReviewSection";
 //
 import ReviewListSection from "../../components/reviewC/reviewListSection/ReviewListSection";
+import Header from "../../components/layout/header/Header";
 
 export interface ReviewProps {}
 
@@ -19,8 +20,22 @@ const text = `Для роста нашей компании и развити�
 рабочего процесса и полученного результата.`;
 
 const Review: FC<ReviewProps> = ({}) => {
+  const [isSticky, elRef] = useSticky(false);
   return (
     <div>
+      <li ref={elRef} className={style.stickyScreen} />
+      <Header
+        HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
+        HeaderNavDropdownNotStickyStyle={"stickydHeaderNavItem"}
+        //
+        notStickedMobileBackground={"white"}
+        isStickyMobileBackground={"white"}
+        //
+        isSticky={isSticky}
+        //
+        textColor={"black"}
+        isStickyTextColor={"black"}
+      />
       <ReviewListSection />
       <SendReviewSection
         title={["Want to share", "experience working with us?"]}

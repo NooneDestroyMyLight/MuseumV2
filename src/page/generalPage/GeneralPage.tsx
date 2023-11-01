@@ -21,10 +21,26 @@ import SendQuestions from "../../components/mainScreenC/consultationSection/send
 import Footer from "../../components/layout/footer/Footer";
 import { textBlockGeneralPageData } from "../../components/mainScreenC/infoSection/textBlock/textBlock.data";
 import { serviceThesisItemGeneralPageData } from "../../components/mainScreenC/serviceRangeSection/serviceRange.data";
+import Header from "../../components/layout/header/Header";
+import { useSticky } from "../../hooks/useSticky";
 
 const GeneralPage: FC = () => {
+  const [isSticky, elRef] = useSticky(false);
   return (
     <div className={`${style.mainContainer}`}>
+      <li ref={elRef} className={style.stickyScreen} />
+      <Header
+        HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
+        HeaderNavDropdownNotStickyStyle={"headerNavItem"}
+        //
+        notStickedMobileBackground={"black"}
+        isStickyMobileBackground={"white"}
+        //
+        isSticky={isSticky}
+        //
+        textColor={"white"}
+        isStickyTextColor={"black"}
+      />
       <MainScreen
         videoSrc="../../../public/introVideo/main-bg-video.mp4"
         videoType="video/mp4"

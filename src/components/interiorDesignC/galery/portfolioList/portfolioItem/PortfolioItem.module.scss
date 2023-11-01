@@ -4,10 +4,10 @@
 //Mixin START
 @mixin MPortfolioItem {
   width: 100%;
+  height: 100%;
   position: relative;
   cursor: pointer;
 
-  width: auto;
   img {
     height: auto;
     object-fit: cover;
@@ -98,12 +98,13 @@
 }
 @media (max-width: 920px) {
   .portfolioItem {
-    &__infoGroup {
+    .portfolioItem__infoGroup {
       display: flex;
       position: static;
       align-items: center;
-      color: $darkColor;
+      width: 100%;
 
+      color: $darkColor;
       opacity: 1;
     }
   }
@@ -111,7 +112,8 @@
 //////
 .portfolioVideoItem {
   @include MPortfolioItem;
-
+  // width: 33.3333%;
+  // height: auto;
   display: grid;
   justify-self: center;
 
@@ -121,6 +123,7 @@
 
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+    // width: 100%;
   }
 
   &:hover {
@@ -177,7 +180,7 @@
 
 .portfolioItem__verticalGallery {
   @include MPorfolioItem_video;
-
+  width: auto;
   img {
     object-fit: cover;
     width: 335px;

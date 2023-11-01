@@ -34,6 +34,7 @@ import Button from "../../../components/generalC/button/Button";
 //
 import Footer from "../../../components/layout/footer/Footer";
 import { processSectionInteriorDesignPageData } from "../../../components/interiorDesignC/processSection/processSection.data";
+import { portfolioListData } from "../../../components/interiorDesignC/galery/portfolioList/portfolioList.data";
 
 const ConstructionAndRenovation: FC = () => {
   return (
@@ -56,7 +57,11 @@ const ConstructionAndRenovation: FC = () => {
         //
         discriptionClassName="discription__constructionAndRenovation"
       />
-      <Gallery showButtonText="Show more" />
+      <Gallery
+        showButtonText="Show more"
+        showAll={false}
+        dataList={portfolioListData}
+      />
       <ResultSection>
         <ul className={`row ${style.resultSection__hoc__container}`}>
           <li className={`col-6 p-0 ${style.column}`}>

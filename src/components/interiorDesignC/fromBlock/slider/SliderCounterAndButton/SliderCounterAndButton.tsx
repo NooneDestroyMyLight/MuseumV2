@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import style from "./SliderCounterAndButton.module.scss";
 import ArrowButtonIcon from "../../../../../assets/arrowButtonIcon/ArrowButtonIcon";
 import { useSwiper } from "swiper/react";
@@ -20,8 +20,12 @@ const SliderCounterAndButton: FC<SliderCounterAndButtonProps> = ({
         <ArrowButtonIcon color={"white"} height="8" width="50" />
       </button>
       <li className={style.counter}>
-        <span className={style.currentSlide}>0{currentSlide}</span>
-        <span className={style.sliderLength}>0{sliderLength}</span>
+        <span className={style.currentSlide}>
+          {currentSlide < 10 ? "0" + currentSlide : currentSlide}
+        </span>
+        <span className={style.sliderLength}>
+          {sliderLength < 10 ? "0" + sliderLength : sliderLength}
+        </span>
       </li>
       <button onClick={() => swiper.slideNext()} className={style.nextButton}>
         <ArrowButtonIcon color={"white"} height="8" width="50" />

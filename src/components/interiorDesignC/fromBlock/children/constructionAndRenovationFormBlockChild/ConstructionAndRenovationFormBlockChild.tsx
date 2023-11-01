@@ -35,8 +35,8 @@ const ConstructionAndRenovationFormBlockChild: FC<
         <h1>{title}</h1>
         <TextBlock text={textBlockData} />
         <ButtonArrow color="black" text={buttonArrowText} />
-        <Input label="Your name *" StylesClass="LightStyleInput" />
-        <Input label="Phone number / email *" StylesClass="LightStyleInput" />
+        <Input label="Your name *" className="LightStyleInput" />
+        <Input label="Phone number / email *" className="LightStyleInput" />
         <button className={style.button}>{buttonText}</button>
       </div>
       {/* <div className="col-auto p-0 d-flex"> */}

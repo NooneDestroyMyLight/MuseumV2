@@ -12,6 +12,7 @@ import ButtonArrow from "../../mainScreenC/buttonArrow/ButtonArrow";
 import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
 import Video from "../../generalC/video/Video";
 import { useToggle } from "../../../hooks/useToggle";
+import { useCurrentVideo } from "../../../hooks/useCurrentVideo";
 
 export interface AboutUsMainScreenSectionProps
   extends IAboutUsMainScreenSectionData {}
@@ -21,7 +22,9 @@ const AboutUsMainScreenSection: FC<AboutUsMainScreenSectionProps> = ({
   description,
 }) => {
   const [isSticky, elRef] = useSticky(false);
-  const [isMWOpen, toggleMW] = useToggle(false);
+  const [currentVideo, isMWOpen, onVideoItemClick, toggleMW] =
+    useCurrentVideo();
+
   return (
     <section className={style.aboutUsMainScreenSection}>
       <li ref={elRef} className={style.stickyScreen} />
@@ -59,9 +62,16 @@ const AboutUsMainScreenSection: FC<AboutUsMainScreenSectionProps> = ({
               {description}
             </p>
             <div className={style.aboutUsMainScreenSection__button}>
-              <Button styles={"button__play__aboutUsMainScreenSection"} />
+              <Button
+                styles={"button__play__aboutUsMainScreenSection"}
+                onClick={() =>
+                  onVideoItemClick(
+                    "https://www.youtube.com/watch?v=MJzMvBe6N5M"
+                  )
+                }
+              />
               <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
-                <Video videoSrc="https://www.youtube.com/watch?v=MJzMvBe6N5M" />
+                <Video videoSrc={currentVideo} />
               </ModelWindow>
             </div>
             <div className={style.aboutUsMainScreenSection__buttonArrow}>

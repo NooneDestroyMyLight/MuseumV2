@@ -12,12 +12,15 @@ import { useCurrentVideo } from "../../../hooks/useCurrentVideo";
 
 import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
 import Video from "../../generalC/video/Video";
+import VerticalGallerySection from "../../generalC/verticalSection/VerticalGallerySection";
 
 interface AboutUsGallerySectionProps {
   dataList: IReviewListData[];
   //
   title: string;
-  description: string;
+  description: string[];
+  //
+  arrowButtonText: string;
 }
 
 const AboutUsGallerySection: FC<AboutUsGallerySectionProps> = ({
@@ -25,42 +28,64 @@ const AboutUsGallerySection: FC<AboutUsGallerySectionProps> = ({
   //
   title,
   description,
+  arrowButtonText,
 }) => {
   const [currentVideo, isMWOpen, onVideoItemClick, toggleMW] =
     useCurrentVideo();
 
   return (
-    <section
-      className={` container-fluid ${style.aboutUsGallerySection} ${style.section}`}
-    >
-      <div className={style.description}>
-        <h2 className={style.description__title}>{title}</h2>
-        <p>{description}</p>
-        <ButtonArrow color="black" text="Leave feedback" />
-      </div>
-      <VerticalGallery>
-        {dataList.map(item => (
-          <PortfolioItem
-            className={"portfolioItem__verticalGallery"}
-            //
-            key={item.imgSrc}
-            //
-            imgSrc={item.imgSrc}
-            description={item.category}
-            name={item.name}
+    <section className={` container-fluid  ${style.section}`}>
+      <div className="row">
+        <div className={`col p-0 ${style.aboutUsGallerySection}`}>
+          <VerticalGallerySection
+            title={title}
+            description={description}
+            buttonArrowText={arrowButtonText}
           >
-            <Button
-              styles={"button__play__directorSection"}
-              onClick={() => onVideoItemClick(item.videoSrc)}
-            />
-          </PortfolioItem>
-        ))}
-        <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
-          <Video videoSrc={currentVideo} />
-        </ModelWindow>
-      </VerticalGallery>
+            {dataList.map(item => (
+              <PortfolioItem
+                className={"portfolioItem__verticalGallery"}
+                //
+                key={item.imgSrc}
+                //
+                imgSrc={item.imgSrc}
+                description={item.category}
+                name={item.name}
+              >
+                <Button
+                  styles={"button__play__directorSection"}
+                  onClick={() => onVideoItemClick(item.videoSrc)}
+                />
+              </PortfolioItem>
+            ))}
+            <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
+              <Video videoSrc={currentVideo} />
+            </ModelWindow>
+          </VerticalGallerySection>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default AboutUsGallerySection;
+
+// {dataList.map(item => (
+//   <PortfolioItem
+//     className={"portfolioItem__verticalGallery"}
+//     //
+//     key={item.imgSrc}
+//     //
+//     imgSrc={item.imgSrc}
+//     description={item.category}
+//     name={item.name}
+//   >
+//     <Button
+//       styles={"button__play__directorSection"}
+//       onClick={() => onVideoItemClick(item.videoSrc)}
+//     />
+//   </PortfolioItem>
+// ))}
+// <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
+//   <Video videoSrc={currentVideo} />
+// </ModelWindow>

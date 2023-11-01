@@ -240,7 +240,10 @@ export const portfolioListData: IPortfolioListData[] = shuffleArray([
   },
 ]);
 
-export interface IReviewListData extends IPortfolioListData {
+export interface IReviewListData {
+  imgSrc: string;
+  category: string[];
+  name: string;
   videoSrc: string;
 }
 
@@ -248,7 +251,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x1-1-.png.pagespeed.ic.n2mZD4bsx-.png",
-    category: "Частный клиент",
+    category: ["Частный клиент"],
     name: "Мария Лазарева",
     videoSrc:
       "https://www.youtube.com/watch?v=7JLaLHVaLsc&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark",
@@ -256,7 +259,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x2.png.pagespeed.ic.EIaag1Pawh.png",
-    category: "Владелец ТРЦ БОШЕ",
+    category: ["Владелец ТРЦ БОШЕ"],
     name: "Игорь Барщук",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/2zsK068ITso?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=5",
@@ -264,7 +267,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x3-2.png.pagespeed.ic.IcNJvpuAoN.png",
-    category: 'Ресторатор(рестораны "Веретено", "Сосновка")',
+    category: ["Ресторатор", '(рестораны "Веретено", "Сосновка")'],
     name: "Александр Бондарь",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/Ekj8kAHsuGc?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=6",
@@ -272,7 +275,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x4-2.png.pagespeed.ic.jjxK3Nlqku.png",
-    category: "Арт-директор ресторана-курорта Дубровкий",
+    category: ["Арт-директор", "ресторана-курорта Дубровкий"],
     name: "Оксана Яценко",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/ZB-ehsNiS-Y?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=7",
@@ -281,7 +284,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x5.png.pagespeed.ic.IpU4LzjzbI.png",
-    category: "Руководитель компании «ОВИС»",
+    category: ["Руководитель", " компании «ОВИС»"],
     name: "Сергей Иванович",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/MwhGntOumzs?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=8",
@@ -289,7 +292,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x6.png.pagespeed.ic.mIbkfIk4WF (1).png",
-    category: 'Генеральный директор хлебозавода "Ново Баварский"',
+    category: ["Генеральный директор ", " хлебозавода ", '"Ново Баварский"'],
     name: "Валерий Фандер",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/EdJbpj_JOBk?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=9",
@@ -297,7 +300,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x6.png.pagespeed.ic.mIbkfIk4WF.png",
-    category: "Генеральный директор сети кофеен и турагенств",
+    category: ["Генеральный директор ", " сети кофеен и", "турагенств"],
     name: "Ирина Мишина",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/y031hUXS2GU?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=10",
@@ -305,7 +308,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x8.png.pagespeed.ic.xNJ953pbMV.png",
-    category: "Директор салона красоты",
+    category: ["Директор салона", " красоты"],
     name: "Эльмира Гончарова",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/ngGY7aFXPTI?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=11",
@@ -314,7 +317,7 @@ export const reviewListData: IReviewListData[] = [
   {
     imgSrc:
       "../../../../../public/review/previewList/x9.png.pagespeed.ic.xKTyZPH9FB.png",
-    category: 'Мер города "Мерефа"',
+    category: ["Мер города ", ' "Мерефа"'],
     name: "Вениамин Ситов",
     videoSrc:
       "https://www.youtube-nocookie.com/embed/HHZGKLQeaoM?autoplay=0&controls=0&disablekb=1&playsinline=1&cc_load_policy=0&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fru%2Freviews%2F&noCookie=true&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&origin=https%3A%2F%2Fmuseum-interior.com&widgetid=13",

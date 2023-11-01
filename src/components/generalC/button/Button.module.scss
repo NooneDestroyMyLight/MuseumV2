@@ -22,6 +22,7 @@ $LightColor: #efefef;
   $hoveredCircle,
   $iconSize
 ) {
+  z-index: 3;
   width: $playbuttonSize; //121px
   height: $playbuttonSize;
 
@@ -127,6 +128,18 @@ $LightColor: #efefef;
     @include playButton(94px, 72px, 90px, 24px);
   }
 }
+
+.button__mWSendQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 19px 50px;
+
+  background-color: black;
+  color: white;
+}
+
 //buttonPlay END
 
 .cursor {

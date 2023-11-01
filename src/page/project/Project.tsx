@@ -34,7 +34,6 @@ const Project: FC<ProjectProps> = ({}) => {
   const [isSticky, elRef] = useSticky(false);
   const [portfilioList, setPortfilioList] =
     useState<IPortfolioListData[]>(portfolioListData);
-
   const [currentFilter, setCurrentFilter] = useState<string>(allProject);
 
   return (

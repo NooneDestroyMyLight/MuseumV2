@@ -1,0 +1,50 @@
+@import "../../../scss/styles.scss";
+
+.casesHeader {
+  position: relative;
+  height: 440px;
+  .background {
+    object-fit: cover;
+    filter: brightness(0.5);
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  &__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    .casesHeader__container__topic {
+      //gap 10px
+      align-self: flex-end;
+
+      width: 100%;
+      max-width: 60%;
+      box-sizing: content-box;
+
+      background-color: #fff;
+      padding: 20px 38px 14px;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+      span {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .casesHeader {
+    &__container {
+      .casesHeader__container__topic {
+        max-width: unset;
+      }
+    }
+  }
+}

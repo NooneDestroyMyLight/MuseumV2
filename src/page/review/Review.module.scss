@@ -3,3 +3,8 @@
   overflow-wrap: break-word;
   color: #fff;
 }
+@media (max-width: 740px) {
+  .text {
+    max-width: unset;
+  }
+}

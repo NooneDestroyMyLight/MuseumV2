@@ -29,7 +29,7 @@ import { estimateCostSectionData } from "./interiorDesign.data";
 //
 import TextBlock from "../../../components/mainScreenC/infoSection/textBlock/TextBlock";
 import { textBlockResultSectionData } from "../../../components/interiorDesignC/resultSection/resultSection.data";
-
+//
 import ResultSectionImage from "../../../components/interiorDesignC/resultSection/resultSectionImage/ResultSectionImage";
 import DirectorSection from "../../../components/interiorDesignC/directorSection/DirectorSection";
 import Button from "../../../components/generalC/button/Button";

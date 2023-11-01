@@ -28,21 +28,25 @@ const FilterList: FC<FilterListProps> = ({
   setCurrentFilter,
 }) => {
   return (
-    <div className={`row d-flex ${style.filterList}`}>
-      {category.map(item => (
-        <div className={`col-2  p-0 ${style.col}`}>
-          <FilterItem
-            name={item}
-            //
-            portfilioList={portfilioList}
-            setPortfilioList={setPortfilioList}
-            //
-            currentFilter={currentFilter}
-            setCurrentFilter={setCurrentFilter}
-          />
+    <ul className="row">
+      <li className="col p-0">
+        <div className={` ${style.filterList}`}>
+          {category.map(item => (
+            <div className={` ${style.col}`}>
+              <FilterItem
+                name={item}
+                //
+                portfilioList={portfilioList}
+                setPortfilioList={setPortfilioList}
+                //
+                currentFilter={currentFilter}
+                setCurrentFilter={setCurrentFilter}
+              />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </li>
+    </ul>
   );
 };
 

@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export interface PortfolioListProps {
   // portfilioList: IPortfolioListData[];
-  showMore: boolean;
+  showMore?: boolean;
   //
   children?: ReactNode;
 }
