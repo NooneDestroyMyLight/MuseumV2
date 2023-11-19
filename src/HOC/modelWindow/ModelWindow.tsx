@@ -1,6 +1,7 @@
 import { FC, ReactNode, useEffect } from "react";
 import style from "./ModelWindow.module.scss";
-import { motion } from "framer-motion";
+//
+import { motion, AnimatePresence } from "framer-motion";
 import ReactDOM from "react-dom";
 
 interface ModelWindowProps {
@@ -8,6 +9,11 @@ interface ModelWindowProps {
   isOpen?: boolean;
   toggleMW: () => void;
 }
+
+let backdrop = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
 
 const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, toggleMW }) => {
   useEffect(() => {
@@ -19,21 +25,29 @@ const ModelWindow: FC<ModelWindowProps> = ({ children, isOpen, toggleMW }) => {
     }
   }, [isOpen]);
 
-  if (!isOpen) return;
-
   return ReactDOM.createPortal(
-    <motion.ul
-      onClick={toggleMW}
-      className={`${style.modelWindow} ${style.modelWindow__open}`}
-    >
-      <li
-        onClick={(e): void => e.stopPropagation()}
-        className={style.modelWindow__content}
-      >
-        {children}
-      </li>
-    </motion.ul>,
+    <AnimatePresence>
+      {isOpen && (
+        <motion.ul
+          onClick={toggleMW}
+          className={`${style.modelWindow} ${style.modelWindow__open}`}
+          //
+          variants={backdrop}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          <li
+            onClick={(e): void => e.stopPropagation()}
+            className={style.modelWindow__content}
+          >
+            {children}
+          </li>
+        </motion.ul>
+      )}
+    </AnimatePresence>,
     document.getElementById("portal") as HTMLElement
   );
 };
+
 export default ModelWindow;

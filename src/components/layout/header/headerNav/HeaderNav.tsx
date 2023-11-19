@@ -37,7 +37,6 @@ const HeaderNav: FC<HeaderNavProps> = ({
   navToggle,
 }) => {
   const onBurgerButtonClick = (): void => {
-    console.log("navToggle");
     if (navToggle) {
       document.body.classList.remove("modal-open");
     } else if (!navToggle) {
@@ -54,10 +53,12 @@ const HeaderNav: FC<HeaderNavProps> = ({
             isStickyStyle={HeaderNavDropdownIsStickyStyle}
             notStickyStyle={HeaderNavDropdownNotStickyStyle}
             //
-            navItem={item}
             textColor={textColor}
             isSticky={isSticky}
-            navToggle={navToggle}
+            //
+            navToggle={navToggle} //Burger Menu
+            //
+            navItem={item}
           />
         ))}
       </div>

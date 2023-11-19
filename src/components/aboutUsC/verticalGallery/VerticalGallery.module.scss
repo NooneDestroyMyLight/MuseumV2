@@ -1,19 +1,28 @@
 @import "../../../scss/styles.scss";
 
-.verticalGallery {
-  display: flex;
-  // align-self: center;
-  gap: 2px;
-  width: 57%;
-
-  overflow: scroll;
+.verticalGallery__wrapper {
   position: absolute;
   right: 0;
-  padding-bottom: 44px;
+  overflow: auto !important;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+  touch-action: none;
+  width: 57%;
+  gap: 2px;
+  .verticalGallery {
+    // align-self: center;
+    // overflow: auto;
+    display: flex;
+    padding-bottom: 44px;
+  }
 }
 @media (max-width: 740px) {
-  .verticalGallery {
+  .verticalGallery__wrapper {
     width: 100%;
     position: static;
+    .verticalGallery {
+    }
   }
 }

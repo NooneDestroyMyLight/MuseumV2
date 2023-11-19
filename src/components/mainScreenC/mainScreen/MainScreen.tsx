@@ -18,18 +18,6 @@ const MainScreen: FC<MainScreenProps> = ({ children }) => {
 
   return (
     <section ref={elRef} className={`${style.mainPageContainer}`}>
-      {/* <Header
-        HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
-        HeaderNavDropdownNotStickyStyle={"headerNavItem"}
-        //
-        notStickedMobileBackground={"black"}
-        isStickyMobileBackground={"white"}
-        //
-        isSticky={isSticky}
-        //
-        textColor={"white"}
-        isStickyTextColor={"black"}
-      /> */}
       <IntroVideo
         videoSrc="../../../public/introVideo/main-bg-video.mp4"
         videoType="video/mp4"

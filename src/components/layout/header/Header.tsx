@@ -1,11 +1,8 @@
-import { CSSProperties, FC, useState } from "react";
+import { FC, useState } from "react";
 import style from "./Header.module.scss";
 
 import MainLogo from "../../../assets/mainLogo/mainLogo/MainLogo";
 import HeaderNav from "./headerNav/HeaderNav";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useSticky } from "../../../hooks/useSticky";
 
 interface HeaderProps {
   HeaderNavDropdownIsStickyStyle: string;

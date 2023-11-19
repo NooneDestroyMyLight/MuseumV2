@@ -1,6 +1,7 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import style from "./HeaderNavItem.module.scss";
 
+import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { IHeaderNav } from "../../headerNav.data";
 import Dropdown from "../../../../../HOC/dropdown/Dropdown";
@@ -29,30 +30,33 @@ const HeaderNavItem: FC<IHeaderNavItemProps> = ({
       style={{ color: textColor }}
       className={`text-nowrap ${style.headerNavItamContainer}`}
     >
-      {navItem.name}
+      <NavLink to={navItem.link}>{navItem.name}</NavLink>
       <div className={style.subMenu}>
         {navItem.subMenu && !navToggle && (
           <Dropdown
             styleClass={isSticky ? isStickyStyle : notStickyStyle} //Its styles take from Dropdown.scss Look that
           >
             {navItem.subMenu.map(item => (
-              <label className={`text-nowrap ${style.headerNavItamContainer}`}>
+              <NavLink
+                to={item.link}
+                className={`text-nowrap ${style.headerNavItamContainer}`}
+              >
                 {item.name}
-              </label>
+              </NavLink>
             ))}
           </Dropdown>
         )}
       </div>
-
       {navItem.subMenu && navToggle && (
         <div className={style.subMenuMobile}>
           {navItem.subMenu.map(item => (
-            <label
+            <NavLink
+              to={item.link}
               style={{ color: textColor }}
               className={`text-nowrap ${style.subItem}`}
             >
               {item.name}
-            </label>
+            </NavLink>
           ))}
         </div>
       )}

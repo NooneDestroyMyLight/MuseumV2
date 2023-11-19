@@ -54,6 +54,7 @@
     }
     &__textarea {
       grid-area: textarea;
+      // overflow: scroll;
     }
     &__button {
       grid-area: button;
@@ -66,6 +67,8 @@
 @media (max-width: 660px) {
   .mWSendQuestion__wrapper {
     width: 100vw;
+
+    min-width: 340px;
     height: 100vh;
 
     .mWSendQuestion {

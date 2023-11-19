@@ -1,8 +1,8 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import style from "./Video.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 //
-import Plyr from "plyr-react";
+import Plyr, { APITypes } from "plyr-react";
 import "plyr-react/plyr.css";
 
 interface VideoProps {
@@ -10,9 +10,20 @@ interface VideoProps {
 }
 
 const Video: FC<VideoProps> = ({ videoSrc }) => {
+  const playerRef = useRef<APITypes | null>(null);
+
+  // useEffect(() => {
+  //   if ((playerRef.current as APITypes).plyr && window.innerWidth <= 768) {
+  //     (playerRef.current as APITypes).plyr.fullscreen.enter();
+  //   }
+  // }, [videoSrc]);
+
+  // console.log("windowWidth", window.innerWidth);
+
   return (
     <div className={style.video}>
       <Plyr
+        ref={playerRef}
         source={{
           type: "video",
           sources: [
@@ -26,6 +37,5 @@ const Video: FC<VideoProps> = ({ videoSrc }) => {
     </div>
   );
 };
-//"https://www.youtube.com/watch?v=AD2aftdD_fA&embeds_widget_referrer=https%3A%2F%2Fmuseum-interior.com%2Fes%2Finterior-design%2F&embeds_referring_origin=https%3A%2F%2Fmuseum-interior.com&feature=emb_yt_watermark"
 
 export default Video;

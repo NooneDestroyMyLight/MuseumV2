@@ -11,8 +11,9 @@ export interface FAQSectionListProps {
 
 const FAQSectionList: FC<FAQSectionListProps> = ({ FAQSectionListData }) => {
   const [isDiscOpen, setDiscOpen] = useState<string>(
-    FAQSectionListData[0].title
+    FAQSectionListData.length > 0 ? FAQSectionListData[0].title : ""
   );
+
   return (
     <div className={`row ${style.fAQSectionList}`}>
       <div className={`col-6 p-0 ${style.column}`}>

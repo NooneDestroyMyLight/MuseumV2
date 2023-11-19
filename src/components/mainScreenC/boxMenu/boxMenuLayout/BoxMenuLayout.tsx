@@ -25,8 +25,9 @@ const BoxMenuLayout: FC<BoxMenuLayoutProps> = ({
           }}
         >
           <TitleWithButton
+            data={item}
+            //
             marginTop="38px"
-            titleText={item.text}
             color={
               currentBackground === null ||
               currentBackground === item.backgroundImg

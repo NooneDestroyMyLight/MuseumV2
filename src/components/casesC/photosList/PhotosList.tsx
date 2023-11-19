@@ -51,7 +51,7 @@ const PhotosList: FC<PhotosListProps> = ({}) => {
       <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
         <div className={style.mWSlider__wrapper}>
           <button
-            className={style.close}
+            className={style.button__close}
             onClick={toggleMW}
             aria-label={"close (Esc)"}
           />

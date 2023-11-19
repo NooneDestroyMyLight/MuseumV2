@@ -9,7 +9,7 @@ export interface PortfolioItemProps {
   //
   imgSrc: string;
   name: string;
-  description: string;
+  description: string[] | string; //mistake can be there
   //
   children?: ReactNode;
 }

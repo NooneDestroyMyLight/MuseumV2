@@ -11,6 +11,7 @@ import {
 } from "../../generalC/verticalSection/verticalGallerySection.data";
 import VerticalGallerySectionItem from "../../generalC/verticalSection/verticalGallerySectionItem/VerticalGallerySectionItem";
 import { serviceGallerysListData } from "./ServiceGallerysList.data";
+import { SwiperSlide } from "swiper/react";
 
 export interface ServiceGallerysListProps {}
 
@@ -38,11 +39,13 @@ const ServiceGallerysList: FC<ServiceGallerysListProps> = ({}) => {
             {verticalGalleryDataImgList.map(
               item =>
                 item.category === verticalGalleryDataImgListCategory[0] && (
-                  <VerticalGallerySectionItem
-                    imgSrc={item.imgSrc}
-                    alt={item.alt}
-                    key={item.imgSrc}
-                  />
+                  <SwiperSlide>
+                    <VerticalGallerySectionItem
+                      imgSrc={item.imgSrc}
+                      alt={item.alt}
+                      key={item.imgSrc}
+                    />
+                  </SwiperSlide>
                 )
             )}
           </VerticalGallerySection>
@@ -54,11 +57,13 @@ const ServiceGallerysList: FC<ServiceGallerysListProps> = ({}) => {
             {verticalGalleryDataImgList.map(
               item =>
                 item.category === verticalGalleryDataImgListCategory[1] && (
-                  <VerticalGallerySectionItem
-                    imgSrc={item.imgSrc}
-                    alt={item.alt}
-                    key={item.imgSrc}
-                  />
+                  <SwiperSlide>
+                    <VerticalGallerySectionItem
+                      imgSrc={item.imgSrc}
+                      alt={item.alt}
+                      key={item.imgSrc}
+                    />
+                  </SwiperSlide>
                 )
             )}
           </VerticalGallerySection>
@@ -70,11 +75,13 @@ const ServiceGallerysList: FC<ServiceGallerysListProps> = ({}) => {
             {verticalGalleryDataImgList.map(
               item =>
                 item.category === verticalGalleryDataImgListCategory[2] && (
-                  <VerticalGallerySectionItem
-                    imgSrc={item.imgSrc}
-                    alt={item.alt}
-                    key={item.imgSrc}
-                  />
+                  <SwiperSlide>
+                    <VerticalGallerySectionItem
+                      imgSrc={item.imgSrc}
+                      alt={item.alt}
+                      key={item.imgSrc}
+                    />
+                  </SwiperSlide>
                 )
             )}
           </VerticalGallerySection>

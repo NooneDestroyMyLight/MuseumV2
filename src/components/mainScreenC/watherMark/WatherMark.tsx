@@ -1,13 +1,11 @@
 import { FC } from "react";
-import style from "./WatherMark.module.scss";
 import { useToggle } from "../../../hooks/useToggle";
-import "bootstrap/dist/css/bootstrap.min.css";
+import style from "./WatherMark.module.scss";
 
 import ButtonArrow from "../buttonArrow/ButtonArrow";
 //
 import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
-import SendQuestions from "../consultationSection/sendQuestions/SendQuestions";
-import MWSendQuestion from "./mWSendQuestion/mWSendQuestion";
+import MWSendQuestion from "./mWSendQuestion/MWSendQuestion";
 
 interface WatherMarkProps {}
 

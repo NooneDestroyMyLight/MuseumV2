@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import TextTitle from "./textTitle/TextTitle";
 import ButtonArrow from "../buttonArrow/ButtonArrow";
+import { NavLink } from "react-router-dom";
 
 export interface InfoSectionProps {
   children?: ReactNode;
@@ -28,7 +29,11 @@ const InfoSection: FC<InfoSectionProps> = ({
         colorStyle="textTitleLightStyle"
       >
         <div className={`align-self-end ${style.infoSection__Button}`}>
-          {buttonText && <ButtonArrow text={buttonText} color="black" />}
+          {buttonText && (
+            <NavLink to={"about-us"}>
+              <ButtonArrow text={buttonText} color="black" />
+            </NavLink>
+          )}
         </div>
       </TextTitle>
       <ul className="row">

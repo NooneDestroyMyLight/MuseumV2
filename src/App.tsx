@@ -1,5 +1,6 @@
 // import style from "./App.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
 
 //PAGE
 // import GeneralPage from "./page/generalPage/GeneralPage";
@@ -16,15 +17,23 @@ import Cases from "./page/cases/Cases";
 function App() {
   return (
     <main>
-      {/* <GeneralPage /> */}
-      {/* <InteriorDesign /> */}
-      {/* <ConstructionAndRenovation /> */}
-      {/* <ArchitecturalDesign /> */}
-      {/* <Review /> */}
-      {/* <Project /> */}
-      {/* <AboutUs /> */}
-      <Service />
-      {/* <Cases /> */}
+      <Routes>
+        <Route path="/" element={<GeneralPage />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/services/interior-design" element={<InteriorDesign />} />
+        <Route
+          path="/services/construction-and-renovation"
+          element={<ConstructionAndRenovation />}
+        />
+        <Route
+          path="/services/architectural-design"
+          element={<ArchitecturalDesign />}
+        />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/reviews" element={<Review />} />
+        <Route path="/сases" element={<Cases />} />
+      </Routes>
     </main>
   );
 }

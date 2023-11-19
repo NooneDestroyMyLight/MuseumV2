@@ -8,27 +8,27 @@ export interface IHeaderNav {
 }
 
 export const headerNavData: IHeaderNav[] = [
-  { name: "Projects", link: "/Projects" },
+  { name: "Projects", link: "/projects" },
   {
     name: "Services",
     link: "/services",
     subMenu: [
       {
         name: "Interior Design",
-        link: "/InteriorDesign",
+        link: "/services/interior-design",
       },
       {
         name: "Construction and renovation",
-        link: "/ConstructionAndRenovation",
+        link: "/services/construction-and-renovation",
       },
       {
         name: "Architectural design",
-        link: "/ArchitecturalDesign",
+        link: "/services/architectural-design",
       },
     ],
   },
-  { name: "About us", link: "/AboutUs" },
-  { name: "Reviews", link: "/Reviews" },
+  { name: "About us", link: "/about-us" },
+  { name: "Reviews", link: "/reviews" },
   { name: "Contacts", link: "/Contacts" },
   { name: "RU", link: "/RU" },
   { name: "EU", link: "/EU" },

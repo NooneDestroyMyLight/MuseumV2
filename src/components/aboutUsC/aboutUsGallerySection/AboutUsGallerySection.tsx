@@ -13,6 +13,7 @@ import { useCurrentVideo } from "../../../hooks/useCurrentVideo";
 import ModelWindow from "../../../HOC/modelWindow/ModelWindow";
 import Video from "../../generalC/video/Video";
 import VerticalGallerySection from "../../generalC/verticalSection/VerticalGallerySection";
+import { SwiperSlide } from "swiper/react";
 
 interface AboutUsGallerySectionProps {
   dataList: IReviewListData[];
@@ -43,20 +44,23 @@ const AboutUsGallerySection: FC<AboutUsGallerySectionProps> = ({
             buttonArrowText={arrowButtonText}
           >
             {dataList.map(item => (
-              <PortfolioItem
-                className={"portfolioItem__verticalGallery"}
-                //
-                key={item.imgSrc}
-                //
-                imgSrc={item.imgSrc}
-                description={item.category}
-                name={item.name}
-              >
-                <Button
-                  styles={"button__play__directorSection"}
-                  onClick={() => onVideoItemClick(item.videoSrc)}
-                />
-              </PortfolioItem>
+              <SwiperSlide>
+                <PortfolioItem
+                  className={"portfolioItem__verticalGallery"}
+                  //
+                  key={item.imgSrc}
+                  //
+                  imgSrc={item.imgSrc}
+                  description={item.category}
+                  //
+                  name={item.name}
+                >
+                  <Button
+                    styles={"button__play__directorSection"}
+                    onClick={() => onVideoItemClick(item.videoSrc)}
+                  />
+                </PortfolioItem>
+              </SwiperSlide>
             ))}
             <ModelWindow isOpen={isMWOpen} toggleMW={toggleMW}>
               <Video videoSrc={currentVideo} />

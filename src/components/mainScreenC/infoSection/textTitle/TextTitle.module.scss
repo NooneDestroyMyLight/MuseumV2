@@ -6,7 +6,7 @@
     color: $mainColor;
 
     font-family: Gilroy-Bold;
-    z-index: 10;
+    z-index: 3;
 
     &:before {
       content: attr(data-content);
