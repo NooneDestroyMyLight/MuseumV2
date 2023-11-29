@@ -9,10 +9,26 @@
   position: relative;
 
   margin-right: 42px;
-  padding-right: 0;
 
   &:hover {
-    + .arrowContainer {
+    + .arrow {
+      .arrowContainer {
+        -webkit-transform: translate(7px, 0);
+        -moz-transform: translate(7px, 0);
+        -o-transform: translate(7px, 0);
+        transform: translate(7px, 0);
+      }
+    }
+  }
+}
+.arrow {
+  width: fit-content;
+  .arrowContainer {
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -mox-transition: all 0.5s ease-in-out;
+    transition: transform all 0.5s ease-in-out;
+    &:hover {
       -webkit-transform: translate(7px, 0);
       -moz-transform: translate(7px, 0);
       -o-transform: translate(7px, 0);
@@ -21,15 +37,19 @@
   }
 }
 
-.arrowContainer {
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -mox-transition: all 0.5s ease-in-out;
-  transition: transform all 0.5s ease-in-out;
-  &:hover {
-    -webkit-transform: translate(7px, 0);
-    -moz-transform: translate(7px, 0);
-    -o-transform: translate(7px, 0);
-    transform: translate(7px, 0);
+.reverse {
+  flex-direction: row-reverse;
+  .buttonArrow {
+    margin-right: 0;
+    margin-left: 42px;
+  }
+  .arrow {
+    transform: rotateY(180deg);
+  }
+}
+
+@media (max-width: 660px) {
+  .textHide {
+    display: none;
   }
 }

@@ -1,12 +1,10 @@
 .textBlockContainer {
   text-align: left;
   gap: 28px;
-
+  margin-right: 130px;
+  width: 100%;
   .paragraph {
-    margin-right: 130px;
-    // margin-bottom: 28px;
     overflow-wrap: break-word;
-    max-width: 600px;
   }
 }
 @media (max-width: 850px) {
@@ -15,4 +13,10 @@
       margin-right: 0;
     }
   }
+}
+
+//Modifications styles
+.textBlock__InfoSectionBlock {
+  margin-right: 130px;
+  max-width: 600px;
 }

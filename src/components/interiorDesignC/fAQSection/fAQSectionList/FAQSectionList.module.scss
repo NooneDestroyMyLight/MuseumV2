@@ -1,0 +1,22 @@
+@import "../../../../scss/styles.scss";
+
+$gap: 15px;
+
+.fAQSectionList {
+  justify-content: space-between;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+
+    width: calc(50% - $gap);
+  }
+}
+@media (max-width: 660px) {
+  .fAQSectionList {
+    flex-direction: column;
+    .column {
+      width: 100%;
+    }
+  }
+}

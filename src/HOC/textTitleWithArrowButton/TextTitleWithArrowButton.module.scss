@@ -1,0 +1,10 @@
+@import "../../../src/scss/styles.scss";
+
+@media (max-width: 850px) {
+  $paddingBottom: 130px;
+  .TextTitleWithArrowButton__button {
+    position: absolute;
+    bottom: calc($paddingBottom / 2 - 1rem);
+    left: 0;
+  }
+}

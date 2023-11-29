@@ -4,42 +4,71 @@ import style from "./Header.module.scss";
 import MainLogo from "../../../assets/mainLogo/mainLogo/MainLogo";
 import HeaderNav from "./headerNav/HeaderNav";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 interface HeaderProps {
+  HeaderNavDropdownIsStickyStyle: string;
+  HeaderNavDropdownNotStickyStyle: string;
+  //
+  isStickyMobileBackground: string;
+  notStickedMobileBackground: string;
+  //
   isSticky: boolean;
-  //////////////////
-  mainColor: string;
-  isStickyColor: string;
+  //
+  textColor: string;
+  isStickyTextColor: string;
 }
 
-const Header: FC<HeaderProps> = ({ isSticky, mainColor, isStickyColor }) => {
+const Header: FC<HeaderProps> = ({
+  HeaderNavDropdownIsStickyStyle,
+  HeaderNavDropdownNotStickyStyle,
+  //
+  isStickyMobileBackground,
+  notStickedMobileBackground,
+  //
+  isSticky,
+  //
+  textColor,
+  isStickyTextColor,
+}) => {
   const [navToggle, setNavToggle] = useState<boolean>(false);
+
+  document.documentElement.style.setProperty(
+    "--header--background-color-notSticked",
+    notStickedMobileBackground
+  );
+
+  document.documentElement.style.setProperty(
+    "--header--background-color-isSticky",
+    isStickyMobileBackground
+  );
+
   return (
     <header
       className={`
       ${style.header} 
       ${isSticky && style.sticked} 
-      ${navToggle && style.burgerMenuActive}
+      ${navToggle && style.burgerMenu__active}
       ${navToggle && !isSticky && style.notSticked}
       `}
     >
-      <section className={`container-fluid ${style.header__Container}`}>
-        <div className={`row `}>
+      <section className={`container-fluid ${style.header__container}`}>
+        <div className={`row p-0`}>
           <div
-            className={`col p-0 d-flex justify-content-between   ${style.header__Container__Links}`}
+            className={`col p-0 d-flex justify-content-between   ${style.header__container__links}`}
           >
-            <MainLogo
-              color={isSticky ? isStickyColor : mainColor}
-              // width={isSticky ? "141" : "109"}
-              // height={isSticky ? "62" : "48"}
-            />
+            <MainLogo color={isSticky ? isStickyTextColor : textColor} />
             <HeaderNav
+              HeaderNavDropdownIsStickyStyle={HeaderNavDropdownIsStickyStyle}
+              HeaderNavDropdownNotStickyStyle={HeaderNavDropdownNotStickyStyle}
+              //
+              isStickyColor={isSticky ? isStickyTextColor : textColor}
+              notStickyColor={isSticky ? isStickyTextColor : textColor}
+              //
+              textColor={isSticky ? isStickyTextColor : textColor}
+              isSticky={isSticky}
+              //
               setNavToggle={setNavToggle}
               navToggle={navToggle}
               //
-              textColor={isSticky ? isStickyColor : mainColor}
-              isSticky={isSticky}
             />
           </div>
         </div>

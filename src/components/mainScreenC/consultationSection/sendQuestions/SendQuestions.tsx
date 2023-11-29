@@ -7,22 +7,49 @@ import Textarea from "./textAriea/Textarea";
 
 interface SendQuestionsProps {
   title: string;
-  subTitle: string;
+  subTitle?: string;
+
+  sendQuestionsClassName?: string;
+  inputClassName?: string;
+  textareaClassName?: string;
 }
 
-const SendQuestions: FC<SendQuestionsProps> = ({ title, subTitle }) => {
+const SendQuestions: FC<SendQuestionsProps> = ({
+  title,
+  subTitle,
+  //
+  sendQuestionsClassName,
+  inputClassName,
+  textareaClassName,
+}) => {
   return (
-    <div className={`col-auto  ${style.SendQuestionsContainer}`}>
-      <div className={style.title}>
-        <span className={style.subTitle}>{title}</span>
-        <span>{subTitle}</span>
+    <div
+      className={`col-auto p-0 ${style[sendQuestionsClassName as string]} ${
+        style.sendQuestions
+      }`}
+    >
+      <div className={style.SendQuestionsContainer}>
+        <div className={style.title}>
+          <span className={style.title__text}>{title}</span>
+          <span>{subTitle}</span>
+        </div>
+        <div className={`${style.inputs}`}>
+          <Input
+            label="Your name *"
+            className={
+              inputClassName ? (inputClassName as string) : "DarkStyleInput"
+            }
+          />
+          <Input
+            label="Phone number / email *"
+            className={
+              inputClassName ? (inputClassName as string) : "DarkStyleInput"
+            }
+          />
+        </div>
+        <Textarea label="Your massage" className={textareaClassName} />
+        <button className={style.button}>Send massage</button>
       </div>
-      <div className={`${style.inputs}`}>
-        <Input label="Your name *" />
-        <Input label="Phone number / email *" />
-      </div>
-      <Textarea label="Your massage" />
-      <button className={style.button}>Send your massage</button>
     </div>
   );
 };

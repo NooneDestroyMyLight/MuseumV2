@@ -1,0 +1,47 @@
+@import "../../../../../scss/styles.scss";
+.sliderCounterAndButton {
+  display: flex;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  .counter {
+    display: flex;
+    justify-content: space-between;
+
+    width: 65px;
+    height: 60px;
+
+    color: $lightColor;
+    font-size: 24px;
+
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+
+      transform: rotate(-45deg);
+      background-color: $lightColor;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+    .currentSlide {
+      align-self: start;
+    }
+    .sliderLength {
+      align-self: end;
+    }
+  }
+
+  .prevButton {
+    display: flex;
+    align-items: start;
+    transform: rotate(-180deg);
+  }
+  .nextButton {
+    display: flex;
+    align-items: start;
+  }
+}

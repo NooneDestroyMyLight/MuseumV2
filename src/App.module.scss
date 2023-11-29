@@ -1,11 +1,32 @@
-.mainContainer {
-  position: relative;
-}
+// @import "../src/scss/vars.scss";
 
-.summaryBlocksContainer {
-  gap: 60px;
-}
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
-.line {
-  width: 20px;
-}
+@import "./scss/media.scss";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 790px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$custom-grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 790px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$grid-breakpoints: map-merge(
+  $map1: $custom-grid-breakpoints,
+  $map2: $grid-breakpoints,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

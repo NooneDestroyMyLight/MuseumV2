@@ -1,5 +1,4 @@
-@import "../../scss/vars.scss";
-@import "../../scss/media.scss";
+@import "../../../scss/vars.scss";
 
 .mainPageContainer {
   display: flex;
@@ -8,15 +7,15 @@
   width: 100%;
   height: 100vh;
 
-  &:before {
-    content: "";
-    background-color: $introColor;
-    position: absolute;
-    z-index: 1;
+  // &:before {
+  //   content: "";
+  //   background-color: $introColor;
+  //   position: absolute;
+  //   z-index: 1;
 
-    width: 100%;
-    height: 100%;
-  }
+  //   width: 100%;
+  //   height: 100%;
+  // }
 
   position: relative;
 

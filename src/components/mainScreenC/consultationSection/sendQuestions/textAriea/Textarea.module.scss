@@ -1,7 +1,11 @@
 @import "../../../../../scss/styles.scss";
 
-.textareaContainer {
+.textarea {
   @include inputGroup(100%, 14px, white);
+}
+
+.textarea__theme__black {
+  @include inputGroup(100%, 14px, black);
 }
 textarea {
   resize: none;

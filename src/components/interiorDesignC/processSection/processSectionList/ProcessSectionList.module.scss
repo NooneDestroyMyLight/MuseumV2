@@ -1,0 +1,15 @@
+@import "../../../../scss/styles.scss";
+.processSectionList {
+  row-gap: 90px;
+  justify-content: space-between;
+
+  .item {
+    width: 260px;
+  }
+}
+
+// @media (max-width: 660px) {
+//   .processSectionList {
+//     justify-content: center;
+//   }
+// }

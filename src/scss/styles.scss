@@ -1,5 +1,21 @@
 @import "./vars.scss";
 
+.section {
+  // padding: 130px 0;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.stickyScreen {
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+
+// <== Mixin START ==>
 @mixin inputGroup($inputWidth, $fontSize, $borderColor) {
   .inputGroup {
     position: relative;
@@ -11,14 +27,15 @@
       pointer-events: none;
 
       position: absolute;
-      top: 0;
+      top: 1rem;
       left: 0;
     }
     .input {
-      color: white;
+      padding: 10px 0 16px 0;
+      color: $borderColor;
       width: $inputWidth;
 
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $borderColor;
       background-color: transparent;
 
       transition: 0.3s;
@@ -27,7 +44,7 @@
         font-size: $fontSize;
         color: rgba($borderColor, 0.5);
 
-        top: -1.5em;
+        top: -1rem;
       }
     }
   }
@@ -45,13 +62,58 @@
   line-height: 29px;
 }
 
+@mixin subText($textSize, $line-height) {
+  font-size: $textSize;
+  line-height: $line-height;
+}
+
 @mixin mobileNav($textSize, $textColor) {
   color: $textColor;
   font-weight: bold;
   font-size: $textSize;
   line-height: 29px;
-  // margin-bottom: 22px;
 }
+
+@mixin button($size) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  z-index: 2;
+
+  white-space: nowrap;
+
+  width: $size;
+  color: black;
+
+  background-color: #c1c1c1;
+
+  transition: color 0.4s linear;
+  padding: 17px 50px;
+
+  position: relative;
+  &:before {
+    width: 100%;
+    height: 100%;
+
+    content: "";
+
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #efefef;
+    z-index: -1;
+
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+// <== Mixin END ==>
 
 // <== TEXT START ==>
 h1 {
@@ -61,6 +123,30 @@ h1 {
 
   margin-bottom: 0;
   padding-left: 0;
+}
+
+h2 {
+  font-family: Gilroy-Bold;
+
+  font-size: 2.43rem;
+  line-height: 3rem;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+h3 {
+  font-family: Gilroy-Bold;
+
+  font-size: 1.72rem;
+  line-height: 2.07rem;
+}
+
+h4 {
+  font-family: Gilroy-Bold;
+
+  font-size: 1.13rem;
+  line-height: 22px;
 }
 
 .generalText {
@@ -73,6 +159,18 @@ h1 {
 
 .subTitle {
   @include subTitle(24px, $lightColor);
+}
+
+.subText {
+  @include subText(14px, 180%);
+}
+.bold {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+}
+
+.boldItem {
+  font-family: Gilroy-Bold;
 }
 
 // <== TEXT END ==>

@@ -2,9 +2,9 @@
 @import "../../../scss/vars.scss";
 .consultationSection {
   background-color: $contactSectionColor;
+  padding: 125px 0 110px 0;
   &__Container {
     // background-color: $contactSectionColor;
-    padding: 125px 0 110px 0;
   }
   &__Children {
     gap: 35px;

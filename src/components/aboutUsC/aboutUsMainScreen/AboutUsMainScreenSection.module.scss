@@ -1,0 +1,66 @@
+@import "../../../scss/styles.scss";
+$gap: 30px;
+.aboutUsMainScreenSection {
+  position: relative;
+  height: 100vh;
+  &__textBlock {
+    padding-top: 230px;
+    color: $lightColor;
+
+    &__container {
+      // display: flex;
+      // flex-direction: column;
+      // gap: $gap;
+      display: grid;
+      grid-template-areas:
+        "t p"
+        "d p"
+        "b p";
+
+      row-gap: $gap;
+      column-gap: $gap;
+    }
+
+    .aboutUsMainScreenSection__title {
+      grid-area: t;
+    }
+
+    @media (max-width: 740px) {
+      .aboutUsMainScreenSection__title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    .aboutUsMainScreenSection__description {
+      grid-area: d;
+      max-width: 470px;
+    }
+
+    .aboutUsMainScreenSection__buttonArrow {
+      grid-area: b;
+    }
+
+    .aboutUsMainScreenSection__button {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      grid-area: p;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .aboutUsMainScreenSection {
+    &__textBlock {
+      &__container {
+        grid-template-areas:
+          "p t"
+          "d d"
+          "b b";
+      }
+    }
+  }
+}

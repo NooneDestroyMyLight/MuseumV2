@@ -1,0 +1,12 @@
+@import "../../../scss/styles.scss";
+@import "../../../scss/vars.scss";
+
+.priceListSection {
+  background-color: $priceListSection;
+  padding: 130px 0;
+  &__container {
+    width: 100%;
+    gap: 30px;
+    overflow-x: scroll;
+  }
+}

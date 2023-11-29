@@ -1,0 +1,43 @@
+@import "../../../scss/styles.scss";
+.formBlockWithHeader {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  .formBlock {
+    padding-top: 100px;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      &__discription {
+        width: 390px;
+        gap: 28px;
+        .button {
+          @include button(100%);
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@media (max-width: 920px) {
+  .formBlockWithHeader {
+    .formBlock {
+      padding-top: 100px;
+      &__container {
+        flex-direction: column;
+        gap: 30px;
+        &__discription {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

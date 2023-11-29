@@ -12,34 +12,24 @@ interface ContactInfoProps {
 
 const ContactInfo: FC<ContactInfoProps> = ({ info }) => {
   return (
-    <ul className={`col-auto ${style.contactInfo}`}>
-      <SubTitle
-        label="Our contacts"
-        subLabel="Contact us in a comfortable way"
-      />
+    <div className={`p-0 col-auto`}>
+      <ul className={style.contactInfo}>
+        <SubTitle
+          label="Our contacts"
+          subLabel="Contact us in a comfortable way"
+        />
 
-      {contactInfoData.map(item => (
-        <li className={style.contactInfo__Block}>
-          {item.map(inner => (
-            <span className={`${style.contactText} ${style.line}`}>
-              {inner.text}
-            </span>
-          ))}
-        </li>
-      ))}
-
-      {/* <li className={style.contactInfo__Block}>
-        <span className={style.contactText}>Valencia</span>
-      </li>
-
-      <li className={style.contactInfo__Block}>
-        {contact.map(item => (
-          <span className={`${style.contactText} ${style.line}`}>
-            {item.text}
-          </span>
+        {contactInfoData.map(item => (
+          <li className={style.contactInfo__Block}>
+            {item.map(inner => (
+              <span className={`${style.contactText} ${style.line}`}>
+                {inner.text}
+              </span>
+            ))}
+          </li>
         ))}
-      </li> */}
-    </ul>
+      </ul>
+    </div>
   );
 };
 

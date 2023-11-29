@@ -1,0 +1,24 @@
+@import "../../../scss/styles.scss";
+
+.aboutUsGallerySection {
+  display: grid;
+  .description {
+    &__title {
+      font-size: 1.72rem;
+      line-height: 2.07rem;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    width: 35%;
+  }
+}
+@media (max-width: 740px) {
+  .aboutUsGallerySection {
+    row-gap: $gap;
+    .description {
+      width: 100%;
+    }
+  }
+}

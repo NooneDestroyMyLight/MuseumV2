@@ -1,10 +1,55 @@
 @import "../../../scss/vars.scss";
 
-.ServiceRangeSectionContainer {
+$gap: 30px;
+.ServiceRangeSection {
   padding: 130px 0;
   background-color: $serviceRangeSectionColor;
   color: white;
+
   .ServiceThesisItemsContainer {
-    row-gap: 35px;
+    display: grid;
+  }
+
+  //General Page Style START
+  .generalPage {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: $gap;
+  }
+
+  @media (max-width: 850px) {
+    .generalPage {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  //General Page Style END
+
+  //ConstructionAndRenovation Style START
+  .constructionAndRenovation {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $gap;
+  }
+
+  @media (max-width: 850px) {
+    .constructionAndRenovation {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  //ConstructionAndRenovation Style END
+
+  //interiorDesign  START
+  .interiorDesign {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 850px) {
+    .interiorDesign {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  //interiorDesign  END
+}
+@media (max-width: 850px) {
+  .ServiceThesisItemsContainer {
+    align-items: center;
+    row-gap: 60px;
   }
 }

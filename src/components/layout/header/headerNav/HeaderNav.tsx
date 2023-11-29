@@ -10,6 +10,12 @@ import CloseIcon from "../../../../assets/closeIcon/CloseIcon";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface HeaderNavProps {
+  HeaderNavDropdownIsStickyStyle: string;
+  HeaderNavDropdownNotStickyStyle: string;
+  //
+  isStickyColor: string;
+  notStickyColor: string;
+  //
   textColor: string;
   isSticky: boolean;
   //
@@ -18,6 +24,12 @@ interface HeaderNavProps {
 }
 
 const HeaderNav: FC<HeaderNavProps> = ({
+  HeaderNavDropdownIsStickyStyle,
+  HeaderNavDropdownNotStickyStyle,
+  //
+  isStickyColor,
+  notStickyColor,
+  //
   textColor,
   isSticky,
   //
@@ -25,7 +37,6 @@ const HeaderNav: FC<HeaderNavProps> = ({
   navToggle,
 }) => {
   const onBurgerButtonClick = (): void => {
-    console.log("navToggle");
     if (navToggle) {
       document.body.classList.remove("modal-open");
     } else if (!navToggle) {
@@ -39,10 +50,15 @@ const HeaderNav: FC<HeaderNavProps> = ({
       <div className={`${style.linkGroup} ${navToggle && style.showLinkGroup}`}>
         {headerNavData.map(item => (
           <HeaderNavItem
-            navItem={item}
+            isStickyStyle={HeaderNavDropdownIsStickyStyle}
+            notStickyStyle={HeaderNavDropdownNotStickyStyle}
+            //
             textColor={textColor}
             isSticky={isSticky}
-            navToggle={navToggle}
+            //
+            navToggle={navToggle} //Burger Menu
+            //
+            navItem={item}
           />
         ))}
       </div>
@@ -54,10 +70,10 @@ const HeaderNav: FC<HeaderNavProps> = ({
           <CloseIcon
             width={"30"}
             height={"30"}
-            color={isSticky ? "black" : "white"}
+            color={isSticky ? isStickyColor : notStickyColor}
           />
         ) : (
-          <BurgerMenuIcon color={isSticky ? "black" : "white"} />
+          <BurgerMenuIcon color={isSticky ? isStickyColor : notStickyColor} />
         )}
       </button>
     </>

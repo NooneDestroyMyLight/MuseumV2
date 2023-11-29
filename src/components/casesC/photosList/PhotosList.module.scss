@@ -1,0 +1,85 @@
+@import "../../../scss/styles.scss";
+
+.photosList {
+  &__container {
+    padding: 59px 38px 109px 38px;
+    position: relative;
+    display: grid;
+    .photoList {
+      display: grid;
+      row-gap: 2px;
+      padding: 10px;
+    }
+    .buttonGroup {
+      justify-self: center;
+      width: 90%;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .photosList {
+    &__container {
+      padding: 59px 0 109px 0;
+    }
+  }
+}
+
+.mWSlider__wrapper {
+  position: relative;
+  width: 100vw; //1916px
+  height: 100vh;
+  .button__close {
+    width: 20px;
+    height: 20px;
+
+    z-index: 10;
+
+    right: 20px;
+    top: 20px;
+
+    display: grid;
+
+    position: absolute;
+
+    &:after {
+      content: "";
+
+      width: 3px;
+      height: 100%;
+
+      background-color: rgb(246, 233, 233);
+      position: absolute;
+
+      transform: rotate(45deg);
+
+      border-radius: 2px;
+
+      align-self: center;
+      justify-self: center;
+    }
+
+    &:before {
+      content: "";
+
+      transform: rotate(135deg);
+
+      width: 3px;
+      height: 100%;
+
+      background-color: rgb(246, 233, 233);
+      position: absolute;
+
+      border-radius: 2px;
+
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}
+
+.el {
+  max-width: 100%;
+  justify-self: center;
+}

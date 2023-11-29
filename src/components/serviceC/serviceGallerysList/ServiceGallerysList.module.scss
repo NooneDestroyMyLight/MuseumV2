@@ -1,0 +1,9 @@
+@import "../../../scss/styles.scss";
+
+.serviceGallerysList {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 115px;
+  }
+}

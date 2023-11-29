@@ -1,0 +1,25 @@
+@import "../../../../scss/styles.scss";
+
+.verticalGallerySectionItem {
+  &__img {
+    object-fit: cover;
+    width: 340px;
+    height: 325px;
+
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+
+    &:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+}
+@media (max-width: 740px) {
+  .verticalGallerySectionItem {
+    &__img {
+      width: 240px;
+      height: 230px;
+    }
+  }
+}

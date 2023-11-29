@@ -1,0 +1,39 @@
+@import "../../../scss/styles.scss";
+
+.compoundProject {
+  background-color: $compoundProjectSection;
+  &__container {
+    position: relative;
+    .topic__block {
+      background-color: $lightColor;
+      display: flex;
+      justify-content: space-between;
+      -webkit-box-pack: justify;
+
+      padding: 43px 72px;
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          &::before {
+            content: "- ";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .compoundProject {
+    &__container {
+      .topic__block {
+        flex-direction: column;
+        background-color: inherit;
+        padding: 0;
+      }
+    }
+  }
+}

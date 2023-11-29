@@ -2,72 +2,77 @@
 
 $gap: 25px;
 
-.SendQuestionsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-
-  color: white;
-  width: 600px;
-
-  .title {
+.sendQuestions {
+  .SendQuestionsContainer {
     display: flex;
     flex-direction: column;
-  }
+    gap: 35px;
 
-  .inputs {
-    display: flex;
-    gap: $gap;
-    width: 100%;
-  }
+    color: white;
+    width: 600px;
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: end;
-    z-index: 2;
-
-    position: relative;
-
-    width: calc(50% - $gap / 2);
-    color: black;
-
-    background-color: #c1c1c1;
-
-    transition: color 0.4s linear;
-    padding: 17px 50px;
-
-    &:before {
-      width: 100%;
-      height: 100%;
-
-      content: "";
-
-      left: 0;
-      top: 0;
-      position: absolute;
-      background-color: white;
-      z-index: -1;
-
-      transition: transform 0.5s;
-      transform-origin: 0 0;
-      transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-      transform: scaleX(0);
+    .title {
+      display: flex;
+      flex-direction: column;
+      &__text {
+        @include subTitle(24px, $lightColor);
+      }
     }
-    &:hover::before {
-      transform: scaleX(1);
+
+    .inputs {
+      display: flex;
+      gap: $gap;
+      width: 100%;
+    }
+
+    .button {
+      @include button(calc(50% - $gap / 2));
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .sendQuestions {
+    .SendQuestionsContainer {
+      width: 500px;
     }
   }
 }
 @media (max-width: 850px) {
-  .SendQuestionsContainer {
-    width: 100%;
-    .inputs {
-      flex-direction: column;
-    }
-    .button {
+  .sendQuestions {
+    .SendQuestionsContainer {
       width: 100%;
+      .inputs {
+        flex-direction: column;
+      }
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 740px) {
+  .sendQuestions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .sendQuestions {
+    width: 100%;
+  }
+}
+
+.mWSendQuestions {
+  .SendQuestionsContainer {
+    background-color: white;
+    color: black;
+    padding: 25px 25px 30px 25px;
+
+    .title {
+      &__text {
+        @include subTitle(24px, $darkColor);
+      }
     }
   }
 }

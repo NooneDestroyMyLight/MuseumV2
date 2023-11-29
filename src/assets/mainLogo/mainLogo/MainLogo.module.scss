@@ -1,10 +1,16 @@
-.mainLogo {
-  width: 110px;
-  height: 50px;
+.mainLogo__wrapper {
+  width: fit-content;
+  height: fit-content;
+  .mainLogo {
+    width: 110px;
+    height: 50px;
+  }
 }
 @media (max-width: 768px) {
-  .mainLogo {
-    width: 141px;
-    height: 62px;
+  .mainLogo__wrapper {
+    .mainLogo {
+      width: 141px;
+      height: 62px;
+    }
   }
 }

@@ -1,0 +1,48 @@
+// @import "../../../../../scss/styles.scss";
+$gap: 2px;
+.portfolioList {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: $gap;
+    column-gap: $gap;
+
+    align-self: center;
+
+    overflow: hidden;
+    *:nth-child(n + 10) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .portfolioList {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+
+      *:nth-child(n + 4) {
+        opacity: 1;
+        display: none;
+      }
+    }
+  }
+}
+
+.showMore {
+  > *:nth-child(n) {
+    display: grid;
+  }
+}
+
+// @media (max-width: 920px) {
+//   .portfolioList {
+//     &__container {
+//       grid-template-columns: repeat(2, 1fr);
+
+//       *:nth-child(n + 4) {
+//         display: none;
+//       }
+//     }
+//   }
+// }

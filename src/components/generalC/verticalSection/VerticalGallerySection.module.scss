@@ -1,0 +1,29 @@
+@import "../../../scss/styles.scss";
+
+.verticalGallerySection {
+  display: grid;
+  height: 380px;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    width: 35%;
+
+    &__title {
+      font-size: 1.72rem;
+      line-height: 2.07rem;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .verticalGallerySection {
+    row-gap: $gap;
+    height: auto;
+    .description {
+      width: 100%;
+    }
+  }
+}
