@@ -20,7 +20,7 @@ const InfoSection: FC<InfoSectionProps> = ({
 }) => {
   return (
     <section
-      className={`container-fluid p-0   d-flex flex-column   ${style.infoSection}`}
+      className={`container-fluid d-flex flex-column ${style.infoSection}`}
     >
       <TextTitle
         title={title}
@@ -31,9 +31,11 @@ const InfoSection: FC<InfoSectionProps> = ({
           <ButtonArrow text={buttonText} color="black" />
         </div>
       </TextTitle>
-      <div className={`col-auto d-flex  ${style.infoSection__Children}`}>
-        {children && children}
-      </div>
+      <ul className="row">
+        <li className={`col-auto p-0 d-flex  ${style.infoSection__Children}`}>
+          {children && children}
+        </li>
+      </ul>
     </section>
   );
 };

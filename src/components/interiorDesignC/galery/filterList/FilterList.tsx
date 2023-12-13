@@ -23,9 +23,9 @@ const FilterList: FC<FilterListProps> = ({
   const [currentFilter, setCurrentFilter] = useState(allProject);
 
   return (
-    <div className={`row  d-flex ${style.filterList}`}>
+    <div className={`row d-flex ${style.filterList}`}>
       {category.map(item => (
-        <div className={`col-2 p-0 ${style.col}`}>
+        <div className={`col-2  p-0 ${style.col}`}>
           <FilterItem
             name={item}
             //

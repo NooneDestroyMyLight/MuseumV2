@@ -6,6 +6,9 @@ import { IHeaderNav } from "../../headerNav.data";
 import Dropdown from "../../../../../HOC/dropdown/Dropdown";
 
 interface IHeaderNavItemProps {
+  isStickyStyle: string;
+  notStickyStyle: string;
+  //
   navItem: IHeaderNav;
   textColor: string;
   isSticky: boolean;
@@ -13,6 +16,9 @@ interface IHeaderNavItemProps {
 }
 
 const HeaderNavItem: FC<IHeaderNavItemProps> = ({
+  isStickyStyle,
+  notStickyStyle,
+  //
   navItem,
   textColor,
   isSticky,
@@ -27,7 +33,7 @@ const HeaderNavItem: FC<IHeaderNavItemProps> = ({
       <div className={style.subMenu}>
         {navItem.subMenu && !navToggle && (
           <Dropdown
-            styleClass={isSticky ? "stickydHeaderNavItem" : "headerNavItem"} //Its styles take from Dropdown.scss Look that
+            styleClass={isSticky ? isStickyStyle : notStickyStyle} //Its styles take from Dropdown.scss Look that
           >
             {navItem.subMenu.map(item => (
               <label className={`text-nowrap ${style.headerNavItamContainer}`}>

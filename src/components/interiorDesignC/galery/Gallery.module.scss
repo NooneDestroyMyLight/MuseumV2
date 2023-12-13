@@ -3,13 +3,23 @@
 $gap: 30px;
 .gallery {
   padding: 130px 0;
-
+  position: relative;
   &__Container {
-    // gap: $gap;
     .portfolioGroup {
       display: flex;
       flex-direction: column;
       gap: $gap;
+
+      width: 100%;
+    }
+    .showMoreButton {
+      position: relative;
+      &__Container {
+        position: absolute;
+        top: 50px;
+      }
     }
   }
+}
+@media (max-width: 920px) {
 }

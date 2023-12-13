@@ -5,16 +5,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 
 export interface PortfolioItemProps {
+  index: number;
+  showMore: boolean;
+  //
   imgSrc: string;
   name: string;
   category: string;
 }
 
-const PortfolioItem: FC<PortfolioItemProps> = ({ imgSrc, name, category }) => {
+const PortfolioItem: FC<PortfolioItemProps> = ({
+  imgSrc,
+  name,
+  category,
+  index,
+  showMore,
+}) => {
   return (
-    // <div className={`col-4 p-0 `}>
     <motion.div
-      className={` ${style.portfolioItem}`}
+      className={`${style.portfolioItem}`}
+      // style={{ display: index >= 9 && !showMore ? "none" : "" }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
@@ -26,7 +35,6 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ imgSrc, name, category }) => {
         <span className={style.category}>{category}</span>
       </div>
     </motion.div>
-    // </div>
   );
 };
 

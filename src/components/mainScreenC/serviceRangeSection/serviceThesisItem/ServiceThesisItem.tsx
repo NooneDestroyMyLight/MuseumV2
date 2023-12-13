@@ -6,26 +6,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export interface ServiceThesisItemProps {
   order: number;
   title: string;
+  //
+  discriptionClassName: string;
   discription: string;
 }
 
 const ServiceThesisItem: FC<ServiceThesisItemProps> = ({
   order,
   title,
+  //
+  discriptionClassName,
   discription,
 }) => {
   return (
-    <div
-      className={`col-12 p-0 col-md-3 d-flex ${style.serviceThesisItemContainer}`}
-    >
-      <div className={`justify-content-center ${style.orderNumber}`}>
-        {order}
-      </div>
-      <div className={`d-flex flex-column ${style.discriptionContainer}`}>
+    <ul className={`col p-0 d-flex ${style.serviceThesisItemContainer}`}>
+      <li className={`justify-content-center ${style.orderNumber}`}>{order}</li>
+      <li className={`d-flex flex-column ${style.discriptionContainer}`}>
         <strong className={style.title}>{title}</strong>
-        <span className={style.discription}>{discription}</span>
-      </div>
-    </div>
+        <span className={style[discriptionClassName]}>{discription}</span>
+      </li>
+    </ul>
   );
 };
 

@@ -15,17 +15,28 @@ import {
   portfolioListData,
   portfolioCategory,
 } from "./portfolioList/portfolioList.data";
+import ShowMoreButton from "./showMoreButton/ShowMoreButton";
+import Button from "../../generalC/button/Button";
+import ArrowButtonIcon from "../../../assets/arrowButtonIcon/ArrowButtonIcon";
+import TextTitleWithArrowButton from "../../../HOC/textTitleWithArrowButton/TextTitleWithArrowButton";
 
 export interface GalleryProps {
   // children?: ReactNode;
   // title: string;
-  // buttonText: string;
+  // arrowButtonText: string;
   //   backText: string;
+  showButtonText: string;
 }
 
-const Gallery: FC<GalleryProps> = ({}) => {
+const Gallery: FC<GalleryProps> = ({ showButtonText }) => {
   const [portfilioList, setPortfilioList] =
     useState<IPortfolioListData[]>(portfolioListData);
+
+  const [showMore, setShowMore] = useState<boolean>(false);
+
+  const onButtonClick = () => {
+    setShowMore(true);
+  };
 
   return (
     <section className={style.gallery}>
@@ -41,15 +52,37 @@ const Gallery: FC<GalleryProps> = ({}) => {
             <ButtonArrow text={"Our service"} color="black" />
           </div>
         </TextTitle>
+        {/* <TextTitleWithArrowButton
+          textTitleStyle="textTitleLightStyle"
+          //
+          title={["Our", "project"]}
+          backText={"Cases"}
+          //
+          buttonText="Our service"
+          buttonColor="black"
+        /> */}
         <div className={style.portfolioGroup}>
           <FilterList
-            category={portfolioCategory}
             //
+            category={portfolioCategory}
             setPortfilioList={setPortfilioList}
             portfilioList={portfolioListData}
           />
-          <PortfolioList portfilioList={portfilioList} />
+          <PortfolioList portfilioList={portfilioList} showMore={showMore} />
         </div>
+        <ul
+          className={`row d-flex justify-content-center ${style.showMoreButton} `}
+        >
+          <li
+            className={`col-auto p-0 ${style.showMoreButton__Container}`}
+            style={{ display: showMore ? "none" : "" }}
+          >
+            <ShowMoreButton
+              showButtonText={showButtonText}
+              onButtonClick={onButtonClick}
+            />
+          </li>
+        </ul>
       </div>
     </section>
   );

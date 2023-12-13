@@ -11,11 +11,19 @@ import { IserviceThesisItemData } from "./serviceRange.data";
 
 export interface SummeryBlockProps {
   data: IserviceThesisItemData[];
+  //
+  className: string;
+  discriptionClassName: string;
 }
 
-const ServiceRangeSection: FC<SummeryBlockProps> = ({ data }) => {
+const ServiceRangeSection: FC<SummeryBlockProps> = ({
+  data,
+  //
+  className,
+  discriptionClassName,
+}) => {
   return (
-    <section className={style.ServiceRangeSectionContainer}>
+    <section className={style.ServiceRangeSection}>
       <div className={` container-fluid `}>
         <TextTitle
           title={["We build", `“turn-key” projects`]}
@@ -23,13 +31,15 @@ const ServiceRangeSection: FC<SummeryBlockProps> = ({ data }) => {
           colorStyle="textTitleDarkStyle"
         />
         <div
-          className={`row d-flex justify-content-between ${style.ServiceThesisItemsContainer}`}
+          className={`row justify-content-between ${style.ServiceThesisItemsContainer} ${style[className]}`}
         >
           {data.map((item, index) => (
             <ServiceThesisItem
               // key={item.discription}
               order={index + 1}
               title={item.title}
+              //
+              discriptionClassName={discriptionClassName}
               discription={item.discription}
             />
           ))}

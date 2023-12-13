@@ -16,6 +16,7 @@
   font-family: Gilroy-Regular;
   src: url("../Gilroy-Regular.ttf");
 }
+
 /* html {
   overflow-x: hidden;
 } */
@@ -64,6 +65,12 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+@media (max-width: 850px) {
+  h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 *,
@@ -135,4 +142,17 @@ textarea {
   .container-fluid {
     width: 328px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  width: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

@@ -18,7 +18,7 @@ const PriceListSection: FC<PriceListSectionProps> = ({}) => {
         />
         <div className="row">
           <div
-            className={`col p-0 d-flex justify-content-between ${style.priceListSection__Container}`}
+            className={`col p-0 d-flex justify-content-between ${style.priceListSection__container}`}
           >
             {priceListSectionData.map(item => (
               <PriceListTextBlock

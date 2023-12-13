@@ -4,7 +4,7 @@ $gap: 28px;
 $bgColor: white;
 
 .priceListSection {
-  width: calc(33% - 120px);
+  width: 300px;
   height: -moz-min-content;
   height: min-content;
 
@@ -27,6 +27,12 @@ $bgColor: white;
     }
   }
 }
+
+// @media (max-width: 920px) {
+//   .priceListSection {
+//     width: 50%;
+//   }
+// }
 
 .button {
   display: flex;

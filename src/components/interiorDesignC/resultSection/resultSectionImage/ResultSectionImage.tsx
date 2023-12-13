@@ -1,8 +1,21 @@
-import { FC, MouseEventHandler, ReactNode, useRef, useState } from "react";
-
+import { FC, useState } from "react";
 import style from "./ResultSectionImage.module.scss";
-
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import { ReactCompareSlider } from "react-compare-slider";
+import { ReactCompareSliderImage } from "react-compare-slider";
+
+const ResizeTumblerButton: FC = () => {
+  return (
+    <>
+      <div className={style.resizeTumbler} aria-hidden="true"></div>
+      <ul className={style.resizeTumblerButt} aria-hidden="true">
+        <li className={style.leftIcon}></li>
+        <li className={style.rightIcon}></li>
+      </ul>
+    </>
+  );
+};
 
 export interface ResultSectionImageProps {
   firstImageSrc: string;
@@ -16,58 +29,34 @@ export interface ResultSectionImageProps {
 
 const ResultSectionImage: FC<ResultSectionImageProps> = ({
   firstImageSrc,
-  firstImageLabel,
   firstImageAlt,
+  firstImageLabel,
   //
   secondImageSrc,
-  secondImageLabel,
   secondImageAlt,
+  secondImageLabel,
 }) => {
-  const [currentWidth, setCurrentWidth] = useState<string>("");
+  const [currentWidth, setCurrentWidth] = useState<string>("50"); //default value
   return (
     <div className={`col-6 d-flex flex-column p-0 ${style.resultSectionImage}`}>
-      <div className={style.resultSectionImage__Container}>
-        <div className={style.resultSectionImage__Container__Inner}>
-          <img
+      <ReactCompareSlider
+        handle={<ResizeTumblerButton />}
+        position={50}
+        itemOne={
+          <ReactCompareSliderImage
             src={firstImageSrc}
+            srcSet={firstImageSrc}
             alt={firstImageAlt}
-            className={`${style.fistImage} ${style.image}`}
           />
-
-          <img
+        }
+        itemTwo={
+          <ReactCompareSliderImage
             src={secondImageSrc}
-            style={{
-              width: `${currentWidth}px`,
-            }}
-            className={`${style.secondImage} ${style.image}`}
+            srcSet={secondImageSrc}
+            alt={secondImageAlt}
           />
-        </div>
-        <input
-          type="range"
-          min="0"
-          max="800"
-          step="0.01"
-          value="400"
-          aria-label="Percentage of before image show"
-          className={style.resizeBar}
-          onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setCurrentWidth(e.target.value)
-          }
-        />
-        <div
-          className={style.resizeTumbler}
-          aria-hidden="true"
-          style={{ left: `${currentWidth}px` }}
-        ></div>
-        <ul
-          className={style.resizeTumblerButt}
-          aria-hidden="true"
-          style={{ left: `${currentWidth}px` }}
-        >
-          <li className={style.leftIcon}></li>
-          <li className={style.rightIcon}></li>
-        </ul>
-      </div>
+        }
+      />
       <ul className="d-flex justify-content-between">
         <li className={style.bold}>{firstImageLabel}</li>
         <li className={style.bold}>{secondImageLabel}</li>

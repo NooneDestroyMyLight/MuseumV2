@@ -32,7 +32,10 @@ const GeneralPage: FC = () => {
         buttonText={"More about us"}
         backText={"about"}
       >
-        <TextBlock text={textBlockGeneralPageData} />
+        <TextBlock
+          text={textBlockGeneralPageData}
+          styles={"textBlock__InfoSectionBlock"}
+        />
         <div className={` d-flex flex-column ${style.summaryBlocksContainer}`}>
           <SummeryBlock
             title="Residential property"
@@ -47,7 +50,11 @@ const GeneralPage: FC = () => {
         </div>
       </InfoSection>
       <BoxMenu />
-      <ServiceRangeSection data={serviceThesisItemGeneralPageData} />
+      <ServiceRangeSection
+        data={serviceThesisItemGeneralPageData}
+        className="generalPage"
+        discriptionClassName="discription__interiorDesign"
+      />
       <ConsultationSection>
         <ContactInfo info="" />
         <SendQuestions

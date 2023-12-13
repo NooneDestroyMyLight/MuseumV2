@@ -2,22 +2,29 @@ import { FC, useState } from "react";
 import style from "./Silder.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { sliderData } from "./slider.data";
+// import { sliderData } from "./slider.data";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SliderCounterAndButton from "./SliderCounterAndButton/SliderCounterAndButton";
 
-export interface SilderProps {}
+import SliderCounterAndButton from "./sliderCounterAndButton/SliderCounterAndButton";
 
-const Silder: FC<SilderProps> = ({}) => {
+export interface SilderProps {
+  sliderData: string[];
+}
+
+const Silder: FC<SilderProps> = ({ sliderData }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(1);
 
   return (
     <Swiper
       slidesPerView={1}
+      loop={true}
       //class
       className={`col-auto p-0 ${style.slider}`}
       wrapperClass={style.slider__Wrapper}
-      onSlideChange={swiper => setCurrentSlide(swiper.activeIndex + 1)}
+      //
+      onSlideChange={swiper => {
+        setCurrentSlide(swiper.realIndex + 1);
+      }}
     >
       {sliderData.map(item => (
         <SwiperSlide key={item} className={style.slider__Wrapper__Slide}>

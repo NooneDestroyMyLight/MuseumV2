@@ -12,7 +12,7 @@ interface SendQuestionsProps {
 
 const SendQuestions: FC<SendQuestionsProps> = ({ title, subTitle }) => {
   return (
-    <div className={` col-auto p-0`}>
+    <div className={` col-auto p-0 ${style.sendQuestions}`}>
       <div className={style.SendQuestionsContainer}>
         <div className={style.title}>
           <span className={style.subTitle}>{title}</span>

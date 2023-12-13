@@ -18,8 +18,13 @@ $orederNumberColor: #6a6a6a;
     .title {
       font-family: Gilroy-Bold;
     }
-    .discription {
+    .discription__interiorDesign {
       max-width: 310px;
+      word-wrap: break-word;
+    }
+
+    .discription__constructionAndRenovation {
+      max-width: 100%;
       word-wrap: break-word;
     }
   }

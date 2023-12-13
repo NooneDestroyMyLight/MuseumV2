@@ -2,22 +2,22 @@ import { FC, ReactNode, useEffect, useRef, useState } from "react";
 import style from "./FormBlock.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Header from "../../layout/header/Header";
 import TextBlock from "../../mainScreenC/infoSection/textBlock/TextBlock";
 import Input from "../../mainScreenC/consultationSection/sendQuestions/input/Input";
 import { textBlockInteriorDesignData } from "../../mainScreenC/infoSection/textBlock/textBlock.data";
 import Silder from "./slider/Silder";
-import Header from "../../layout/header/Header";
 
 export interface FormBlockProps {
   children?: ReactNode;
-  title: string;
-  buttonText: string;
+  // title: string;
+  // buttonText: string;
 
   //   backText: string;
 }
 
-const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
-  const divRef = useRef<HTMLDivElement | null>(null);
+const FormBlock: FC<FormBlockProps> = ({ children }) => {
+  const divRef = useRef<HTMLLIElement | null>(null);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -45,28 +45,25 @@ const FormBlock: FC<FormBlockProps> = ({ title, buttonText }) => {
   }, []);
 
   return (
-    <>
-      <Header isSticky={isSticky} mainColor={"black"} isStickyColor={"black"} />
-      <div ref={divRef} className={`container-fluid  ${style.formBlock}`}>
-        <div
-          className={`row p-0 d-flex justify-content-between ${style.formBlock__Container}`}
-        >
-          <div
-            className={`col-auto p-0 d-flex flex-column ${style.formBlock__Container__Discription}`}
-          >
-            <h1>{title}</h1>
-            <TextBlock text={textBlockInteriorDesignData} />
-            <Input label="Your name *" StylesClass="LightStyleInput" />
-            <Input
-              label="Phone number / email *"
-              StylesClass="LightStyleInput"
-            />
-            <button className={style.button}>{buttonText}</button>
-          </div>
-          <Silder />
+    <ul className={style.formBlockWithHeader}>
+      <Header
+        HeaderNavDropdownIsStickyStyle={"stickydHeaderNavItem"}
+        HeaderNavDropdownNotStickyStyle={"stickydHeaderNavItem"}
+        //
+        notStickedMobileBackground={"white"}
+        isStickyMobileBackground={"white"}
+        //
+        isSticky={isSticky}
+        //
+        textColor={"black"}
+        isStickyTextColor={"black"}
+      />
+      <li ref={divRef} className={`container-fluid  ${style.formBlock}`}>
+        <div className={`row p-0 ${style.formBlock__container}`}>
+          {children}
         </div>
-      </div>
-    </>
+      </li>
+    </ul>
   );
 };
 

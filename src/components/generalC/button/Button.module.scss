@@ -2,6 +2,7 @@
 $LightHoverColor: black;
 $LightColor: #efefef;
 
+//Mixin START
 @mixin sectionButton($mainColor, $textColor, $hoverColor, $textHoverColor) {
   color: $textColor;
 
@@ -14,12 +15,36 @@ $LightColor: #efefef;
     color: $textHoverColor;
   }
 }
+//Mixin END
 
+//resultSectionButton START
 .resultSectionButton {
+  display: flex;
+  margin-top: 30px;
   @include sectionButton($LightColor, black, $LightHoverColor, $lightColor);
 }
+@media (max-width: 920px) {
+  .resultSectionButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+//resultSectionButton END
 
+//estimateCostSectionButton START
 .estimateCostSectionButton {
+  display: flex;
   width: fit-content;
   @include sectionButton(white, black, #e5e5e5, black);
+}
+@media (max-width: 850px) {
+  .estimateCostSectionButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+//estimateCostSectionButton END
+
+.cursor {
+  cursor: pointer;
 }

@@ -1,9 +1,10 @@
-interface IFAQSectionData {
+export interface IFAQSectionData {
   title: string;
   discription: string;
 }
 
-export const fAQSectionData: IFAQSectionData[] = [
+//
+export const fAQSectionInteriorDesignData: IFAQSectionData[] = [
   {
     title: "Why is it worth ordering a design project?",
     discription:
@@ -55,5 +56,50 @@ export const fAQSectionData: IFAQSectionData[] = [
     title: "What is a project package?",
     discription:
       "Completion is one of the stages of the project implementation, at which the selection, coordination, payment and delivery of finishing materials and interior items takes place. At this stage, the specialists of the procurement department carry out the selection of all items from plumbing to lighting equipment, textiles and decorative accessories.",
+  },
+];
+//ConstructionAndRenovation
+export const fAQSectionConstructionAndRenovationData: IFAQSectionData[] = [
+  {
+    title:
+      "How long does the repair take? Can the deadlines for completing the work change?",
+    discription:
+      "On average, repairs last from 8 to 12 months. Usually it all depends on the amount of work and the area of the room. At the very beginning of work, our specialists visit the site in order to assess the scale of the necessary work, calculate estimates and indicate timing. If during the repair the client does not have any additional adjustments, then we, for our part, guarantee the completion of the work within the specified time frame. Our company very carefully calculates all the timing and costs of repair work so that there is no discrepancy in the specified contract figures and the real ones.",
+  },
+  {
+    title: "How is the estimate calculated? Can prices change?",
+    discription:
+      "We guarantee the estimated cost, which was indicated at the beginning of the work when signing the cooperation agreement. Except for cases where the client directly made adjustments and wishes during the repair work, as well as unforeseen circumstances.",
+  },
+  {
+    title:
+      "Is it possible to carry out renovation work without drawing up a design project?",
+    discription:
+      "On average, repairs last from 8 to 12 months. Usually it all depends on the amount of work and the area of the room. At the very beginning of work, our specialists visit the site in order to assess the scale of the necessary work, calculate estimates and indicate timing. If during the repair the client does not have any additional adjustments, then we, for our part, guarantee the completion of the work within the specified time frame. Our company very carefully calculates all the timing and costs of repair work so that there is no discrepancy in the specified contract figures and the real ones.",
+  },
+  {
+    title: "Is it possible to make repairs according to my design project?",
+    discription:
+      "It is possible if your design project includes all the drawings and necessary components. By completing a design project with us, you get not just a beautiful picture and options for its design. We ourselves order all the interior items that will be needed for the project.",
+  },
+  {
+    title: "How does payment work?",
+    discription:
+      "Payment is made according to the calculated work schedule for the project. We try to arrange everything in a way that is convenient for the client.",
+  },
+  {
+    title: "What are the stages of repair?",
+    discription:
+      "The entire repair process can be divided into the following stages: - Rough finishing. The partitions are dismantled and installed, screeds are installed, the walls are plastered and puttied. - Engineering work. Electrical and plumbing work is carried out, pipes are laid, etc. - Clean finishing. Installing ceilings, painting walls, decorating them with decorative plaster or wallpapering, laying flooring. - Installation work. Installation of lighting, installation of plumbing, interior doors. - Cleaning the premises. - Filling with furniture, household appliances and delivery of the object.",
+  },
+  {
+    title: "What is the warranty for repair work?",
+    discription:
+      "According to the contract that we sign with the client before starting work, the warranty period for repair work is 1 year. We also have warranty post-service for force majeure situations. We do not work with subcontractors. We carry out all work exclusively by the Museum Interior team; we have our own production of furniture and doors, and we also directly order all the necessary materials from suppliers. Therefore, we can guarantee the high quality of the work performed.",
+  },
+  {
+    title: "Who will work on my property?",
+    discription:
+      "The team that will work at the site usually includes: - a foreman who controls the quality of work performed and compliance with deadlines; - a team of 3-5 workers with general construction specialties who perform installation work, screeding, and plastering walls; - engineering workers (electricians, plumbers, ventilation equipment installers), all of them with appropriate permits for such work; - highly specialized workers for laying tiles, parquet, decorative plaster; - if necessary, industrial climbers, furniture assemblers, helpers, loaders, etc. are involved. - in addition to all the above specialists, the designer, chief engineer for consultations on all technical issues, and customer service managers communicate with the client. All these specialists work in our company. These are not subcontractors, so we guarantee the highest quality of work!",
   },
 ];

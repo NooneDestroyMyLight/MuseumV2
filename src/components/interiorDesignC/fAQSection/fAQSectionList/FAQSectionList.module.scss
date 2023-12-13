@@ -1,14 +1,22 @@
 @import "../../../../scss/styles.scss";
 
-$gap: 30px;
+$gap: 15px;
 
 .fAQSectionList {
   justify-content: space-between;
-  row-gap: $gap;
+
   .column {
     display: flex;
     flex-direction: column;
-    // gap: $gap;
-    width: 600px;
+
+    width: calc(50% - $gap);
+  }
+}
+@media (max-width: 660px) {
+  .fAQSectionList {
+    flex-direction: column;
+    .column {
+      width: 100%;
+    }
   }
 }

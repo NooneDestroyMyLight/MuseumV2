@@ -1,7 +1,9 @@
 @import "./vars.scss";
 
 .section {
-  padding: 130px 0;
+  // padding: 130px 0;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 // <== Mixin START ==>
@@ -90,7 +92,7 @@
     left: 0;
     top: 0;
     position: absolute;
-    background-color: white;
+    background-color: #efefef;
     z-index: -1;
 
     transition: transform 0.5s;
